@@ -19,7 +19,9 @@ function compile() {
   1) CFLAGS="-w -fprofile-arcs -ftest-coverage --coverage $BENCHMARK_CFLAGS" ;;
   *) CFLAGS="-w $1 $BENCHMARK_CFLAGS" ;;
   esac
-  $CC $SRC $CFLAGS -o $REDUCED_BIN >&/dev/null || exit 1
+  # $CC $SRC $CFLAGS -o $REDUCED_BIN >&/dev/null || exit 1
+  $CC $ORIGIN_SRC $CFLAGS -o $ORIGIN_BIN >&/dev/null || exit 1
+  $CC $DEB_SRC $CFLAGS -o $DEB_BIN >&/dev/null || exit 1
   return 0
 }
 
