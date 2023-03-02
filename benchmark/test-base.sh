@@ -16,12 +16,11 @@ function crash() {
 
 function compile() {
   case $COV in
-  1) CFLAGS="-w -fprofile-arcs -ftest-coverage --coverage $BENCHMARK_CFLAGS" ;;
-  *) CFLAGS="-w $1 $BENCHMARK_CFLAGS" ;;
+  1) CFLAGS="-w -g -fprofile-arcs -ftest-coverage --coverage $BENCHMARK_CFLAGS" ;;
+  *) CFLAGS="-w -g $1 $BENCHMARK_CFLAGS" ;;
   esac
-  # $CC $SRC $CFLAGS -o $REDUCED_BIN >&/dev/null || exit 1
   $CC $ORIGIN_SRC $CFLAGS -o $ORIGIN_BIN >&/dev/null || exit 1
-  $CC $DEB_SRC $CFLAGS -o $DEB_BIN >&/dev/null || exit 1
+  $CC $REDUCED_SRC $CFLAGS -o $REDUCED_BIN >&/dev/null || exit 1
   return 0
 }
 
@@ -36,16 +35,27 @@ environment_libs=("-L$CHISEL_BENCHMARK_HOME/benchmark/lib -lmemwrap"
 
 function main() {
   for ((i = 0; i < ${#sanitizers[@]}; i++)); do
+    echo "sanitizer: ${sanitizers[$i]}"
+    echo "clean_$i"
     clean
+    echo "compile_$i"
     compile "${sanitizers[$i]}" || exit 1
+    echo "desired_$i"
     desired "${sanitizers[$i]}" || exit 1
+    echo "undesired_$i"
     undesired || exit 1
+    echo "clean"
     clean
   done
   for ((i = 0; i < ${#environments[@]}; i++)); do
+    echo "env: ${environments[$i]}"
+    echo "clean"
     clean
+    echo "compile"
     compile "${environment_libs[$i]}" || exit 1
+    echo "desired_disaster"
     desired_disaster "${environments[$i]}" || exit 1
+    echo "clean"
     clean
   done
 }
