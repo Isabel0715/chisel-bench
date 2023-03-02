@@ -2,22 +2,17 @@
 
 export BENCHMARK_NAME=rm-8.4
 export BENCHMARK_DIR=$CHISEL_BENCHMARK_HOME/benchmark/$BENCHMARK_NAME/merged
-# export SRC=$BENCHMARK_DIR/$BENCHMARK_NAME.c
-# export ORIGIN_BIN=$BENCHMARK_DIR/$BENCHMARK_NAME.origin
-# export REDUCED_BIN=$BENCHMARK_DIR/$BENCHMARK_NAME.reduced
 export ORIGIN_SRC=$BENCHMARK_DIR/$BENCHMARK_NAME.c.origin.c
-export DEB_SRC=$BENCHMARK_DIR/$BENCHMARK_NAME.c.debloated.c
+export REDUCED_SRC=$BENCHMARK_DIR/$BENCHMARK_NAME.c.debloated.c
 export ORIGIN_BIN=$BENCHMARK_DIR/$BENCHMARK_NAME.origin
-# export REDUCED_BIN=$BENCHMARK_DIR/$BENCHMARK_NAME.reduced
-export DEB_BIN=$BENCHMARK_DIR/$BENCHMARK_NAME.debloated
+export REDUCED_BIN=$BENCHMARK_DIR/$BENCHMARK_NAME.reduced
 export TIMEOUT="-k 0.5 0.5"
 export LOG=$BENCHMARK_DIR/log.txt
 
 source $CHISEL_BENCHMARK_HOME/benchmark/test-base.sh
 
 function clean() {
-  # rm -rf $LOG $DEB_BIN dir file
-  rm -rf  dir file
+  rm -rf $LOG $REDUCED_BIN dir file
   chmod -Rf 755 cu-*
   /bin/rm -rf cu-*
   return 0
@@ -25,7 +20,7 @@ function clean() {
 
 function run1() {
   touch file
-  { timeout $TIMEOUT $DEB_BIN file; } >&$LOG
+  { timeout $TIMEOUT $REDUCED_BIN file; } >&$LOG
   r=$?
   a=1
   b=1
@@ -33,7 +28,7 @@ function run1() {
     a=0
   fi
   /bin/rm -rf file
-  { timeout $TIMEOUT $DEB_BIN file; } >&$LOG
+  { timeout $TIMEOUT $REDUCED_BIN file; } >&$LOG
   r=$?
   err=1
   if grep -q "No such file or directory" $LOG; then
@@ -51,14 +46,14 @@ function run1() {
 
 function run1_disaster() {
   touch file
-  { timeout $TIMEOUT $DEB_BIN file; } >&$LOG
+  { timeout $TIMEOUT $REDUCED_BIN file; } >&$LOG
   cat $LOG | grep -q -E $1 || exit 1
   return 0
 }
 
 function run2() {
   mkdir dir
-  { timeout $TIMEOUT $DEB_BIN -r dir; } >&$LOG
+  { timeout $TIMEOUT $REDUCED_BIN -r dir; } >&$LOG
   r=$?
   a=1
   b=1
@@ -67,7 +62,7 @@ function run2() {
   fi
   /bin/rm -rf dir
   mkdir dir
-  { timeout $TIMEOUT $DEB_BIN -r -f dir; } >&$LOG
+  { timeout $TIMEOUT $REDUCED_BIN -r -f dir; } >&$LOG
   r=$?
   if [[ $r -eq 0 && ! -d dir ]]; then
     b=0
@@ -82,12 +77,12 @@ function run2() {
 
 function run2_disaster() {
   mkdir dir
-  { timeout $TIMEOUT $DEB_BIN -r dir; } >&$LOG
+  { timeout $TIMEOUT $REDUCED_BIN -r dir; } >&$LOG
   /bin/rm -rf dir
   cat $LOG | grep -q -E $1 || exit 1
 
   mkdir dir
-  { timeout $TIMEOUT $DEB_BIN -r -f dir; } >&$LOG
+  { timeout $TIMEOUT $REDUCED_BIN -r -f dir; } >&$LOG
   /bin/rm -rf dir
   cat $LOG | grep -q -E $1 || exit 1
 
@@ -96,7 +91,7 @@ function run2_disaster() {
 
 function run3() {
   mkdir dir
-  { timeout $TIMEOUT $DEB_BIN -f dir; } >&$LOG
+  { timeout $TIMEOUT $REDUCED_BIN -f dir; } >&$LOG
   r=$?
   x=1
   if grep -q "cannot remove \`dir': Is a directory" $LOG; then
@@ -111,14 +106,14 @@ function run3() {
 
 function run3_disaster() {
   mkdir dir
-  { timeout $TIMEOUT $DEB_BIN -f dir; } >&$LOG
+  { timeout $TIMEOUT $REDUCED_BIN -f dir; } >&$LOG
   cat $LOG | grep -q -E $1 || exit 1
   return 0
 }
 
 function run4() {
   touch filei
-  { timeout $TIMEOUT echo "Y" | timeout $TIMEOUT $DEB_BIN -i filei; } >&$LOG
+  { timeout $TIMEOUT echo "Y" | timeout $TIMEOUT $REDUCED_BIN -i filei; } >&$LOG
   r=$?
   if [[ $r -eq 0 && ! -f filei ]]; then
     return 0
@@ -127,7 +122,7 @@ function run4() {
     return 1
   fi
   touch filei
-  { timeout $TIMEOUT echo "N" | timeout $TIMEOUT $DEB_BIN -i filei; } >&$LOG
+  { timeout $TIMEOUT echo "N" | timeout $TIMEOUT $REDUCED_BIN -i filei; } >&$LOG
   r=$?
   if [[ $r -eq 0 && -f filei ]]; then
     return 0
@@ -140,11 +135,11 @@ function run4() {
 
 function run4_disaster() {
   touch filei
-  { timeout $TIMEOUT echo "Y" | timeout $TIMEOUT $DEB_BIN -i filei; } >&$LOG
+  { timeout $TIMEOUT echo "Y" | timeout $TIMEOUT $REDUCED_BIN -i filei; } >&$LOG
   cat $LOG | grep -q -E $1 || exit 1
 
   touch filei
-  { timeout $TIMEOUT echo "N" | timeout $TIMEOUT $DEB_BIN -i filei; } >&$LOG
+  { timeout $TIMEOUT echo "N" | timeout $TIMEOUT $REDUCED_BIN -i filei; } >&$LOG
   cat $LOG | grep -q -E $1 || exit 1
 
   return 0
@@ -194,7 +189,7 @@ function outputcheckerror() {
 function undesired() {
   export srcdir=$CHISEL_BENCHMARK_HOME/benchmark/
   export PATH="$(pwd):$PATH"
-  { timeout $TIMEOUT $DEB_BIN; } >&$LOG
+  { timeout $TIMEOUT $REDUCED_BIN; } >&$LOG
   err=$?
   outputcheckerror "missing operand" && exit 1
   crash $err && exit 1
