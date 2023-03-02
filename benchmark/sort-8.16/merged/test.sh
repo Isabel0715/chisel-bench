@@ -2,7 +2,8 @@
 
 export BENCHMARK_NAME=sort-8.16
 export BENCHMARK_DIR=$CHISEL_BENCHMARK_HOME/benchmark/$BENCHMARK_NAME/merged
-export SRC=$BENCHMARK_DIR/$BENCHMARK_NAME.c
+export ORIGIN_SRC=$BENCHMARK_DIR/$BENCHMARK_NAME.c.origin.c
+export REDUCED_SRC=$BENCHMARK_DIR/$BENCHMARK_NAME.c.debloated.c
 export ORIGIN_BIN=$BENCHMARK_DIR/$BENCHMARK_NAME.origin
 export REDUCED_BIN=$BENCHMARK_DIR/$BENCHMARK_NAME.reduced
 export TIMEOUT="-k 0.8 0.8"
@@ -99,7 +100,7 @@ function undesired() {
     if [[ $opt == "-k" ]]; then
       { timeout -k 0.1 0.1 $REDUCED_BIN $opt notexist; } >&$LOG
       err=$?
-      outputcheckerror "invalid number at field start: invalid count at start of \‘notexist\’" && exit 1
+      outputcheckerror "invalid number at field start: invalid count at start of 'notexist'" && exit 1
       crash $err && exit 1
     elif [[ $opt == '-T' || $opt == '--help' ]]; then
       continue
@@ -114,7 +115,7 @@ function undesired() {
     elif [[ $opt == '-t' ]]; then
       { timeout -k 0.1 0.1 $REDUCED_BIN $opt notexist; } >&$LOG
       err=$?
-      outputcheckerror "multi-character tab \‘notexist\’" && exit 1
+      outputcheckerror "multi-character tab 'notexist'" && exit 1
       crash $err && exit 1
     else
       { timeout -k 0.1 0.1 $REDUCED_BIN $opt notexist; } >&$LOG
