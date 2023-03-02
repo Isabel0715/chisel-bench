@@ -2,17 +2,12 @@
 
 export BENCHMARK_NAME=tar-1.14
 export BENCHMARK_DIR=$CHISEL_BENCHMARK_HOME/benchmark/$BENCHMARK_NAME/merged
-# export SRC=$BENCHMARK_DIR/$BENCHMARK_NAME.c
-# export ORIGIN_BIN=$BENCHMARK_DIR/$BENCHMARK_NAME.origin
-# export DEB_BIN=$BENCHMARK_DIR/$BENCHMARK_NAME.reduced
 export ORIGIN_SRC=$BENCHMARK_DIR/$BENCHMARK_NAME.c.origin.c
-export DEB_SRC=$BENCHMARK_DIR/$BENCHMARK_NAME.c.debloated.c
+export REDUCED_SRC=$BENCHMARK_DIR/$BENCHMARK_NAME.c.debloated.c
 export ORIGIN_BIN=$BENCHMARK_DIR/$BENCHMARK_NAME.origin
-# export DEB_BIN=$BENCHMARK_DIR/$BENCHMARK_NAME.reduced
-export DEB_BIN=$BENCHMARK_DIR/$BENCHMARK_NAME.debloated
+export REDUCED_BIN=$BENCHMARK_DIR/$BENCHMARK_NAME.reduced
 export TIMEOUT="-k 2 2"
 export LOG=$BENCHMARK_DIR/log.txt
-
 
 source $CHISEL_BENCHMARK_HOME/benchmark/test-base.sh
 
@@ -41,7 +36,7 @@ function desired() {
   if [[ $1 == "-fsanitize=leak" ]]; then # ignore leak sanitizer
     return 0
   fi
-  cp $DEB_BIN tar
+  cp $REDUCED_BIN tar
   for file in $(ls tests/tar*); do
     { timeout $TIMEOUT sh -e $file; } >&$LOG || exit 1
     rm -rf f* b*
@@ -61,7 +56,7 @@ function desired_disaster() {
     return 1
     ;;
   esac
-  cp $DEB_BIN tar
+  cp $REDUCED_BIN tar
   for file in $(ls tests/tar*); do
     { timeout $TIMEOUT sh -e $file; } >&$LOG
     rm -rf f* b*
@@ -85,25 +80,25 @@ OPT=("" "-R" "-w" "-j" "-T" "--null" "--exclude" "-o" "-Z" "--ungzip" "--no-wild
   "--no-overwrite-dir" "-U" "--recursive-unlink" "-S" "-O" "-G"
   "-A" "-u" "-r")
 function undesired() {
-  { timeout $TIMEOUT_LOW $DEB_BIN; } >&$LOG
+  { timeout $TIMEOUT_LOW $REDUCED_BIN; } >&$LOG
   crash $? && exit 1
 
-  { timeout $TIMEOUT_LOW $DEB_BIN notexist; } >&$LOG
+  { timeout $TIMEOUT_LOW $REDUCED_BIN notexist; } >&$LOG
   crash $? && exit 1
 
-  { timeout $TIMEOUT_LOW $DEB_BIN --help; } >&$LOG
+  { timeout $TIMEOUT_LOW $REDUCED_BIN --help; } >&$LOG
   crash $? && exit 1
 
-  { timeout $TIMEOUT_LOW $DEB_BIN --version; } >&$LOG
+  { timeout $TIMEOUT_LOW $REDUCED_BIN --version; } >&$LOG
   crash $? && exit 1
 
   for opt in ${OPT[@]}; do
-    { timeout $TIMEOUT_LOW $DEB_BIN $opt; } >&$LOG
+    { timeout $TIMEOUT_LOW $REDUCED_BIN $opt; } >&$LOG
     crash $? && exit 1
   done
 
   for c in $(find afl_crash -type f); do
-    { timeout $TIMEOUT_LOW $DEB_BIN $(cat $c); } >&$LOG
+    { timeout $TIMEOUT_LOW $REDUCED_BIN $(cat $c); } >&$LOG
     crash $? && exit 1
   done
   return 0
