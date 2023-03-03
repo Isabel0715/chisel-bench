@@ -184,7 +184,6 @@ static void fillbuf(int n) {
   unsigned int tmp;
   int tmp___0;
   int tmp___1;
-
   {
     bitbuf = (ush)((int)bitbuf << n);
     {
@@ -220,7 +219,6 @@ static void fillbuf(int n) {
 }
 static unsigned int getbits(int n) {
   unsigned int x;
-
   {
     {
       x = (unsigned int)((int)bitbuf >>
@@ -231,7 +229,6 @@ static unsigned int getbits(int n) {
   }
 }
 static void init_getbits(void) {
-
   {
     {
       bitbuf = (ush)0;
@@ -262,7 +259,6 @@ static void make_table(int nchar, uch *bitlen, int tablebits, ush *table) {
   void *__cil_tmp21;
   void *__cil_tmp22;
   char *__cil_tmp23;
-
   {
     i___0 = 1U;
     {
@@ -423,7 +419,6 @@ static void read_pt_len(int nn, int nbit, int i_special) {
   int tmp___0;
   int tmp___1;
   int tmp___2;
-
   {
     { n = (int)getbits(nbit); }
     if (n == 0) {
@@ -536,7 +531,6 @@ static void read_c_len(void) {
   int tmp___1;
   int tmp___2;
   int tmp___3;
-
   {
     { n = (int)getbits(9); }
     if (n == 0) {
@@ -652,7 +646,6 @@ static void read_c_len(void) {
 static unsigned int decode_c(void) {
   unsigned int j___0;
   unsigned int mask;
-
   {
     if (blocksize == 0U) {
       {
@@ -695,7 +688,6 @@ static unsigned int decode_p(void) {
   unsigned int j___0;
   unsigned int mask;
   unsigned int tmp;
-
   {
     j___0 = (unsigned int)pt_table[(int)bitbuf >> (16UL * sizeof(char) - 8UL)];
     if (j___0 >= 14U) {
@@ -727,7 +719,6 @@ static unsigned int decode_p(void) {
   }
 }
 static void huf_decode_start(void) {
-
   {
     {
       init_getbits();
@@ -739,7 +730,6 @@ static void huf_decode_start(void) {
 static int j;
 static int done;
 static void decode_start(void) {
-
   {
     {
       huf_decode_start();
@@ -754,7 +744,6 @@ static unsigned int decode(unsigned int count, uch *buffer) {
   unsigned int r;
   unsigned int c;
   unsigned int tmp;
-
   {
     r = 0U;
     {
@@ -817,7 +806,6 @@ static unsigned int decode(unsigned int count, uch *buffer) {
 }
 int unlzh(int in, int out) {
   unsigned int n;
-
   {
     {
       ifd = in;
@@ -878,7 +866,6 @@ static void read_tree(void) {
   int tmp___11;
   char *__cil_tmp17;
   char *__cil_tmp18;
-
   {
     orig_len = (ulg)0;
     n = 1;
@@ -996,7 +983,6 @@ static void build_tree(void) {
   uch *prefixp;
   int prefixes;
   int tmp;
-
   {
     nodes = 0;
     len = max_len;
@@ -1073,7 +1059,6 @@ int unpack(int in, int out) {
   int tmp___4;
   unsigned int tmp___5;
   char *__cil_tmp15;
-
   {
     {
       ifd = in;
@@ -1226,7 +1211,6 @@ int unlzw(int in, int out) {
   char *__cil_tmp27;
   char *__cil_tmp28;
   char *__cil_tmp29;
-
   {
     if (inptr < insize) {
       tmp = inptr;
@@ -1496,7 +1480,6 @@ int unlzw(int in, int out) {
 int lzw(int in, int out);
 static int msg_done = 0;
 int lzw(int in, int out) {
-
   {
     if (msg_done) {
       return (1);
@@ -1565,7 +1548,6 @@ ulg crc_32_tab[256];
 int copy(int in, int out) {
   int *tmp;
   int *tmp___0;
-
   {
     {
       tmp = __errno_location();
@@ -1608,7 +1590,6 @@ static ulg crc = (ulg)4294967295L;
 ulg updcrc(uch *s, unsigned int n) {
   register ulg c;
   uch *tmp;
-
   {
     if ((unsigned long)s == (unsigned long)((void *)0)) {
       c = (ulg)4294967295L;
@@ -1635,7 +1616,6 @@ ulg updcrc(uch *s, unsigned int n) {
   }
 }
 void clear_bufs(void) {
-
   {
     outcnt = 0U;
     inptr = 0U;
@@ -1648,7 +1628,6 @@ void clear_bufs(void) {
 int fill_inbuf(int eof_ok) {
   int len;
   int *tmp;
-
   {
     {
       insize = 0U;
@@ -1688,7 +1667,6 @@ int fill_inbuf(int eof_ok) {
   }
 }
 void flush_outbuf(void) {
-
   {
     if (outcnt == 0U) {
       return;
@@ -1702,7 +1680,6 @@ void flush_outbuf(void) {
   }
 }
 void flush_window(void) {
-
   {
     if (outcnt == 0U) {
       return;
@@ -1720,7 +1697,6 @@ void flush_window(void) {
 }
 void write_buf(int fd, voidp buf, unsigned int cnt) {
   unsigned int n;
-
   {
     {
       while (1) {
@@ -1745,7 +1721,6 @@ void write_buf(int fd, voidp buf, unsigned int cnt) {
 char *strlwr(char *s) {
   char *t;
   unsigned short const **tmp___0;
-
   {
     t = s;
     {
@@ -1769,7 +1744,6 @@ char *strlwr(char *s) {
 }
 char *basename(char *fname) {
   char *p;
-
   {
     { p = strrchr((char const *)fname, '/'); }
     if ((unsigned long)p != (unsigned long)((void *)0)) {
@@ -1800,7 +1774,6 @@ char *add_envopt(int *argcp, char ***argvp, char *env___0) {
   int tmp___14;
   char *__cil_tmp25;
   char *__cil_tmp26;
-
   {
     {
       oargc = *argcp;
@@ -1923,7 +1896,6 @@ char *add_envopt(int *argcp, char ***argvp, char *env___0) {
   }
 }
 void error(char *m) {
-
   {
     {
       fprintf((FILE * /* __restrict  */) stderr,
@@ -1936,7 +1908,6 @@ void error(char *m) {
 }
 void read_error(void) {
   int *tmp;
-
   {
     {
       fprintf((FILE * /* __restrict  */) stderr,
@@ -1959,7 +1930,6 @@ void read_error(void) {
   }
 }
 void write_error(void) {
-
   {
     {
       fprintf((FILE * /* __restrict  */) stderr,
@@ -1972,7 +1942,6 @@ void write_error(void) {
 }
 void display_ratio(long num, long den, FILE *file) {
   long ratio;
-
   {
     if (den == 0L) {
       ratio = 0L;
@@ -2003,7 +1972,6 @@ voidp xmalloc(unsigned int size) {
   voidp cp;
   voidp tmp;
   char *__cil_tmp4;
-
   {
     {
       tmp = malloc((size_t)size);
@@ -2158,7 +2126,6 @@ int huft_build(unsigned int *b, unsigned int n, unsigned int s, ush *d, ush *e,
   void *__cil_tmp38;
   void *__cil_tmp39;
   int __cil_tmp40;
-
   {
     {
       memset((voidp)(c), 0, sizeof(c));
@@ -2450,7 +2417,6 @@ int huft_build(unsigned int *b, unsigned int n, unsigned int s, ush *d, ush *e,
 int huft_free(struct huft *t) {
   register struct huft *p;
   register struct huft *q;
-
   {
     p = t;
     {
@@ -2504,7 +2470,6 @@ int inflate_codes(struct huft *tl, struct huft *td, int bl, int bd) {
   unsigned int tmp___19;
   unsigned int tmp___20;
   unsigned int tmp___21;
-
   {
     b = bb;
     k = bk;
@@ -2789,7 +2754,6 @@ int inflate_stored(void) {
   int tmp___7;
   unsigned int tmp___8;
   unsigned int tmp___9;
-
   {
     b = bb;
     k = bk;
@@ -2906,7 +2870,6 @@ int inflate_fixed(void) {
   unsigned int l[288];
   int tmp;
   void *__cil_tmp8;
-
   {
     i___0 = 0;
     {
@@ -3042,7 +3005,6 @@ int inflate_dynamic(void) {
   unsigned int tmp___29;
   int tmp___30;
   void *__cil_tmp48;
-
   {
     b = bb;
     k = bk;
@@ -3419,7 +3381,6 @@ int inflate_block(int *e) {
   int tmp___5;
   int tmp___6;
   int tmp___7;
-
   {
     b = bb;
     k = bk;
@@ -3498,7 +3459,6 @@ int inflate(void) {
   int e;
   int r;
   unsigned int h;
-
   {
     outcnt = 0U;
     bk = 0U;
@@ -3550,7 +3510,6 @@ int pkzip = 0;
 int ext_header = 0;
 int check_zipfile(int in) {
   uch *h;
-
   {
     h = inbuf + inptr;
     ifd = in;
@@ -3643,7 +3602,6 @@ int unzip(int in, int out) {
   char *__cil_tmp29;
   char *__cil_tmp30;
   char *__cil_tmp31;
-
   {
     {
       orig_crc = (ulg)0;
@@ -3882,7 +3840,6 @@ static file_t zfile;
 static unsigned short bi_buf;
 static int bi_valid;
 void bi_init(file_t zipfile) {
-
   {
     zfile = zipfile;
     bi_buf = (unsigned short)0;
@@ -3898,7 +3855,6 @@ void send_bits(int value, int length) {
   unsigned int tmp___0;
   unsigned int tmp___1;
   unsigned int tmp___2;
-
   {
     if (bi_valid > (int)(16UL * sizeof(char)) - length) {
       bi_buf = (unsigned short)((int)bi_buf | (value << bi_valid));
@@ -3940,7 +3896,6 @@ void send_bits(int value, int length) {
 }
 unsigned int bi_reverse(unsigned int code, int len) {
   register unsigned int res;
-
   {
     res = 0U;
     {
@@ -3965,7 +3920,6 @@ void bi_windup(void) {
   unsigned int tmp___1;
   unsigned int tmp___2;
   unsigned int tmp___3;
-
   {
     if (bi_valid > 8) {
       if (outcnt < 16382U) {
@@ -4022,7 +3976,6 @@ void copy_block(char *buf, unsigned int len, int header) {
   unsigned int tmp___7;
   char *tmp___8;
   unsigned int tmp___9;
-
   {
     { bi_windup(); }
     if (header) {
@@ -4172,7 +4125,6 @@ void ct_init(ush *attr, int *methodp) {
   int tmp___3;
   int tmp___4;
   int tmp___5;
-
   {
     file_type = attr;
     file_method = methodp;
@@ -4351,7 +4303,6 @@ void ct_init(ush *attr, int *methodp) {
 }
 static void init_block(void) {
   int n;
-
   {
     n = 0;
     {
@@ -4403,7 +4354,6 @@ static void init_block(void) {
 static void pqdownheap(ct_data *tree, int k) {
   int v;
   int j___0;
-
   {
     v = heap[k];
     j___0 = k << 1;
@@ -4459,7 +4409,6 @@ static void gen_bitlen(tree_desc *desc) {
   int xbits;
   ush f;
   int overflow;
-
   {
     tree = desc->dyn_tree;
     extra = desc->extra_bits;
@@ -4583,7 +4532,6 @@ static void gen_codes(ct_data *tree, int max_code) {
   int len;
   ush tmp;
   void *__cil_tmp10;
-
   {
     code = (ush)0;
     bits = 1;
@@ -4637,7 +4585,6 @@ static void build_tree___0(tree_desc *desc) {
   int tmp___1;
   ush tmp___2;
   int tmp___3;
-
   {
     tree = desc->dyn_tree;
     stree = desc->static_tree;
@@ -4759,7 +4706,6 @@ static void scan_tree(ct_data *tree, int max_code) {
   int count;
   int max_count;
   int min_count;
-
   {
     prevlen = -1;
     nextlen = (int)(tree + 0)->dl.len;
@@ -4838,7 +4784,6 @@ static void send_tree(ct_data *tree, int max_code) {
   int count;
   int max_count;
   int min_count;
-
   {
     prevlen = -1;
     nextlen = (int)(tree + 0)->dl.len;
@@ -4934,7 +4879,6 @@ static void send_tree(ct_data *tree, int max_code) {
 }
 static int build_bl_tree(void) {
   int max_blindex;
-
   {
     {
       scan_tree(dyn_ltree, l_desc.max_code);
@@ -4961,7 +4905,6 @@ static int build_bl_tree(void) {
 }
 static void send_all_trees(int lcodes, int dcodes, int blcodes) {
   int rank;
-
   {
     {
       send_bits(lcodes - 257, 5);
@@ -4993,7 +4936,6 @@ ulg flush_block(char *buf, ulg stored_len, int eof) {
   ulg opt_lenb;
   ulg static_lenb;
   int max_blindex;
-
   {
     flag_buf[last_flags] = flags;
     if ((int)*file_type == 65535) {
@@ -5074,7 +5016,6 @@ int ct_tally(int dist, int lc) {
   ulg in_length;
   int dcode;
   int tmp___3;
-
   {
     tmp = last_lit;
     last_lit++;
@@ -5153,7 +5094,6 @@ static void compress_block(ct_data *ltree, ct_data *dtree) {
   unsigned int tmp;
   unsigned int tmp___0;
   unsigned int tmp___1;
-
   {
     lx = 0U;
     dx = 0U;
@@ -5227,7 +5167,6 @@ static void set_file_type(void) {
   int tmp;
   int tmp___0;
   int tmp___1;
-
   {
     n = 0;
     ascii_freq = 0U;
@@ -5308,7 +5247,6 @@ void lm_init(int pack_level, ush *flags___0) {
   unsigned int tmp;
   char *__cil_tmp6;
   char *__cil_tmp7;
-
   {
     if (pack_level < 1) {
       {
@@ -5401,7 +5339,6 @@ int longest_match(IPos cur_match) {
   register uch *strend;
   register uch scan_end1;
   register uch scan_end;
-
   {
     chain_length = max_chain_length;
     scan = window + strstart;
@@ -5531,7 +5468,6 @@ static void fill_window(void) {
   unsigned int more;
   unsigned int tmp;
   unsigned int tmp___0;
-
   {
     more = (unsigned int)((window_size - (ulg)lookahead) - (ulg)strstart);
     if (more == 4294967295U) {
@@ -5610,7 +5546,6 @@ static ulg deflate_fast(void) {
   char *tmp;
   char *tmp___0;
   ulg tmp___1;
-
   {
     match_length = 0U;
     prev_length = 2U;
@@ -5724,7 +5659,6 @@ ulg deflate(void) {
   int tmp___2;
   char *tmp___3;
   ulg tmp___4;
-
   {
     match_available = 0;
     match_length = 2U;
@@ -5908,7 +5842,6 @@ int zip(int in, int out) {
   unsigned int tmp___31;
   char *__cil_tmp40;
   char *__cil_tmp41;
-
   {
     flags___0 = (uch)0;
     attr = (ush)0;
@@ -6162,7 +6095,6 @@ int zip(int in, int out) {
 }
 int file_read(char *buf, unsigned int size) {
   unsigned int len;
-
   {
     { len = (unsigned int)read(ifd, (void *)buf, (size_t)size); }
     if (len == 4294967295U) {
@@ -6340,7 +6272,6 @@ int (*work)(int infile, int outfile) = &zip;
 static void treat_dir(char *dir);
 static void reset_times(char *name, struct stat *statb);
 static void usage(void) {
-
   {
     {
       fprintf((FILE * /* __restrict  */) stderr,
@@ -6378,7 +6309,6 @@ static char *help_msg[18] = {
 static void help(void) {
   char **p;
   char **tmp;
-
   {
     {
       p = help_msg;
@@ -6408,7 +6338,6 @@ static void help(void) {
 static void license(void) {
   char **p;
   char **tmp;
-
   {
     {
       p = license_msg;
@@ -6435,7 +6364,6 @@ static void license(void) {
   }
 }
 static void version(void) {
-
   {
     {
       fprintf((FILE * /* __restrict  */) stderr,
@@ -6470,7 +6398,6 @@ int main(int argc, char **argv) {
   int tmp___8;
   char *__cil_tmp19;
   char *__cil_tmp20;
-
   {
     {
       progname = basename(*(argv + 0));
@@ -6866,7 +6793,6 @@ static void treat_stdin(void) {
   char *__cil_tmp17;
   char *__cil_tmp18;
   char *__cil_tmp19;
-
   {
     if (!force) {
       if (!list) {
@@ -7045,7 +6971,6 @@ static void treat_file(char *iname) {
   char *__cil_tmp18;
   char *__cil_tmp19;
   char *__cil_tmp20;
-
   {
     { tmp = strcmp((char const *)iname, "-"); }
     if (tmp == 0) {
@@ -7332,7 +7257,6 @@ static int create_outfile(void) {
   int tmp___0;
   int tmp___1;
   void *__cil_tmp6;
-
   {
     flags___0 = 193;
     if (ascii) {
@@ -7408,7 +7332,6 @@ static int do_stat(char *name, struct stat *sbuf) {
   int *tmp;
   int tmp___0;
   int tmp___1;
-
   {
     {
       tmp = __errno_location();
@@ -7444,7 +7367,6 @@ static char *get_suffix(char *name) {
   int tmp___0;
   int tmp___1;
   void *__cil_tmp13;
-
   {
     {
       suf = known_suffixes;
@@ -7507,7 +7429,6 @@ static int get_istat(char *iname, struct stat *sbuf) {
   int *tmp___0;
   int tmp___1;
   int tmp___2;
-
   {
     {
       suf = suffixes;
@@ -7584,7 +7505,6 @@ static int make_ofname(void) {
   int tmp___0;
   char *__cil_tmp4;
   char *__cil_tmp5;
-
   {
     {
       strcpy((char * /* __restrict  */)(ofname),
@@ -7757,7 +7677,6 @@ static int get_method(int in) {
   int tmp___62;
   void *__cil_tmp74;
   char *__cil_tmp75;
-
   {
     if (force) {
       if (to_stdout) {
@@ -8252,7 +8171,6 @@ static void do_list(int ifd___0, int method___0) {
   ssize_t tmp___0;
   char *tmp___1;
   void *__cil_tmp9;
-
   {
     if (first_time) {
       if (method___0 >= 0) {
@@ -8380,7 +8298,6 @@ static void do_list(int ifd___0, int method___0) {
 }
 static int same_file(struct stat *stat1, struct stat *stat2) {
   int tmp;
-
   {
     if (stat1->st_ino == stat2->st_ino) {
       if (stat1->st_dev == stat2->st_dev) {
@@ -8404,7 +8321,6 @@ static int name_too_long(char *name, struct stat *statb) {
   int tmp___1;
   int tmp___2;
   void *__cil_tmp12;
-
   {
     {
       tmp = (int)strlen((char const *)name);
@@ -8445,7 +8361,6 @@ static void shorten_name(char *name) {
   char *__cil_tmp13;
   char *__cil_tmp14;
   char *__cil_tmp15;
-
   {
     {
       trunc = (char *)((void *)0);
@@ -8573,7 +8488,6 @@ static int check_ofname(void) {
   char *__cil_tmp18;
   char *__cil_tmp19;
   char *__cil_tmp20;
-
   {
     {
       tmp = __errno_location();
@@ -8701,7 +8615,6 @@ static int check_ofname(void) {
 static void reset_times(char *name, struct stat *statb) {
   struct utimbuf timep;
   int tmp;
-
   {
     {
       timep.actime = statb->st_atim.tv_sec;
@@ -8732,7 +8645,6 @@ static void reset_times(char *name, struct stat *statb) {
 static void copy_stat(struct stat *ifstat) {
   int tmp;
   int tmp___0;
-
   {
     if (decompress) {
       if (time_stamp != 0L) {
@@ -8804,7 +8716,6 @@ static void treat_dir(char *dir) {
   int tmp___1;
   size_t tmp___2;
   void *__cil_tmp11;
-
   {
     { dirp = opendir((char const *)dir); }
     if ((unsigned long)dirp == (unsigned long)((void *)0)) {
@@ -8869,7 +8780,6 @@ static void treat_dir(char *dir) {
 }
 static int in_exit = 0;
 static void do_exit(int exitcode) {
-
   {
     if (in_exit) {
       {
@@ -8893,7 +8803,6 @@ static void do_exit(int exitcode) {
   }
 }
 void abort_gzip(void) {
-
   {
     if (remove_ofname) {
       {

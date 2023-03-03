@@ -303,7 +303,6 @@ void BZ2_hbMakeCodeLengths(UChar *len, Int32 *freq, Int32 alphaSize,
                     
                     
                     
-
   {
     i = 0;
     {
@@ -360,10 +359,8 @@ void BZ2_hbMakeCodeLengths(UChar *len, Int32 *freq, Int32 alphaSize,
         }
                              
            
-
                                         
            
-
          
         {
           while (1) {
@@ -458,10 +455,8 @@ void BZ2_hbMakeCodeLengths(UChar *len, Int32 *freq, Int32 alphaSize,
         }
                               
            
-
                                         
            
-
          
                           
         i = 1;
@@ -520,7 +515,6 @@ void BZ2_hbAssignCodes(Int32 *code, UChar *length, Int32 minLen, Int32 maxLen,
   Int32 n;
   Int32 vec;
   Int32 i;
-
   {
     vec = 0;
     n = minLen;
@@ -560,7 +554,6 @@ void BZ2_hbCreateDecodeTables(Int32 *limit, Int32 *base, Int32 *perm,
   Int32 i;
   Int32 j;
   Int32 vec;
-
   {
     pp = 0;
     i = minLen;
@@ -674,7 +667,6 @@ Int32 BZ2_indexIntoF(Int32 indx, Int32 *cftab);
 Int32 BZ2_decompress(DState *s);
 static void makeMaps_d(DState *s) {
   Int32 i;
-
   {
     s->nInUse = 0;
     i = 0;
@@ -784,7 +776,6 @@ Int32 BZ2_decompress(DState *s) {
   UInt32 v___39;
   UInt32 v___40;
                     
-
   {
     strm = s->strm;
                          
@@ -967,14 +958,6 @@ Int32 BZ2_decompress(DState *s) {
                     
       {
                   {
-
-
-
-
-
-
-
-
                                        ;
                                
                                                                               
@@ -996,14 +979,6 @@ Int32 BZ2_decompress(DState *s) {
                                          
            
         }
-
-
-
-
-
-
-
-
                                    
       }
                           
@@ -1014,7 +989,6 @@ Int32 BZ2_decompress(DState *s) {
                     
       {
                    
-
                                            ;
                                
                    
@@ -1037,7 +1011,6 @@ Int32 BZ2_decompress(DState *s) {
                                          
            
          
-
                                        
       }
                           
@@ -1048,12 +1021,6 @@ Int32 BZ2_decompress(DState *s) {
                     
       {
                    
-
-
-
-
-
-
                                            ;
                                
                    
@@ -1076,12 +1043,6 @@ Int32 BZ2_decompress(DState *s) {
                                          
            
          
-
-
-
-
-
-
                                        
       }
                            
@@ -1150,13 +1111,11 @@ Int32 BZ2_decompress(DState *s) {
          
              {
          
-
           s->tt = (UInt32 *)(*(strm->bzalloc))(
               strm->opaque,
               (int)((unsigned long)(s->blockSize100k * 100000) * sizeof(Int32)),
               1);
          
-
                                                                  
                       
                                      
@@ -1201,7 +1160,6 @@ Int32 BZ2_decompress(DState *s) {
                     
       {
                    
-
                                            ;
                                
                    
@@ -1224,7 +1182,6 @@ Int32 BZ2_decompress(DState *s) {
                                          
            
          
-
                                        
       }
                           
@@ -1235,7 +1192,6 @@ Int32 BZ2_decompress(DState *s) {
                     
       {
                    
-
                                            ;
                                
                    
@@ -1258,7 +1214,6 @@ Int32 BZ2_decompress(DState *s) {
                                          
            
          
-
                                        
       }
                           
@@ -1269,7 +1224,6 @@ Int32 BZ2_decompress(DState *s) {
                     
       {
                    
-
                                            ;
                                
                    
@@ -1292,7 +1246,6 @@ Int32 BZ2_decompress(DState *s) {
                                          
            
          
-
                                        
       }
                           
@@ -1303,8 +1256,6 @@ Int32 BZ2_decompress(DState *s) {
                     
       {
                    
-
-
                                            ;
                                
                    
@@ -1327,8 +1278,6 @@ Int32 BZ2_decompress(DState *s) {
                                          
            
          
-
-
                                        
       }
                           
@@ -1339,11 +1288,6 @@ Int32 BZ2_decompress(DState *s) {
                     
       {
                    
-
-
-
-
-
                                            ;
                                
                    
@@ -1366,11 +1310,6 @@ Int32 BZ2_decompress(DState *s) {
                                          
            
          
-
-
-
-
-
                                        
       }
                           
@@ -1380,22 +1319,16 @@ Int32 BZ2_decompress(DState *s) {
                          
                               
          
-
                                                     
                                                                           
                                   
          
-
        
                                     
                             
                     
       {
                   {
-
-
-
-
                                            ;
                                
                    
@@ -1418,10 +1351,6 @@ Int32 BZ2_decompress(DState *s) {
                                          
            
         }
-
-
-
-
                                        
       }
                                                                 
@@ -1429,7 +1358,6 @@ Int32 BZ2_decompress(DState *s) {
                     
       {
                    
-
                                             ;
                               {
                     
@@ -1452,7 +1380,6 @@ Int32 BZ2_decompress(DState *s) {
                                          
            
          
-
                                         
       }
                                                                 
@@ -1460,8 +1387,6 @@ Int32 BZ2_decompress(DState *s) {
                     
       {
                    
-
-
                                             ;
                               {
                     
@@ -1484,8 +1409,6 @@ Int32 BZ2_decompress(DState *s) {
                                          
            
          
-
-
                                         
       }
                                                                 
@@ -1493,7 +1416,6 @@ Int32 BZ2_decompress(DState *s) {
                     
       {
                    
-
                                             ;
                               {
                     
@@ -1516,7 +1438,6 @@ Int32 BZ2_decompress(DState *s) {
                                          
            
          
-
                                         
       }
                                                                 
@@ -1553,8 +1474,6 @@ Int32 BZ2_decompress(DState *s) {
                     
       {
                    
-
-
                                             ;
                               {
             v___14 =
@@ -1577,8 +1496,6 @@ Int32 BZ2_decompress(DState *s) {
                                          
            
          
-
-
                                         
       }
       s->origPtr = (s->origPtr << 8) | (Int32)uc;
@@ -1659,9 +1576,6 @@ Int32 BZ2_decompress(DState *s) {
                         
           {
                        
-
-
-
                                                 ;
                                   {
                                                          
@@ -1684,9 +1598,6 @@ Int32 BZ2_decompress(DState *s) {
                                              
                
              
-
-
-
                                             
           }
                              
@@ -2258,10 +2169,8 @@ Int32 BZ2_decompress(DState *s) {
                     es += N;
                   } else {
                                        
-
                       es += 2 * N;
                      
-
                   }
                   N *= 2;
                   if (groupPos == 0) {
@@ -2373,7 +2282,6 @@ Int32 BZ2_decompress(DState *s) {
               s->unzftab[uc] += es;
                                        
                  
-
                              
                                                        
                                     
@@ -2389,10 +2297,8 @@ Int32 BZ2_decompress(DState *s) {
                    
                                                   
                  
-
                      {
                  
-
                   while (1) {
                                                       ;
                     if (!(es > 0)) {
@@ -2408,7 +2314,6 @@ Int32 BZ2_decompress(DState *s) {
                   }
                 while_break___51: /* CIL Label */;
                  
-
               }
               goto while_continue___45;
             } else {
@@ -2678,11 +2583,9 @@ Int32 BZ2_decompress(DState *s) {
       s->state = 2;
                               
          
-
                                                     
                                                              
          
-
        
                                
               
@@ -3251,21 +3154,15 @@ void BZ2_blockSort(EState *s);
 void BZ2_compressBlock(EState *s, Bool is_last_block);
 void BZ2_bsInitWrite(EState *s);
 void BZ2_bsInitWrite(EState *s) {
-
    
-
     s->bsLive = 0;
     s->bsBuff = (UInt32)0;
            
    
-
 }
 static void bsFinishWrite(EState *s) {
-
    
-
      
-
       while (1) {
                                      ;
         if (!(s->bsLive > 0)) {
@@ -3278,15 +3175,11 @@ static void bsFinishWrite(EState *s) {
       }
     while_break: /* CIL Label */;
      
-
            
    
-
 }
 __inline static void bsW(EState *s, Int32 n, UInt32 v) {
-
    
-
     {
       while (1) {
                                      ;
@@ -3304,37 +3197,26 @@ __inline static void bsW(EState *s, Int32 n, UInt32 v) {
     s->bsLive += n;
            
    
-
 }
 static void bsPutUInt32(EState *s, UInt32 u) {
-
    
-
      
-
       bsW(s, 8, (UInt32)((long)(u >> 24) & 255L));
       bsW(s, 8, (UInt32)((long)(u >> 16) & 255L));
       bsW(s, 8, (UInt32)((long)(u >> 8) & 255L));
       bsW(s, 8, (UInt32)((long)u & 255L));
      
-
            
    
-
 }
 static void bsPutUChar(EState *s, UChar c) {
-
    
-
        bsW(s, 8, (UInt32)c);  
-
            
    
-
 }
 static void makeMaps_e(EState *s) {
   Int32 i;
-
   {
     s->nInUse = 0;
     i = 0;
@@ -3371,7 +3253,6 @@ static void generateMTFValues(EState *s) {
   register UChar rll_i;
   register UChar rtmp2;
                     
-
   {
     {
       ptr = s->ptr;
@@ -3544,19 +3425,16 @@ static void sendMTFValues(EState *s) {
                     
                     
                     
-
   {
     mtfv = s->mtfv;
                             
        
-
                 
                                               
                                                                                
                                                                                 
                                            
        
-
      
     alphaSize = s->nInUse + 2;
           
@@ -3584,10 +3462,8 @@ static void sendMTFValues(EState *s) {
      
                          
        
-
                                     
        
-
      
                         
                   
@@ -3595,22 +3471,16 @@ static void sendMTFValues(EState *s) {
                           
                     
               
-
                              
                       
                 
-
                                
                         
                   
-
             nGroups = 6;
            
-
          
-
        
-
     }
     nPart = nGroups;
     remF = s->nMTF;
@@ -3641,21 +3511,16 @@ static void sendMTFValues(EState *s) {
         }
                      {
                                  
-
                              
-
               if ((nGroups - nPart) % 2 == 1) {
                 aFreq -= s->mtfFreq[ge];
                 ge--;
               }
              
-
            
-
         }
                                 
            
-
                                                       
                                
                                                                                
@@ -3664,7 +3529,6 @@ static void sendMTFValues(EState *s) {
                                                       
                                                   
            
-
          
         v = 0;
         {
@@ -4163,22 +4027,17 @@ static void sendMTFValues(EState *s) {
     }
                          
        
-
                                     
        
-
      
                              
                                    
          
-
                                       
          
-
        
             
                                        
-
      
     i = 0;
     {
@@ -4249,17 +4108,13 @@ static void sendMTFValues(EState *s) {
         }
                                 
            
-
                                         
            
-
          
                                
            
-
                                         
            
-
          
         {
           BZ2_hbAssignCodes(&s->code[t][0], &s->len[t][0], minLen, maxLen,
@@ -4305,13 +4160,10 @@ static void sendMTFValues(EState *s) {
         }
                         {
            
-
             bsW(s, 1, (UInt32)1);
            
-
         }       
                                     
-
          
         i++;
       }
@@ -4334,13 +4186,10 @@ static void sendMTFValues(EState *s) {
               }
                                         {
                  
-
                   bsW(s, 1, (UInt32)1);
                  
-
               }       
                                           
-
                
               j++;
             }
@@ -4353,12 +4202,10 @@ static void sendMTFValues(EState *s) {
     }
                             
        
-
                                                   
                                                                              
                                   
        
-
      
     {
                        
@@ -4395,12 +4242,10 @@ static void sendMTFValues(EState *s) {
     }
                             
        
-
                                                   
                                                                   
                                   
        
-
      
                      
     t = 0;
@@ -4460,12 +4305,10 @@ static void sendMTFValues(EState *s) {
     }
                             
        
-
                                                   
                                                                      
                                   
        
-
      
                      
     selCtr = 0;
@@ -4482,15 +4325,12 @@ static void sendMTFValues(EState *s) {
         }
                                                     
            
-
                                         
            
-
          
                            
                                     
              
-
                                                                  
                                                                    
                                     
@@ -4644,7 +4484,6 @@ static void sendMTFValues(EState *s) {
                                                                 
                                                                 
              
-
                   
                         
            
@@ -4673,27 +4512,21 @@ static void sendMTFValues(EState *s) {
     }
                                   
        
-
                                     
        
-
      
                             
        
-
                                                   
                                                               
                                   
        
-
      
            
   }
 }
 void BZ2_compressBlock(EState *s, Bool is_last_block) {
-
    
-
                        {
       s->blockCRC = ~s->blockCRC;
                                                                       
@@ -4703,7 +4536,6 @@ void BZ2_compressBlock(EState *s, Bool is_last_block) {
        
                               
          
-
                   
                                                 
                          
@@ -4711,25 +4543,21 @@ void BZ2_compressBlock(EState *s, Bool is_last_block) {
                                                                     
                                                                   
          
-
        
       { BZ2_blockSort(s); }
     }
     s->zbits = (UChar *)s->arr2 + s->nblock;
                          {
        
-
         BZ2_bsInitWrite(s);
         bsPutUChar(s, (UChar)66);
         bsPutUChar(s, (UChar)90);
         bsPutUChar(s, (UChar)104);
         bsPutUChar(s, (UChar)(48 + s->blockSize100k));
        
-
     }
                        {
        
-
         bsPutUChar(s, (UChar)49);
         bsPutUChar(s, (UChar)65);
         bsPutUChar(s, (UChar)89);
@@ -4742,7 +4570,6 @@ void BZ2_compressBlock(EState *s, Bool is_last_block) {
         generateMTFValues(s);
         sendMTFValues(s);
        
-
     }
                        {
       {
@@ -4756,20 +4583,17 @@ void BZ2_compressBlock(EState *s, Bool is_last_block) {
       }
                               
          
-
                   
                                                 
                          
                                                                                
                               
          
-
        
       { bsFinishWrite(s); }
     }
            
    
-
 }
 extern __attribute__((__nothrow__)) void *(__attribute__((__leaf__))
                                            malloc)(size_t __size)
@@ -4782,7 +4606,6 @@ extern struct _IO_FILE *stdin;
 extern struct _IO_FILE *stdout;
 extern int fclose(FILE *__stream);
 extern int fflush(FILE *__stream);
-
 extern __attribute__((__nothrow__))
 FILE *(__attribute__((__leaf__)) fdopen)(int __fd, char const *__modes);
 extern int fgetc(FILE *__stream);
@@ -4824,7 +4647,6 @@ void BZ2_bzWriteClose64(int *bzerror, BZFILE *b, int abandon,
 char const *BZ2_bzlibVersion(void);
                                          
                   
-
    
      
                                
@@ -4847,7 +4669,6 @@ char const *BZ2_bzlibVersion(void);
      
                           
        
-
                 
                                               
                        
@@ -4882,15 +4703,12 @@ char const *BZ2_bzlibVersion(void);
                                                                            
                                                                        
        
-
      
                 
    
  
                                
-
    
-
                              
                  
      
@@ -4902,12 +4720,10 @@ char const *BZ2_bzlibVersion(void);
      
                
    
-
  
 static void *default_bzalloc(void *opaque, Int32 items, Int32 size) {
   void *v;
   void *tmp;
-
   {
     {
       tmp = malloc((size_t)(items * size));
@@ -4917,27 +4733,18 @@ static void *default_bzalloc(void *opaque, Int32 items, Int32 size) {
   }
 }
 static void default_bzfree(void *opaque, void *addr) {
-
    
-
                                                             
-
        
-
         free(addr);
        
-
      
-
            
    
-
 }
 static void prepare_new_block(EState *s) {
           
-
    
-
     s->nblock = 0;
     s->numZ = 0;
     s->state_out_pos = 0;
@@ -4957,43 +4764,32 @@ static void prepare_new_block(EState *s) {
                    
            
    
-
 }
 static void init_RL(EState *s) {
-
    
-
     s->state_in_ch = (UInt32)256;
     s->state_in_len = 0;
            
    
-
 }
                                    
-
    
-
                                 
-
                                 
                          
               
-
                          
        
-
              
                        
      
    
-
  
 int BZ2_bzCompressInit(bz_stream *strm, int blockSize100k___0,
                        int verbosity___0, int workFactor___0) {
   Int32 n;
   EState *s;
           
-
   {
                              
                
@@ -5054,31 +4850,23 @@ int BZ2_bzCompressInit(bz_stream *strm, int blockSize100k___0,
            
                                                                      
              
-
                                                                
              
-
            
                                                                      
              
-
                                                                
              
-
            
                                                                      
              
-
                                                                
              
-
            
                                                                
              
-
                                                          
              
-
            
                       
          
@@ -5111,7 +4899,6 @@ int BZ2_bzCompressInit(bz_stream *strm, int blockSize100k___0,
 static void add_pair_to_block(EState *s) {
   Int32 i;
   UChar ch;
-
   {
     ch = (UChar)s->state_in_ch;
     i = 0;
@@ -5176,22 +4963,15 @@ static void add_pair_to_block(EState *s) {
   }
 }
 static void flush_RL(EState *s) {
-
    
-
                                 
-
        
-
         add_pair_to_block(s);
        
-
      
-
                    
            
    
-
 }
 static Bool copy_input_until_stop(EState *s) {
   Bool progress_in;
@@ -5199,12 +4979,10 @@ static Bool copy_input_until_stop(EState *s) {
   UChar ch;
                   
                
-
   {
                           
                       {
        
-
                   {
                                        ;
                                                 
@@ -5237,10 +5015,8 @@ static Bool copy_input_until_stop(EState *s) {
               _L:
                 if (s->state_in_ch < 256U) {
                    
-
                     add_pair_to_block(s);
                    
-
                 }
                 s->state_in_ch = zchh;
                 s->state_in_len = 1;
@@ -5258,10 +5034,8 @@ static Bool copy_input_until_stop(EState *s) {
         }
       while_break: /* CIL Label */;
        
-
     }       
        
-
                    
                                             
                                                 
@@ -5297,10 +5071,8 @@ static Bool copy_input_until_stop(EState *s) {
                      
                                             
                    
-
                                          
                    
-
                  
                                           
                                     
@@ -5319,14 +5091,12 @@ static Bool copy_input_until_stop(EState *s) {
          
                                        
        
-
      
     return (progress_in);
   }
 }
 static Bool copy_output_until_stop(EState *s) {
   Bool progress_out;
-
   {
                            
     {
@@ -5362,7 +5132,6 @@ static Bool handle_compress(bz_stream *strm) {
                
   Bool tmp___2;
   int tmp___3;
-
   {
                           
                            
@@ -5380,17 +5149,13 @@ static Bool handle_compress(bz_stream *strm) {
            
                             {
                                            
-
                
                                         
                
                             
-
                 goto while_break;
                
-
              
-
           }
            
                                  
@@ -5414,14 +5179,11 @@ static Bool handle_compress(bz_stream *strm) {
           }
           if (s->mode != 2) {
                                            
-
                
-
                 flush_RL(s);
                 BZ2_compressBlock(s, (Bool)(s->mode == 4));
                 s->state = 1;
                
-
                      
                       
              
@@ -5429,18 +5191,14 @@ static Bool handle_compress(bz_stream *strm) {
              
                                             
                
-
                                               
                              
                
-
                      
-
                                               
                                  
                
              
-
           }
         }
       }
@@ -5464,7 +5222,6 @@ int BZ2_bzCompress(bz_stream *strm, int action) {
   int tmp;
                
   Bool tmp___1;
-
   {
                                                             
                   
@@ -5509,9 +5266,7 @@ int BZ2_bzCompress(bz_stream *strm, int action) {
                     
                        
               
-
                           
-
                                               
           s->mode = 4;
                          
@@ -5519,7 +5274,6 @@ int BZ2_bzCompress(bz_stream *strm, int action) {
                       
          
        
-
     }
                          
                       
@@ -5559,7 +5313,6 @@ int BZ2_bzCompress(bz_stream *strm, int action) {
            {
                                   
                     
-
         if (s->state_out_pos < s->numZ) {
           return (3);
         }
@@ -5576,7 +5329,6 @@ int BZ2_bzCompress(bz_stream *strm, int action) {
 }
 int BZ2_bzCompressEnd(bz_stream *strm) {
   EState *s;
-
   {
                                                             
                   
@@ -5590,24 +5342,18 @@ int BZ2_bzCompressEnd(bz_stream *strm) {
      
                                                               {
        
-
         (*(strm->bzfree))(strm->opaque, (void *)s->arr1);
        
-
     }
                                                               {
        
-
         (*(strm->bzfree))(strm->opaque, (void *)s->arr2);
        
-
     }
                                                               {
        
-
         (*(strm->bzfree))(strm->opaque, (void *)s->ftab);
        
-
     }
     {
       (*(strm->bzfree))(strm->opaque, strm->state);
@@ -5619,7 +5365,6 @@ int BZ2_bzCompressEnd(bz_stream *strm) {
 int BZ2_bzDecompressInit(bz_stream *strm, int verbosity___0, int small) {
   DState *s;
           
-
   {
                              
                
@@ -5689,11 +5434,9 @@ static Bool unRLE_obuf_to_output_FAST(DState *s) {
                         
   Int32 s_save_nblockPP;
   unsigned int total_out_lo32_old;
-
   {
                              
        
-
                    
                                         
            
@@ -5860,10 +5603,7 @@ static Bool unRLE_obuf_to_output_FAST(DState *s) {
          
                                    
        
-
             
-
-
                                                    
       c_state_out_ch = s->state_out_ch;
       c_state_out_len = s->state_out_len;
@@ -5998,8 +5738,6 @@ static Bool unRLE_obuf_to_output_FAST(DState *s) {
                                         
       (s->strm)->avail_out = cs_avail_out;
      
-
-
                      
   }
 }
@@ -6007,7 +5745,6 @@ static Bool unRLE_obuf_to_output_FAST(DState *s) {
            
            
             
-
    
            
              
@@ -6036,13 +5773,9 @@ static Bool unRLE_obuf_to_output_FAST(DState *s) {
               
               
               
-
    
-
                              
-
        
-
                    
                                         
            
@@ -6234,10 +5967,8 @@ static Bool unRLE_obuf_to_output_FAST(DState *s) {
          
                                    
        
-
              
        
-
                    
                                             
            
@@ -6359,17 +6090,14 @@ static Bool unRLE_obuf_to_output_FAST(DState *s) {
          
                                        
        
-
      
    
-
  
 int BZ2_bzDecompress(bz_stream *strm) {
   Bool corrupt;
   DState *s;
   Int32 r;
   Int32 tmp;
-
   {
                                                             
                   
@@ -6390,13 +6118,10 @@ int BZ2_bzDecompress(bz_stream *strm) {
         if (s->state == 2) {
                                    
              
-
                                                       
              
-
                  {
                corrupt = unRLE_obuf_to_output_FAST(s);  
-
           }
                         
                         
@@ -6406,20 +6131,16 @@ int BZ2_bzDecompress(bz_stream *strm) {
                                                              
                                       
                  
-
                                                             
                                                                                
                                                                     
                  
-
                
                                       
                  
-
                                                             
                                                                 
                  
-
                
                                                                
                             
@@ -6443,14 +6164,12 @@ int BZ2_bzDecompress(bz_stream *strm) {
                        
                                     
                
-
                                                           
                                    
                                                                                 
                                                                                 
                                                                         
                
-
              
                                                                    
                           
@@ -6470,7 +6189,6 @@ int BZ2_bzDecompress(bz_stream *strm) {
 }
 int BZ2_bzDecompressEnd(bz_stream *strm) {
   DState *s;
-
   {
                                                             
                   
@@ -6484,24 +6202,18 @@ int BZ2_bzDecompressEnd(bz_stream *strm) {
      
                                                             {
        
-
         (*(strm->bzfree))(strm->opaque, (void *)s->tt);
        
-
     }
                                                                
        
-
                                                          
        
-
      
                                                               
        
-
                                                         
        
-
      
     {
       (*(strm->bzfree))(strm->opaque, strm->state);
@@ -6513,9 +6225,7 @@ int BZ2_bzDecompressEnd(bz_stream *strm) {
                              
           
             
-
    
-
      
                      
               
@@ -6526,7 +6236,6 @@ int BZ2_bzDecompressEnd(bz_stream *strm) {
                      
                      
    
-
  
 BZFILE *BZ2_bzWriteOpen(int *bzerror, FILE *f, int blockSize100k___0,
                         int verbosity___0, int workFactor___0) {
@@ -6534,7 +6243,6 @@ BZFILE *BZ2_bzWriteOpen(int *bzerror, FILE *f, int blockSize100k___0,
   bzFile *bzf;
           
                     
-
   {
                                 
                                                                
@@ -6639,7 +6347,6 @@ void BZ2_bzWrite(int *bzerror, BZFILE *b, void *buf, int len) {
   bzFile *bzf;
           
               
-
   {
     bzf = (bzFile *)b;
                                                                
@@ -6764,7 +6471,6 @@ void BZ2_bzWriteClose64(int *bzerror, BZFILE *b, int abandon,
               
               
               
-
   {
     bzf = (bzFile *)b;
                                                            
@@ -6809,9 +6515,7 @@ void BZ2_bzWriteClose64(int *bzerror, BZFILE *b, int abandon,
      
                   {
                               
-
          
-
           while (1) {
                                          ;
             {
@@ -6832,14 +6536,12 @@ void BZ2_bzWriteClose64(int *bzerror, BZFILE *b, int abandon,
              
                                              {
                
-
                 n = (Int32)(5000U - bzf->strm.avail_out);
                 n2 = (Int32)fwrite(
                     (void const * /* __restrict  */)((void *)(bzf->buf)),
                     sizeof(UChar), (size_t)n,
                     (FILE * /* __restrict  */) bzf->handle);
                
-
                             
                         
                       
@@ -6862,9 +6564,7 @@ void BZ2_bzWriteClose64(int *bzerror, BZFILE *b, int abandon,
           }
         while_break: /* CIL Label */;
          
-
        
-
     }
                    
        
@@ -6917,7 +6617,6 @@ BZFILE *BZ2_bzReadOpen(int *bzerror, FILE *f, int verbosity___0, int small,
   int ret;
           
                     
-
   {
                                 
                                                                
@@ -7037,7 +6736,6 @@ BZFILE *BZ2_bzReadOpen(int *bzerror, FILE *f, int verbosity___0, int small,
 }
 void BZ2_bzReadClose(int *bzerror, BZFILE *b) {
   bzFile *bzf;
-
   {
     bzf = (bzFile *)b;
                                                                
@@ -7066,10 +6764,8 @@ void BZ2_bzReadClose(int *bzerror, BZFILE *b) {
      
                             {
        
-
         BZ2_bzDecompressEnd(&bzf->strm);
        
-
     }
     { free((void *)bzf); }
            
@@ -7083,7 +6779,6 @@ int BZ2_bzRead(int *bzerror, BZFILE *b, void *buf, int len) {
               
   Bool tmp___1;
                
-
   {
     bzf = (bzFile *)b;
                                                                
@@ -7148,7 +6843,6 @@ int BZ2_bzRead(int *bzerror, BZFILE *b, void *buf, int len) {
                                           
            
                          
-
             {
               n = (Int32)fread((void * /* __restrict  */)(bzf->buf),
                                sizeof(UChar), (size_t)5000,
@@ -7168,7 +6862,6 @@ int BZ2_bzRead(int *bzerror, BZFILE *b, void *buf, int len) {
             bzf->strm.avail_in = (unsigned int)bzf->bufN;
             bzf->strm.next_in = bzf->buf;
            
-
         }
         { ret = BZ2_bzDecompress(&bzf->strm); }
                        
@@ -7226,9 +6919,7 @@ int BZ2_bzRead(int *bzerror, BZFILE *b, void *buf, int len) {
 }
                                                                                 
               
-
    
-
                       
                                                            
                                                                  
@@ -7263,10 +6954,8 @@ int BZ2_bzRead(int *bzerror, BZFILE *b, void *buf, int len) {
        
      
                                                                
-
                    
      
-
                                                            
                        
      
@@ -7274,13 +6963,10 @@ int BZ2_bzRead(int *bzerror, BZFILE *b, void *buf, int len) {
                                         
            
    
-
  
 char const *BZ2_bzlibVersion(void) {
                    
-
      return ("1.0.5, 10-Dec-2007");  
-
 }
                                                                           
                                                                      
@@ -7378,9 +7064,7 @@ static void copyFileName(Char *to, Char *from);
 static void *myMalloc(Int32 n);
 static void applySavedFileAttrToOutputFile(IntNative fd);
                                                                       
-
    
-
                                            
                                            
                                           
@@ -7391,13 +7075,11 @@ static void applySavedFileAttrToOutputFile(IntNative fd);
                                    
            
    
-
  
                                            
           
               
              
-
    
                
               
@@ -7419,9 +7101,7 @@ static void applySavedFileAttrToOutputFile(IntNative fd);
  
                                       
           
-
    
-
           
      
                  
@@ -7438,13 +7118,11 @@ static void applySavedFileAttrToOutputFile(IntNative fd);
      
                      
    
-
  
                                       
              
              
           
-
    
                     
           
@@ -7473,7 +7151,6 @@ static void applySavedFileAttrToOutputFile(IntNative fd);
            
                    
                     
-
    
              
                 
@@ -7511,7 +7188,6 @@ static void applySavedFileAttrToOutputFile(IntNative fd);
 static Bool myfeof___0(FILE *f) {
   Int32 c;
   Int32 tmp;
-
   {
     {
       tmp = fgetc(f);
@@ -7556,7 +7232,6 @@ static void compressStream(FILE *stream, FILE *zStream) {
                     
                     
                     
-
   {
      
                       
@@ -7578,11 +7253,9 @@ static void compressStream(FILE *stream, FILE *zStream) {
      
                          
        
-
                                                   
                                                        
        
-
      
     {
       while (1) {
@@ -7601,10 +7274,8 @@ static void compressStream(FILE *stream, FILE *zStream) {
         }
                        {
            
-
             BZ2_bzWrite(&bzerr, bzf, (void *)(ibuf), nIbuf);
            
-
         }
                          
                           
@@ -7659,11 +7330,9 @@ static void compressStream(FILE *stream, FILE *zStream) {
                                  
                                    
            
-
                                                       
                                                                                
            
-
                 
                   
          
@@ -7755,7 +7424,6 @@ static Bool uncompressStream(FILE *zStream, FILE *stream) {
                     
                     
                     
-
   {
     {
                       
@@ -7799,19 +7467,15 @@ static Bool uncompressStream(FILE *zStream, FILE *stream) {
                       
                    {
                                
-
               _L:
                                         {
                    
-
                     fwrite((void const * /* __restrict  */)(obuf),
                            sizeof(UChar), (size_t)nread,
                            (FILE * /* __restrict  */) stream);
                    
-
                 }
                
-
             }
             { tmp___1 = ferror(stream); }
             if (tmp___1) {
@@ -7826,10 +7490,8 @@ static Bool uncompressStream(FILE *zStream, FILE *stream) {
                                                                     
                          
            
-
                                                 
            
-
          
                                         
               
@@ -7847,10 +7509,8 @@ static Bool uncompressStream(FILE *zStream, FILE *stream) {
         { BZ2_bzReadClose(&bzerr, bzf); }
                          
            
-
                                                 
            
-
          
                            
            
@@ -7901,11 +7561,9 @@ static Bool uncompressStream(FILE *zStream, FILE *stream) {
                                                  
                          
        
-
                                                   
                                                            
        
-
      
     return ((Bool)1);
          
@@ -7931,11 +7589,9 @@ static Bool uncompressStream(FILE *zStream, FILE *stream) {
            
                           
              
-
                                                                            
                                                                        
              
-
            
                                        
                         
@@ -7993,31 +7649,25 @@ static Bool uncompressStream(FILE *zStream, FILE *stream) {
                                
                                                            
          
-
                           
          
-
        
                                                            
          
-
                          
          
-
        
                           
                          
               
                     
            
-
                     
                                                   
                                                                               
                                                                        
                                   
            
-
          
                          
        
@@ -8053,7 +7703,6 @@ static Bool testStream(FILE *zStream) {
                     
                     
                     
-
   {
     {
                       
@@ -8098,10 +7747,8 @@ static Bool testStream(FILE *zStream) {
                                                                     
                          
            
-
                                           
            
-
          
                                         
               
@@ -8119,10 +7766,8 @@ static Bool testStream(FILE *zStream) {
         { BZ2_bzReadClose(&bzerr, bzf); }
                          
            
-
                                           
            
-
          
                            
            
@@ -8145,21 +7790,17 @@ static Bool testStream(FILE *zStream) {
      
                          
        
-
                                                   
                                                            
        
-
      
     return ((Bool)1);
                                                        
                          
        
-
                                                   
                                                                                
        
-
      
      
                         
@@ -8212,10 +7853,8 @@ static Bool testStream(FILE *zStream) {
                                
                                                            
          
-
                           
          
-
        
                           
          
@@ -8227,12 +7866,10 @@ static Bool testStream(FILE *zStream) {
               
                     
            
-
                                                       
                                                                               
                                                                       
            
-
          
                          
        
@@ -8247,25 +7884,17 @@ static Bool testStream(FILE *zStream) {
   }
 }
                               
-
    
-
                         
-
                     
      
-
            
    
-
  
                            
-
    
-
                 
        
-
                 
                                               
                        
@@ -8277,37 +7906,29 @@ static Bool testStream(FILE *zStream) {
                                                                               
                                                                  
        
-
      
            
    
-
  
                                  
-
    
-
                 
        
-
                 
                                               
                        
                                                                               
                              
        
-
      
            
    
-
  
 static __attribute__((__noreturn__)) void cleanUpAndFail(Int32 ec);
                                       
                    
                       
                    
-
    
                        
                         
@@ -8319,27 +7940,22 @@ static __attribute__((__noreturn__)) void cleanUpAndFail(Int32 ec);
                             
                         
                
-
                         
                                                       
                                                                                 
                                                                            
                                        
                
-
              
                                                         
                                              
                
-
                                                
                
-
              
                                                          
                               
                
-
                         
                                                       
                                
@@ -8347,11 +7963,9 @@ static __attribute__((__noreturn__)) void cleanUpAndFail(Int32 ec);
                                                                             
                               
                
-
              
                   
              
-
                       
                                                     
                                                                               
@@ -8373,7 +7987,6 @@ static __attribute__((__noreturn__)) void cleanUpAndFail(Int32 ec);
                                                                               
                                 
              
-
            
          
        
@@ -8382,7 +7995,6 @@ static __attribute__((__noreturn__)) void cleanUpAndFail(Int32 ec);
                              
                                                
            
-
                                                       
                                
                                                                              
@@ -8392,7 +8004,6 @@ static __attribute__((__noreturn__)) void cleanUpAndFail(Int32 ec);
                                                      
                                                       
            
-
          
        
      
@@ -8404,11 +8015,8 @@ static __attribute__((__noreturn__)) void cleanUpAndFail(Int32 ec);
  
 static __attribute__((__noreturn__)) void panic(Char const *s);
                                   
-
    
-
      
-
               
                                             
                      
@@ -8419,17 +8027,12 @@ static __attribute__((__noreturn__)) void panic(Char const *s);
                       
                         
      
-
    
-
  
 static __attribute__((__noreturn__)) void crcError(void);
                             
-
    
-
      
-
                                                 
                                                                             
                                                                        
@@ -8438,18 +8041,13 @@ static __attribute__((__noreturn__)) void crcError(void);
                 
                         
      
-
    
-
  
 static __attribute__((__noreturn__)) void compressedStreamEOF(void);
                                        
-
    
-
                 
        
-
                                                   
                                                                               
                                                                                
@@ -8460,19 +8058,14 @@ static __attribute__((__noreturn__)) void compressedStreamEOF(void);
                         
                   
        
-
      
                           
    
-
  
 static __attribute__((__noreturn__)) void ioError(void);
 static void ioError(void) {
-
    
-
      
-
               
                                             
                                                                                
@@ -8482,33 +8075,23 @@ static void ioError(void) {
                       
                         
      
-
    
-
 }
                                           
-
    
-
      
-
                                                 
                                                                             
                                                                      
                         
                         
      
-
    
-
  
                                                    
-
    
-
                       
        
-
                 
                                               
                        
@@ -8538,10 +8121,8 @@ static void ioError(void) {
                                                                 
                       
        
-
             
        
-
                 
                                               
                        
@@ -8575,33 +8156,24 @@ static void ioError(void) {
                                                                 
                       
        
-
      
                         
                       
        
-
                           
        
-
             
        
-
                   
                           
        
-
      
    
-
  
 static __attribute__((__noreturn__)) void outOfMemory(void);
 static void outOfMemory(void) {
-
    
-
      
-
       fprintf(
           (FILE * /* __restrict  */) stderr,
           (char const
@@ -8610,17 +8182,12 @@ static void outOfMemory(void) {
                       
                         
      
-
    
-
 }
 static __attribute__((__noreturn__)) void configError(void);
                                
-
    
-
      
-
               
                                             
                      
@@ -8634,15 +8201,12 @@ static __attribute__((__noreturn__)) void configError(void);
                  
                       
      
-
    
-
  
                           
           
              
                  
-
    
                                       
                                         
@@ -8669,13 +8233,10 @@ static __attribute__((__noreturn__)) void configError(void);
  
 static void copyFileName(Char *to, Char *from) {
              
-
    
-
                                          
                        
        
-
                                                   
                            
                                                                         
@@ -8686,24 +8247,19 @@ static void copyFileName(Char *to, Char *from) {
                    
                         
        
-
      
      
-
       strncpy((char * /* __restrict  */)to,
               (char const * /* __restrict  */)from, (size_t)1024);
                                   
      
-
            
    
-
 }
                                     
             
                 
               
-
    
      
                                                            
@@ -8713,10 +8269,8 @@ static void copyFileName(Char *to, Char *from) {
      
                                                            
        
-
                     
        
-
      
                     
    
@@ -8724,7 +8278,6 @@ static void copyFileName(Char *to, Char *from) {
 static FILE *fopen_output_safely(Char *name, char const *mode) {
   FILE *fp;
   IntNative fh;
-
   {
     { fh = open((char const *)name, 193, 384); }
                    
@@ -8733,10 +8286,8 @@ static FILE *fopen_output_safely(Char *name, char const *mode) {
     { fp = fdopen(fh, mode); }
                                                           
        
-
                   
        
-
      
     return (fp);
   }
@@ -8745,7 +8296,6 @@ static FILE *fopen_output_safely(Char *name, char const *mode) {
               
                       
                    
-
    
      
                                                      
@@ -8764,7 +8314,6 @@ static FILE *fopen_output_safely(Char *name, char const *mode) {
               
                       
                    
-
    
      
                                                      
@@ -8779,7 +8328,6 @@ static FILE *fopen_output_safely(Char *name, char const *mode) {
                                 
                                                   
                    
-
    
      
                                                             
@@ -8787,10 +8335,8 @@ static FILE *fopen_output_safely(Char *name, char const *mode) {
      
                       
        
-
                   
        
-
      
            
    
@@ -8798,7 +8344,6 @@ static FILE *fopen_output_safely(Char *name, char const *mode) {
                                                            
                    
                          
-
    
      
                                                    
@@ -8807,34 +8352,27 @@ static FILE *fopen_output_safely(Char *name, char const *mode) {
      
                       
        
-
                   
        
-
      
            
    
  
                                                           
                    
-
    
                                                   
                       
        
-
                   
        
-
      
                                                              
            
    
  
                                               
-
                         
-
  
                                                           
                                                     
@@ -8844,9 +8382,7 @@ static FILE *fopen_output_safely(Char *name, char const *mode) {
            
                 
               
-
    
-
      
                                            
                
@@ -8862,16 +8398,13 @@ static FILE *fopen_output_safely(Char *name, char const *mode) {
      
                      
    
-
  
                                                         
                                               
            
                  
                  
-
    
-
                                          
                
                        
@@ -8885,7 +8418,6 @@ static FILE *fopen_output_safely(Char *name, char const *mode) {
      
                      
    
-
  
 static void compress(Char *name) {
   FILE *inStr;
@@ -8923,16 +8455,13 @@ static void compress(Char *name) {
                     
                     
                     
-
   {
                                       
                                                             
                          
          
-
                                          
          
-
        
      
     {
@@ -8975,13 +8504,11 @@ static void compress(Char *name) {
                 
                     
            
-
                                                       
                                                                               
                                                                          
                                       
            
-
          
                        
                
@@ -9016,14 +8543,12 @@ static void compress(Char *name) {
                       
                       
              
-
                       
                                                     
                                                                                
                                                                       
                                                 
              
-
            
                          
                  
@@ -9061,13 +8586,11 @@ static void compress(Char *name) {
                       
                       
              
-
                                                         
                                                                               
                                                                               
                                         
              
-
            
                          
                  
@@ -9081,10 +8604,8 @@ static void compress(Char *name) {
                     
                              
            
-
                                             
            
-
                 
            
                                                       
@@ -9121,10 +8642,8 @@ static void compress(Char *name) {
      
                        
        
-
                                       
        
-
      
     {
                          
@@ -9184,10 +8703,8 @@ static void compress(Char *name) {
          
                                                                  
            
-
                           
            
-
          
                        
                
@@ -9223,10 +8740,8 @@ static void compress(Char *name) {
          
                                                                  
            
-
                           
            
-
          
                        
                
@@ -9243,10 +8758,8 @@ static void compress(Char *name) {
         }
                                                                   
            
-
                            
            
-
          
                        
         return;
@@ -9261,13 +8774,11 @@ static void compress(Char *name) {
     }
                          
        
-
                                                   
                                                                    
                     
                        
        
-
      
     {
                                       
@@ -9287,10 +8798,8 @@ static void compress(Char *name) {
          
                           
            
-
                       
            
-
          
        
      
@@ -9336,16 +8845,13 @@ static void uncompress(Char *name) {
                     
                     
                     
-
   {
                                       
                                                             
                          
          
-
                                            
          
-
        
      
                         
@@ -9408,13 +8914,11 @@ static void uncompress(Char *name) {
                     
                     
            
-
                                                       
                                                                               
                                                                          
                                       
            
-
          
                        
                
@@ -9467,13 +8971,11 @@ static void uncompress(Char *name) {
                       
                       
              
-
                                                         
                                                                               
                                                                               
                                         
              
-
            
                          
                  
@@ -9483,13 +8985,11 @@ static void uncompress(Char *name) {
                     
                   
          
-
                                                     
                                                                                
                                                                                
                                              
          
-
        
      
                        
@@ -9499,10 +8999,8 @@ static void uncompress(Char *name) {
                     
                              
            
-
                                             
            
-
                 
            
                                                       
@@ -9539,10 +9037,8 @@ static void uncompress(Char *name) {
      
                        
        
-
                                       
        
-
      
     {
                          
@@ -9557,13 +9053,11 @@ static void uncompress(Char *name) {
                           
                                 
       
-
       inStr = stdin;
       outStr = stdout;
       tmp___7 = fileno(stdin);
       tmp___8 = isatty(tmp___7);
      
-
                     
          
                   
@@ -9599,10 +9093,8 @@ static void uncompress(Char *name) {
          
                                                                  
            
-
                           
            
-
          
                        
                
@@ -9625,10 +9117,8 @@ static void uncompress(Char *name) {
          
                                                                  
            
-
                           
            
-
          
                        
                
@@ -9645,10 +9135,8 @@ static void uncompress(Char *name) {
          
                                                                   
            
-
                            
            
-
          
                        
                
@@ -9663,13 +9151,11 @@ static void uncompress(Char *name) {
     }
                          
        
-
                                                   
                                                                    
                     
                        
        
-
      
     {
                                       
@@ -9690,10 +9176,8 @@ static void uncompress(Char *name) {
            
                             
              
-
                         
              
-
            
          
        
@@ -9707,10 +9191,8 @@ static void uncompress(Char *name) {
          
                               
            
-
                       
            
-
          
        
      
@@ -9718,30 +9200,24 @@ static void uncompress(Char *name) {
                         
                            
          
-
                                                     
                                                              
          
-
        
             
                      
                            
          
-
                                                     
                                                                           
          
-
               
          
-
                   
                                                 
                                                                                
                                 
          
-
        
      
            
@@ -9764,16 +9240,13 @@ static void testf(Char *name) {
                     
                     
                     
-
   {
                                       
                                                             
                          
          
-
                                       
          
-
        
      
                                                 
@@ -9800,10 +9273,8 @@ static void testf(Char *name) {
                         
                             
       
-
       copyFileName(inName, name);
      
-
                         
                                   
     }
@@ -9814,13 +9285,11 @@ static void testf(Char *name) {
                 
                     
            
-
                                                       
                                                                               
                                                                          
                                       
            
-
          
                        
                
@@ -9897,11 +9366,9 @@ static void testf(Char *name) {
                                 
                                 
        
-
       inStr = fopen((char const * /* __restrict  */)(inName),
                     (char const * /* __restrict  */) "rb");
      
-
                                                                
          
                                        
@@ -9925,13 +9392,11 @@ static void testf(Char *name) {
     }
                          
        
-
                                                   
                                                                    
                     
                        
        
-
      
     {
                                                    
@@ -9940,11 +9405,9 @@ static void testf(Char *name) {
                 
                            
          
-
                                                     
                                                            
          
-
        
      
                  
@@ -9955,10 +9418,8 @@ static void testf(Char *name) {
 }
 static void license(void) {
   char const *tmp;
-
   {
      
-
       tmp = BZ2_bzlibVersion();
       fprintf(
           (FILE * /* __restrict  */) stderr,
@@ -9980,16 +9441,13 @@ static void license(void) {
                                     " \n",
           tmp);
      
-
            
   }
 }
 static void usage(Char *fullProgName) {
   char const *tmp;
-
   {
      
-
       tmp = BZ2_bzlibVersion();
       fprintf(
           (FILE * /* __restrict  */) stderr,
@@ -10028,14 +9486,11 @@ static void usage(Char *fullProgName) {
                                     "means the same as -v4 or -4v, &c.\n\n",
           tmp, fullProgName);
      
-
            
   }
 }
                                    
-
    
-
      
                                                 
                                                                         
@@ -10044,26 +9499,21 @@ static void usage(Char *fullProgName) {
      
            
    
-
  
 static void *myMalloc(Int32 n) {
   void *p;
-
   {
     { p = malloc((size_t)n); }
     if ((unsigned long)p == (unsigned long)((void *)0)) {
        
-
         outOfMemory();
        
-
     }
     return (p);
   }
 }
 static Cell *mkCell(void) {
   Cell *c;
-
   {
     {
       c = (Cell *)myMalloc((Int32)sizeof(Cell));
@@ -10078,7 +9528,6 @@ static Cell *snocString(Cell *root, Char *name) {
   Cell *tmp___0;
   size_t tmp___1;
   Cell *tmp___3;
-
   {
     if ((unsigned long)root == (unsigned long)((void *)0)) {
       {
@@ -10115,7 +9564,6 @@ static Cell *snocString(Cell *root, Char *name) {
           
                              
                                  
-
    
                                                 
                                                                
@@ -10229,49 +9677,36 @@ IntNative main(IntNative argc, Char **argv) {
                     
                     
                     
-
   {
                                
        
-
                       
        
-
             
                                   
          
-
                         
          
-
               
                                    
            
-
                           
            
-
                 
                                       
              
-
                             
              
-
                   
                                       
                
-
                               
                
-
                     
                                          
                  
-
                                 
                  
-
                
              
            
@@ -10352,10 +9787,8 @@ IntNative main(IntNative argc, Char **argv) {
          
         if ((int)*(aa->name + 0) == 45) {
                        
-
             goto __Cont;
            
-
         }
         {
           numFileNames++;
@@ -10363,10 +9796,8 @@ IntNative main(IntNative argc, Char **argv) {
         }
                                                
            
-
                                                                     
            
-
          
       __Cont:
         aa = aa->link;
@@ -10428,7 +9859,6 @@ IntNative main(IntNative argc, Char **argv) {
          
         if ((int)*(aa->name + 0) == 45) {
                                            
-
             j = 1;
             {
                         {
@@ -10584,7 +10014,6 @@ IntNative main(IntNative argc, Char **argv) {
                                             ;
             }
            
-
         }
                       
       }
@@ -10639,10 +10068,8 @@ IntNative main(IntNative argc, Char **argv) {
                          
                                             
                            
-
                                       
                            
-
                                 
                            
                                       
@@ -10650,10 +10077,8 @@ IntNative main(IntNative argc, Char **argv) {
                            
                                               
                              
-
                                         
                              
-
                                   
                              
                                                                        
@@ -10668,10 +10093,8 @@ IntNative main(IntNative argc, Char **argv) {
                                
                                                   
                                  
-
                                                       
                                  
-
                                       
                                  
                                                                            
@@ -10679,10 +10102,8 @@ IntNative main(IntNative argc, Char **argv) {
                                  
                                                     
                                    
-
                                                         
                                    
-
                                         
                                    
                                                                              
@@ -10712,11 +10133,9 @@ IntNative main(IntNative argc, Char **argv) {
                                          
                                                             
                                            
-
                                                             
                                                     
                                            
-
                                                 
                                            
                                                       
@@ -10725,7 +10144,6 @@ IntNative main(IntNative argc, Char **argv) {
                                            
                                                               
                                              
-
                                                       
                                                                             
                                                              
@@ -10744,7 +10162,6 @@ IntNative main(IntNative argc, Char **argv) {
                                                               
                                                       
                                              
-
                                            
                                          
                                        
@@ -10780,14 +10197,12 @@ IntNative main(IntNative argc, Char **argv) {
                       
                          
          
-
                                                     
                                                                              
                                                                       
                             
                   
          
-
        
      
                        
@@ -10800,26 +10215,20 @@ IntNative main(IntNative argc, Char **argv) {
      
                        
        
-
                                     
                                      
                                     
        
-
      
     if (opMode == 1) {
                          
          
-
                                         
          
-
               
-
                          
                      
          
-
           while (1) {
                                              ;
             if (!((unsigned long)aa != (unsigned long)((void *)0))) {
@@ -10844,19 +10253,14 @@ IntNative main(IntNative argc, Char **argv) {
           }
         while_break___5: /* CIL Label */;
          
-
        
-
     } else {
       if (opMode == 2) {
                                 
                            
-
            
-
             uncompress((Char *)((void *)0));
            
-
                  
                            
                        
@@ -10888,26 +10292,20 @@ IntNative main(IntNative argc, Char **argv) {
          
                             
            
-
                        
                             
            
-
          
       } else {
                                  
                            
            
-
                                        
            
-
                 
-
                            
                        
            
-
             while (1) {
                                                ;
               if (!((unsigned long)aa != (unsigned long)((void *)0))) {
@@ -10920,10 +10318,8 @@ IntNative main(IntNative argc, Char **argv) {
                
               if ((int)*(aa->name + 0) == 45) {
                              
-
                   goto __Cont___2;
                  
-
               }
               {
                                     
@@ -10934,13 +10330,10 @@ IntNative main(IntNative argc, Char **argv) {
             }
           while_break___7: /* CIL Label */;
            
-
          
-
                              
                       
              
-
                       
                                                     
                              
@@ -10951,7 +10344,6 @@ IntNative main(IntNative argc, Char **argv) {
                          
                               
              
-
            
          
       }
@@ -10966,10 +10358,8 @@ IntNative main(IntNative argc, Char **argv) {
         aa2 = aa->link;
                                                                    {
            
-
             free((void *)aa->name);
            
-
         }
         {
           free((void *)aa);
@@ -10987,7 +10377,6 @@ __inline static void fallbackSimpleSort(UInt32 *fmap, UInt32 *eclass, Int32 lo,
   Int32 j;
   Int32 tmp;
   UInt32 ec_tmp;
-
   {
                    
              
@@ -11086,7 +10475,6 @@ static void fallbackQSort3(UInt32 *fmap, UInt32 *eclass, Int32 loSt,
   Int32 zztmp___3;
                     
                     
-
   {
                   
     sp = 0;
@@ -11101,10 +10489,8 @@ static void fallbackQSort3(UInt32 *fmap, UInt32 *eclass, Int32 loSt,
         }
                          
            
-
                                         
            
-
          
         sp--;
         lo = stackLo[sp];
@@ -11277,17 +10663,14 @@ static void fallbackSort(UInt32 *fmap, UInt32 *eclass, UInt32 *bhtab,
   UChar *eclass8;
                     
                     
-
   {
     eclass8 = (UChar *)eclass;
                     
        
-
                 
                                               
                                                                              
        
-
      
     i = 0;
     {
@@ -11398,12 +10781,10 @@ static void fallbackSort(UInt32 *fmap, UInt32 *eclass, UInt32 *bhtab,
                                          ;
                         
            
-
                                                       
                                                                               
                        
            
-
          
               
         i = 0;
@@ -11457,7 +10838,6 @@ static void fallbackSort(UInt32 *fmap, UInt32 *eclass, UInt32 *bhtab,
                                                 
                
                
-
                 while (1) {
                                                     ;
                   if (!(*(bhtab + (k >> 5)) & (unsigned int)(1 << (k & 31)))) {
@@ -11467,7 +10847,6 @@ static void fallbackSort(UInt32 *fmap, UInt32 *eclass, UInt32 *bhtab,
                 }
               while_break___12: /* CIL Label */;
                
-
             }
             l = k - 1;
             if (l >= nblock) {
@@ -11499,7 +10878,6 @@ static void fallbackSort(UInt32 *fmap, UInt32 *eclass, UInt32 *bhtab,
                                                 
                
                
-
                 while (1) {
                                                     ;
                   if (!(!(*(bhtab + (k >> 5)) &
@@ -11510,7 +10888,6 @@ static void fallbackSort(UInt32 *fmap, UInt32 *eclass, UInt32 *bhtab,
                 }
               while_break___15: /* CIL Label */;
                
-
             }
             r = k - 1;
                               
@@ -11544,12 +10921,10 @@ static void fallbackSort(UInt32 *fmap, UInt32 *eclass, UInt32 *bhtab,
         }
                         
            
-
                                                       
                                                                                 
                               
            
-
          
                
                          
@@ -11564,12 +10939,10 @@ static void fallbackSort(UInt32 *fmap, UInt32 *eclass, UInt32 *bhtab,
     }
                     
        
-
                                                   
                            
                                                                                 
        
-
      
     j = 0;
     i = 0;
@@ -11597,10 +10970,8 @@ static void fallbackSort(UInt32 *fmap, UInt32 *eclass, UInt32 *bhtab,
     }
                      
        
-
                                     
        
-
      
            
   }
@@ -11612,7 +10983,6 @@ static void fallbackSort(UInt32 *fmap, UInt32 *eclass, UInt32 *bhtab,
            
             
             
-
    
                        
                        
@@ -11700,7 +11070,6 @@ static void fallbackSort(UInt32 *fmap, UInt32 *eclass, UInt32 *bhtab,
          
                              
      
-
                  
                                       
                            
@@ -11813,7 +11182,6 @@ static void fallbackSort(UInt32 *fmap, UInt32 *eclass, UInt32 *bhtab,
        
                                  
      
-
                      
    
  
@@ -11831,7 +11199,6 @@ static void fallbackSort(UInt32 *fmap, UInt32 *eclass, UInt32 *bhtab,
            
                
                
-
    
                          
                    
@@ -11950,9 +11317,7 @@ static void fallbackSort(UInt32 *fmap, UInt32 *eclass, UInt32 *bhtab,
  
                                                         
           
-
    
-
                           
             
             
@@ -11966,7 +11331,6 @@ static void fallbackSort(UInt32 *fmap, UInt32 *eclass, UInt32 *bhtab,
      
                
    
-
  
                                                                    
                                                                        
@@ -12008,7 +11372,6 @@ static void fallbackSort(UInt32 *fmap, UInt32 *eclass, UInt32 *bhtab,
                     
                     
                     
-
    
            
                        
@@ -12023,10 +11386,8 @@ static void fallbackSort(UInt32 *fmap, UInt32 *eclass, UInt32 *bhtab,
          
                          
            
-
                                         
            
-
          
              
                          
@@ -12257,16 +11618,13 @@ static void fallbackSort(UInt32 *fmap, UInt32 *eclass, UInt32 *bhtab,
                     
                     
                     
-
    
                     
        
-
                                                   
                            
                                                                                 
        
-
      
               
      
@@ -12332,12 +11690,10 @@ static void fallbackSort(UInt32 *fmap, UInt32 *eclass, UInt32 *bhtab,
      
                     
        
-
                 
                                               
                                                                              
        
-
      
           
      
@@ -12483,7 +11839,6 @@ static void fallbackSort(UInt32 *fmap, UInt32 *eclass, UInt32 *bhtab,
                               
                                   
                      
-
                                                                 
                                          
                                                                                
@@ -12491,14 +11846,11 @@ static void fallbackSort(UInt32 *fmap, UInt32 *eclass, UInt32 *bhtab,
                                                                     
                                                                 
                      
-
                    
                    
-
                                                                                 
                                                 
                    
-
                                     
                            
                    
@@ -12512,10 +11864,8 @@ static void fallbackSort(UInt32 *fmap, UInt32 *eclass, UInt32 *bhtab,
          
                               
            
-
                                         
            
-
          
               
          
@@ -12580,14 +11930,11 @@ static void fallbackSort(UInt32 *fmap, UInt32 *eclass, UInt32 *bhtab,
                                    
                                                
                
-
                                             
                
-
              
                   
                                              
-
            
          
               
@@ -12638,10 +11985,8 @@ static void fallbackSort(UInt32 *fmap, UInt32 *eclass, UInt32 *bhtab,
            
                                                    
              
-
                                           
              
-
            
          
             
@@ -12650,13 +11995,11 @@ static void fallbackSort(UInt32 *fmap, UInt32 *eclass, UInt32 *bhtab,
      
                     
        
-
                                                   
                                                                            
                                                                         
                                                          
        
-
      
            
    
@@ -12673,7 +12016,6 @@ void BZ2_blockSort(EState *s) {
                    
   Int32 i;
           
-
   {
     ptr = s->ptr;
                      
@@ -12683,10 +12025,8 @@ void BZ2_blockSort(EState *s) {
                           
                         {
        
-
         fallbackSort(s->arr1, s->arr2, ftab, nblock, verb);
        
-
     }       
                       
                   
@@ -12721,13 +12061,11 @@ void BZ2_blockSort(EState *s) {
                        
                         
            
-
                                                       
                                
                                                                           
                                                                               
            
-
          
                                                                
        
@@ -12750,10 +12088,8 @@ void BZ2_blockSort(EState *s) {
     }
                               
        
-
                                     
        
-
      
            
   }

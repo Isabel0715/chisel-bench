@@ -586,7 +586,6 @@ struct timespec dtotimespec(double sec);
            
               
           
-
    
                        
                                                                            
@@ -795,7 +794,6 @@ void close_stdout(void) {
   int tmp___3;
                
               
-
   {
     tmp___3 = close_stream(stdout);
     if (tmp___3 != 0) {
@@ -805,7 +803,6 @@ void close_stdout(void) {
                   
          
               
-
          
          tmp = (char const *)gettext("write error");
         write_error = tmp;
@@ -819,7 +816,6 @@ void close_stdout(void) {
         }
                                  
        
-
     }
                                    
                        
@@ -846,7 +842,6 @@ int close_stream(FILE *stream) {
   int tmp___1;
                
                
-
   {
                              
                                        
@@ -861,10 +856,8 @@ int close_stream(FILE *stream) {
                            
                       
                 
-
                                        
                               
-
                  
                                
                                            
@@ -872,9 +865,7 @@ int close_stream(FILE *stream) {
              
             return (-1);
            
-
          
-
       }
     }
     return (0);
@@ -914,7 +905,6 @@ int c_strcasecmp(char const *s1, char const *s2) __attribute__((__pure__));
                                    
                    
                    
-
    
                                    
                                    
@@ -944,7 +934,6 @@ _Bool c_isspace(int c) __attribute__((__const__));
 _Bool c_isalnum(int c) __attribute__((__const__));
                         
           
-
    
                   
                     
@@ -955,9 +944,7 @@ _Bool c_isalnum(int c) __attribute__((__const__));
             
        
                              
-
                               
-
                   
                  
                   
@@ -972,11 +959,9 @@ _Bool c_isalnum(int c) __attribute__((__const__));
 _Bool c_isalpha(int c) __attribute__((__const__));
                         
           
-
    
                           
                             
-
                 
                
                 
@@ -990,11 +975,9 @@ _Bool c_isalpha(int c) __attribute__((__const__));
 _Bool c_isdigit(int c) __attribute__((__const__));
                         
           
-
    
                   
                     
-
                 
                
                 
@@ -1008,7 +991,6 @@ _Bool c_isdigit(int c) __attribute__((__const__));
 _Bool c_isspace(int c) __attribute__((__const__));
                         
           
-
    
                   
               
@@ -1041,11 +1023,9 @@ _Bool c_isspace(int c) __attribute__((__const__));
 int c_tolower(int c) __attribute__((__const__));
                       
           
-
    
                   
                     
-
                             
                
                 
@@ -1061,12 +1041,10 @@ char *last_component(char const *name) __attribute__((__pure__));
                    
                 
                   
-
    
                     
                          
                
-
                                         
                          
        
@@ -1075,7 +1053,6 @@ char *last_component(char const *name) __attribute__((__pure__));
               
              
                
-
                 
                              
        
@@ -1094,9 +1071,7 @@ char *last_component(char const *name) __attribute__((__pure__));
    
  
                                                  
-
                                   
-
  
                                  
                            
@@ -1134,13 +1109,10 @@ char *quotearg_n_style(int n, enum quoting_style s, char const *arg);
 char const *quote_n(int n, char const *name);
 __attribute__((__noreturn__)) void usage(int status);
                                   
-
    
-
              
            
    
-
  
                                              
 ptrdiff_t argmatch(char const *arg, char const *const *arglist,
@@ -1155,14 +1127,12 @@ ptrdiff_t argmatch(char const *arg, char const *const *arglist,
           
                  
               
-
    
                              
                          
                          
                   
                
-
                             
                          
        
@@ -1205,7 +1175,6 @@ ptrdiff_t argmatch(char const *arg, char const *const *arglist,
                 
                       
                 
-
    
                          
                                                   
@@ -1229,14 +1198,12 @@ ptrdiff_t argmatch(char const *arg, char const *const *arglist,
                       
                       
               
-
    
                                          
                                           
                                               
                   
                
-
                             
                          
        
@@ -1268,9 +1235,7 @@ ptrdiff_t argmatch(char const *arg, char const *const *arglist,
                                                                        
                 
                 
-
    
-
                                                    
               
                     
@@ -1281,7 +1246,6 @@ ptrdiff_t argmatch(char const *arg, char const *const *arglist,
                  
                            
    
-
  
 extern
     __attribute__((__nothrow__)) void *(__attribute__((__warn_unused_result__,
@@ -1297,7 +1261,6 @@ __inline static void *xnmalloc(size_t n, size_t s)
 __inline static void *xnmalloc(size_t n, size_t s) {
           
   void *tmp___0;
-
   {
                                               
                
@@ -1320,9 +1283,7 @@ uintmax_t(__attribute__((__leaf__)) strtoumax)(char const *__restrict __nptr,
 strtol_error xstrtoumax(char const *s, char **ptr, int strtol_base,
                         uintmax_t *val, char const *valid_suffixes);
                                                                
-
    
-
                                                                   
                                 
                                
@@ -1330,13 +1291,11 @@ strtol_error xstrtoumax(char const *s, char **ptr, int strtol_base,
                                   
                              
    
-
  
                                                                            
                    
                    
               
-
    
                           
                
@@ -1370,9 +1329,7 @@ strtol_error xstrtoumax(char const *s, char **ptr, int strtol_base,
                         
                 
                 
-
    
-
                           
                            
                                  
@@ -1410,21 +1367,14 @@ strtol_error xstrtoumax(char const *s, char **ptr, int strtol_base,
                  
                                        
                                                 
-
                            
-
                     
-
                                                        
                         
                                
                   
-
-
             return ((strtol_error)4);
            
-
-
                  
                                    
          
@@ -1574,7 +1524,6 @@ strtol_error xstrtoumax(char const *s, char **ptr, int strtol_base,
                
                  
    
-
 }
 strtol_error xstrtoul(char const *s, char **ptr, int strtol_base,
                       unsigned long *val, char const *valid_suffixes);
@@ -1582,9 +1531,7 @@ extern __attribute__((__nothrow__)) unsigned long(__attribute__((
     __nonnull__(1), __leaf__)) strtoul)(char const *__restrict __nptr,
                                         char **__restrict __endptr, int __base);
                                                                        
-
    
-
                                                                   
                                 
                                
@@ -1592,14 +1539,12 @@ extern __attribute__((__nothrow__)) unsigned long(__attribute__((
                                       
                              
    
-
  
                                                                       
                                                        
                    
                    
               
-
    
                           
                
@@ -1633,7 +1578,6 @@ extern __attribute__((__nothrow__)) unsigned long(__attribute__((
                         
                 
                 
-
    
                           
                            
@@ -1701,7 +1645,6 @@ extern __attribute__((__nothrow__)) unsigned long(__attribute__((
                    
      
                           
-
                   
                    
                                                    
@@ -1827,7 +1770,6 @@ extern __attribute__((__nothrow__)) unsigned long(__attribute__((
                                                      
        
      
-
                
                  
    
@@ -1848,7 +1790,6 @@ static void xstrtol_error(enum strtol_error err, int opt_idx, char c,
   char const *option;
   char option_buffer[2];
   char *tmp;
-
   {
     hyphens = "--";
                                   
@@ -1894,13 +1835,10 @@ xstrtol_fatal(enum strtol_error err, int opt_idx, char c,
               struct option const *long_options___2, char const *arg);
 void xstrtol_fatal(enum strtol_error err, int opt_idx, char c,
                    struct option const *long_options___2, char const *arg) {
-
    
-
     xstrtol_error(err, opt_idx, c, long_options___2, arg, (int)exit_failure);
             
    
-
 }
 extern __attribute__((__nothrow__)) int(__attribute__((__leaf__))
                                         ferror)(FILE *__stream);
@@ -1915,9 +1853,7 @@ int(__attribute__((__nonnull__(1)))
               
                
                
-
    
-
                                
                    
                
@@ -1939,7 +1875,6 @@ int(__attribute__((__nonnull__(1)))
                
                
    
-
  
 int memcoll0(char const *s1, size_t s1size, char const *s2, size_t s2size);
 char *quotearg_n_style_mem(int n, enum quoting_style s, char const *arg,
@@ -1952,7 +1887,6 @@ int xmemcoll0(char const *s1, size_t s1size, char const *s2, size_t s2size);
                 
                 
                 
-
    
                                               
                                                  
@@ -1970,7 +1904,6 @@ int xmemcoll0(char const *s1, size_t s1size, char const *s2, size_t s2size);
           
                       
                
-
    
                                            
                
@@ -1989,16 +1922,13 @@ void *xmemdup(void const *p, size_t s)
                                                                  
            
             
-
    
             
              
                
-
                       
                           
        
-
             
                                           
                      
@@ -2022,25 +1952,20 @@ void *xmalloc(size_t n) __attribute__((__malloc__, __alloc_size__(1)));
 void *xmalloc(size_t n) {
   void *p;
   void *tmp;
-
   {
     tmp = malloc(n);
     p = tmp;
     if (!p) {
                      
-
         xalloc_die();
        
-
     }
     return (p);
   }
 }
 void *xrealloc(void *p, size_t n) __attribute__((__alloc_size__(2)));
                                    
-
    
-
              
               
                 
@@ -2055,13 +1980,11 @@ void *xrealloc(void *p, size_t n) __attribute__((__alloc_size__(2)));
      
                
    
-
  
 void *xcalloc(size_t n, size_t s)
     __attribute__((__malloc__, __alloc_size__(1, 2)));
                                    
           
-
    
                      
              
@@ -2075,7 +1998,6 @@ void *xmemdup(void const *p, size_t s)
                                         
             
                 
-
    
                      
                                 
@@ -2085,7 +2007,6 @@ void *xmemdup(void const *p, size_t s)
 __attribute__((__noreturn__)) void xalloc_die(void);
 void xalloc_die(void) {
   char *tmp;
-
   {
     tmp = gettext("memory exhausted");
     error((int)exit_failure, 0, "%s", tmp);
@@ -2123,7 +2044,6 @@ void version_etc(FILE *stream, char const *command_name, char const *package,
                 
                 
                  
-
    
                        
                                                                       
@@ -2233,11 +2153,9 @@ void version_etc(FILE *stream, char const *command_name, char const *package,
                    
                           
                   
-
    
                           
                
-
                              
                                                       
                                  
@@ -2260,7 +2178,6 @@ void version_etc(FILE *stream, char const *command_name, char const *package,
                                                                              
                                             
                   
-
    
                                          
                                                                     
@@ -2290,7 +2207,6 @@ char const *locale_charset(void);
                                                                       
                                                                           
           
-
    
                                                                       
                  
@@ -2326,7 +2242,6 @@ char *(__attribute__((__warn_unused_result__)) uinttostr)(unsigned int i,
                                                                          
                                                                           
           
-
    
                                                                          
                  
@@ -2367,14 +2282,11 @@ size_t(__attribute__((__leaf__))
                 size_t __n, mbstate_t *__restrict __p);
                                      
                                         
-
    
-
                                                                     
                                                       
                          
    
-
  
 #pragma weak pthread_key_create
 #pragma weak pthread_getspecific
@@ -2391,9 +2303,7 @@ strnumcmp(char const *a, char const *b, int decimal_point___0,
                                                                    
                   
                       
-
    
-
                                                           
                                                             
                    
@@ -2430,7 +2340,6 @@ strnumcmp(char const *a, char const *b, int decimal_point___0,
                                                                   
                          
                    
-
                                          
                                  
            
@@ -2444,7 +2353,6 @@ strnumcmp(char const *a, char const *b, int decimal_point___0,
                                                                 
                            
                      
-
                                            
                                    
              
@@ -2458,7 +2366,6 @@ strnumcmp(char const *a, char const *b, int decimal_point___0,
      
                                               
    
-
  
                                              
                                                                
@@ -2472,12 +2379,10 @@ strnumcmp(char const *a, char const *b, int decimal_point___0,
               
                                         
               
-
    
                              
                              
                           
-
                  
             
                                  
@@ -2503,7 +2408,6 @@ strnumcmp(char const *a, char const *b, int decimal_point___0,
                                                        
          
                    
-
                                    
                                                     
                                    
@@ -2537,7 +2441,6 @@ strnumcmp(char const *a, char const *b, int decimal_point___0,
        
                      
                  
-
                                      
                                                   
                                  
@@ -2573,20 +2476,15 @@ strnumcmp(char const *a, char const *b, int decimal_point___0,
               
          
                                               
-
                                                   
-
                                                                  
                              
            
-
          
-
        
                                   
                         
                  
-
                                                 
                                
          
@@ -2603,7 +2501,6 @@ strnumcmp(char const *a, char const *b, int decimal_point___0,
                     
                         
                  
-
                                                 
                                
          
@@ -2656,7 +2553,6 @@ strnumcmp(char const *a, char const *b, int decimal_point___0,
                                                     
          
                    
-
                                    
                                                     
                                     
@@ -2680,7 +2576,6 @@ strnumcmp(char const *a, char const *b, int decimal_point___0,
                                                                              
               
                    
-
                                    
                                                     
                                     
@@ -2691,7 +2586,6 @@ strnumcmp(char const *a, char const *b, int decimal_point___0,
          
                         
                    
-
                                    
                                                     
                                     
@@ -2702,7 +2596,6 @@ strnumcmp(char const *a, char const *b, int decimal_point___0,
          
                         
                    
-
                                        
                                                     
                                     
@@ -2747,7 +2640,6 @@ strnumcmp(char const *a, char const *b, int decimal_point___0,
                                     
                           
                    
-
                                                   
                                   
            
@@ -2764,7 +2656,6 @@ strnumcmp(char const *a, char const *b, int decimal_point___0,
                        
                           
                    
-
                                                   
                                   
            
@@ -2799,7 +2690,6 @@ strnumcmp(char const *a, char const *b, int decimal_point___0,
                                                               
                                   
                                     
-
    
                                                                  
                  
@@ -2810,7 +2700,6 @@ size_t strnlen1(char const *string, size_t maxlen) __attribute__((__pure__));
                                                     
                   
                   
-
    
                                                                      
               
@@ -2832,13 +2721,10 @@ extern size_t fread_unlocked(void *__restrict __ptr, size_t __size, size_t __n,
 extern __attribute__((__nothrow__)) int(__attribute__((__leaf__))
                                         feof_unlocked)(FILE *__stream);
                                                        
-
    
-
                                                       
            
    
-
  
 extern __attribute__((__nothrow__)) int(__attribute__((__leaf__))
                                         raise)(int __sig);
@@ -2854,9 +2740,7 @@ extern int _obstack_begin(struct obstack *, int, int, void *(*)(long),
 void readtokens0_init(struct Tokens *t);
 _Bool readtokens0(FILE *in, struct Tokens *t);
                                          
-
    
-
                          
                                   
                                        
@@ -2868,7 +2752,6 @@ _Bool readtokens0(FILE *in, struct Tokens *t);
                                               
            
    
-
  
                                           
              
@@ -2882,7 +2765,6 @@ _Bool readtokens0(FILE *in, struct Tokens *t);
                            
                           
             
-
    
                                                
                                                                            
@@ -2951,7 +2833,6 @@ _Bool readtokens0(FILE *in, struct Tokens *t);
                 
               
               
-
    
                
                       
@@ -3053,7 +2934,6 @@ _Bool readtokens0(FILE *in, struct Tokens *t);
    
  
 extern int getc_unlocked(FILE *__stream);
-
 extern __attribute__((__nothrow__)) int(__attribute__((__leaf__))
                                         fileno)(FILE *__stream);
 struct randread_source *randread_new(char const *name, size_t bytes_bound);
@@ -3083,7 +2963,6 @@ FILE *fopen_safer(char const *file, char const *mode);
                
                 
                
-
    
                         
                                           
@@ -3104,7 +2983,6 @@ FILE *fopen_safer(char const *file, char const *mode);
                                                                     
                             
                               
-
    
                                                         
             
@@ -3135,7 +3013,6 @@ FILE *fopen_safer(char const *file, char const *mode);
               
                     
                         
-
    
                              
                         
@@ -3216,10 +3093,8 @@ FILE *fopen_safer(char const *file, char const *mode);
                
                             
                         
-
    
                              
-
                                                                        
                    
              
@@ -3256,7 +3131,6 @@ FILE *fopen_safer(char const *file, char const *mode);
                
                
               
-
    
                
                                                                    
@@ -3284,11 +3158,9 @@ FILE *fopen_safer(char const *file, char const *mode);
                                                                            
                  
                  
-
    
                               
                
-
                             
                          
                                               
@@ -3307,7 +3179,6 @@ FILE *fopen_safer(char const *file, char const *mode);
                       
                            
                  
-
                                                                       
                                
          
@@ -3324,14 +3195,11 @@ FILE *fopen_safer(char const *file, char const *mode);
                                                  
                                                              
      
-
            
    
  
                                                                       
-
    
-
                     
                                                     
             
@@ -3339,13 +3207,11 @@ FILE *fopen_safer(char const *file, char const *mode);
      
            
    
-
  
                                               
                
           
               
-
    
                        
                                      
@@ -3362,7 +3228,6 @@ FILE *fopen_safer(char const *file, char const *mode);
 void *hash_delete(Hash_table *table___0, void const *entry);
                                                
                           
-
    
                                                         
                               
@@ -3370,7 +3235,6 @@ void *hash_delete(Hash_table *table___0, void const *entry);
  
                                                                    
                  
-
    
                                                       
                                         
@@ -3443,7 +3307,6 @@ void *hash_delete(Hash_table *table___0, void const *entry);
                       
                       
                       
-
    
              
              
@@ -3451,7 +3314,6 @@ void *hash_delete(Hash_table *table___0, void const *entry);
              
                
                
-
                          
                 
               
@@ -3536,7 +3398,6 @@ void *hash_delete(Hash_table *table___0, void const *entry);
      
                
                
-
                          
                      
               
@@ -3654,7 +3515,6 @@ void *hash_delete(Hash_table *table___0, void const *entry);
                       
                       
                       
-
    
                        
                         
@@ -3706,7 +3566,6 @@ void *hash_delete(Hash_table *table___0, void const *entry);
                 
           
                
-
                           
                          
        
@@ -3759,7 +3618,6 @@ void *hash_delete(Hash_table *table___0, void const *entry);
               
               
                
-
                               
                              
        
@@ -3833,7 +3691,6 @@ __inline static char *xcharalloc(size_t n)
             
                 
                 
-
    
                               
                        
@@ -3862,7 +3719,6 @@ extern __attribute__((__nothrow__)) int(__attribute__((__leaf__))
                               
             
         
-
    
                           
             
@@ -3881,14 +3737,12 @@ extern __attribute__((__nothrow__)) int(__attribute__((__leaf__))
                                                       
                            
                    
-
    
                                     
                 
                               
              
                
-
                             
                          
        
@@ -3914,7 +3768,6 @@ static char const *gettext_quote(char const *msgid, enum quoting_style s) {
                       
               
   char const *tmp___4;
-
   {
                                        
                       
@@ -3979,7 +3832,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
               
   int tmp___6;
                  
-
   {
     len = (size_t)0;
                                    
@@ -4022,7 +3874,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
          
                               
                  
-
                                
                                        
          
@@ -4047,20 +3898,16 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
                              {
       quote_string = left_quote;
                 {
-
                              
                                
          
                    
-
-
                                 {
             *(buffer + len) = (char)*quote_string;
           }
           len++;
                                
          
-
                       
                         
       }
@@ -4076,7 +3923,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
          
                               
                  
-
                                
                                        
          
@@ -4096,7 +3942,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
                
      i = (size_t)0;
     while (1) {
-
                                            {
         tmp___6 = (int const) * (arg + i) == 0;
       }       
@@ -4434,7 +4279,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
                                          
          
                    
-
                                  
                                          
            
@@ -4446,7 +4290,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
                                               
                                                         
                          
-
                                        
                                               
                  
@@ -4455,7 +4298,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
                
                              
                          
-
                                        
                                               
                  
@@ -4525,7 +4367,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
                                                   
                      
                        
-
                                      
                                             
                
@@ -4534,7 +4375,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
              
                            
                        
-
                                      
                                              
                
@@ -4543,7 +4383,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
              
                            
                        
-
                                      
                                              
                
@@ -4552,7 +4391,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
              
                            
                        
-
                                      
                                             
                
@@ -4640,7 +4478,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
                                          
          
                    
-
                                  
                                          
            
@@ -4649,7 +4486,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
          
                         
                    
-
                                  
                                          
            
@@ -4658,7 +4494,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
          
                         
                    
-
                                  
                                          
            
@@ -4695,7 +4530,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
                                                   
                                      
                            
-
                                         
                                             
                                             
@@ -4712,7 +4546,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
                                                           
                                   
                                
-
                                          
                                               
                        
@@ -4765,14 +4598,12 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
                  
                          
                        
-
                                       
                                  
                                            
                                                    
                    
                              
-
                                            
                                                    
                      
@@ -4781,7 +4612,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
                    
                                   
                              
-
                                            
                                                                    
                      
@@ -4790,7 +4620,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
                    
                                   
                              
-
                                            
                                                                          
                      
@@ -4806,7 +4635,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
                  
                                      
                              
-
                                            
                                                    
                      
@@ -4821,7 +4649,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
                                       
                
                          
-
                                        
                                             
                  
@@ -4864,7 +4691,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
                                        
        
                  
-
                                
                                        
          
@@ -4874,7 +4700,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
                       
             
                  {
-
                               {
           *(buffer + len) = (char)c;
         }
@@ -4895,30 +4720,22 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
      
                       {
                                 
-
                   {
-
                                
                                   
            
                      
-
-
                                    
-
               *(buffer + len) = (char)*quote_string;
              
-
                   
                                   
            
-
                          
                           
         }
                        ;
        
-
     }
                            
                                      
@@ -4951,7 +4768,6 @@ static char *quotearg_n_options(int n, char const *arg, size_t argsize,
                
   size_t tmp___2;
                
-
   {
                              
              
@@ -5015,7 +4831,6 @@ static char *quotearg_n_options(int n, char const *arg, size_t argsize,
                            
                              
                 
-
    
                                         
             
@@ -5029,7 +4844,6 @@ static char *quotearg_n_options(int n, char const *arg, size_t argsize,
                            
                              
                 
-
    
                                         
             
@@ -5041,7 +4855,6 @@ static char *quotearg_n_options(int n, char const *arg, size_t argsize,
                                                                    
                                  
             
-
    
                                       
                                       
@@ -5052,7 +4865,6 @@ static char *quotearg_n_options(int n, char const *arg, size_t argsize,
  
                                                
             
-
    
                                                  
                  
@@ -5060,7 +4872,6 @@ static char *quotearg_n_options(int n, char const *arg, size_t argsize,
  
                                        
             
-
    
                                         
                  
@@ -5073,7 +4884,6 @@ struct quoting_options quote_quoting_options = {(enum quoting_style)6,
                                                 (char const *)((void *)0)};
 char const *quote_n(int n, char const *name) {
   char const *tmp;
-
   {
     tmp = (char const *)quotearg_n_options(
         n, name, (size_t)-1,
@@ -5083,7 +4893,6 @@ char const *quote_n(int n, char const *name) {
 }
 char const *quote(char const *name) {
   char const *tmp;
-
   {
     tmp = quote_n(0, name);
     return (tmp);
@@ -5096,7 +4905,6 @@ char const *quote(char const *name) {
                  
               
                 
-
    
                           
              
@@ -5173,7 +4981,6 @@ extern __attribute__((__nothrow__)) char *(__attribute__((__nonnull__(1),
                    
           
               
-
    
                                                              
                                                                                 
@@ -5211,7 +5018,6 @@ int posix2_version(void);
                
                
                
-
    
                 
                                                   
@@ -5252,9 +5058,7 @@ extern __attribute__((__nothrow__)) long(__attribute__((__leaf__))
              
                   
                  
-
    
-
                               
                 
                                   
@@ -5266,7 +5070,6 @@ extern __attribute__((__nothrow__)) long(__attribute__((__leaf__))
      
                               
    
-
  
                                 
                
@@ -5274,7 +5077,6 @@ extern __attribute__((__nothrow__)) long(__attribute__((__leaf__))
                   
                  
                  
-
    
                               
                 
@@ -5304,9 +5106,7 @@ extern __attribute__((__nothrow__)) int(__attribute__((__leaf__))
                 
                       
           
-
    
-
                                                   
                    
                                                                 
@@ -5317,7 +5117,6 @@ extern __attribute__((__nothrow__)) int(__attribute__((__leaf__))
      
                  
    
-
  
 unsigned long num_processors(enum nproc_query query) {
                        
@@ -5337,15 +5136,12 @@ unsigned long num_processors(enum nproc_query query) {
                
                                
                         
-
    
-
                                     
                                                     
                      
                                                                   
                    
-
                                             
                                                 
                            
@@ -5364,7 +5160,6 @@ unsigned long num_processors(enum nproc_query query) {
                           
                                                                     
                        
-
                                       
                                                   
                                
@@ -5416,7 +5211,6 @@ unsigned long num_processors(enum nproc_query query) {
      
     return (1UL);
    
-
 }
 extern int nanosleep(struct timespec const *__requested_time,
                      struct timespec *__remaining);
@@ -5429,11 +5223,8 @@ extern int nanosleep(struct timespec const *__requested_time,
                                
              
               
-
    
-
                                         
-
                                
                 
                   
@@ -5448,7 +5239,6 @@ extern int nanosleep(struct timespec const *__requested_time,
                                               
                                                                        
                
-
                                
                          
        
@@ -5470,14 +5260,12 @@ extern int nanosleep(struct timespec const *__requested_time,
                                                                              
                      
    
-
  
 int mkstemp_safer(char *templ);
 extern int(__attribute__((__nonnull__(1))) mkstemp)(char *__template);
                                 
           
               
-
    
                          
                             
@@ -5497,9 +5285,7 @@ extern __attribute__((__nothrow__)) int(
                
                
               
-
    
-
                
                                    
                    
@@ -5529,24 +5315,19 @@ extern __attribute__((__nothrow__)) int(
                                   
        
                           
-
                    
        
-
      
                
                   
    
-
  
                                                                             
            
               
               
-
    
                            
-
                                                                    
                          
                                  
@@ -5584,7 +5365,6 @@ __attribute__((__nothrow__)) void(__attribute__((__leaf__))
                                   md5_init_ctx)(struct md5_ctx *ctx);
                                                                    
                
-
    
                                   
                          
@@ -5603,9 +5383,7 @@ __attribute__((__nothrow__)) void *(__attribute__((__leaf__))
                                                                          
                                                               
           
-
    
-
                        
                                           
                                                      
@@ -5613,7 +5391,6 @@ __attribute__((__nothrow__)) void *(__attribute__((__leaf__))
                                                            
                     
    
-
  
 __attribute__((__nothrow__)) void *(__attribute__((__leaf__))
                                     md5_finish_ctx)(struct md5_ctx *ctx,
@@ -5624,7 +5401,6 @@ __attribute__((__nothrow__)) void *(__attribute__((__leaf__))
               
           
                 
-
    
                         
                       
@@ -5656,7 +5432,6 @@ __attribute__((__nothrow__)) void(__attribute__((__leaf__))
              
              
                        
-
    
                             
                                       
@@ -5752,7 +5527,6 @@ __attribute__((__nothrow__)) void(__attribute__((__leaf__))
                     
                      
                     
-
    
                                      
                                     
@@ -5766,7 +5540,6 @@ __attribute__((__nothrow__)) void(__attribute__((__leaf__))
                         
      
                
-
                                                           
                          
        
@@ -6336,16 +6109,13 @@ extern __attribute__((__nothrow__)) int(__attribute__((__leaf__))
                       
                                  
                                  
-
    
-
                
                         
               
                                        
                         
                  
-
                                                           
                            
          
@@ -6688,7 +6458,6 @@ extern __attribute__((__nothrow__)) int(__attribute__((__leaf__))
                      
      
                
-
                                                         
                              
        
@@ -6720,7 +6489,6 @@ extern __attribute__((__nothrow__)) int(__attribute__((__leaf__))
            
                          
    
-
  
 int(__attribute__((__nonnull__(1, 2))) mbscasecmp)(char const *s1,
                                                    char const *s2);
@@ -6756,7 +6524,6 @@ wint_t(__attribute__((__leaf__)) towlower)(wint_t __wc);
                
                                   
                   
-
    
                                                  
                  
@@ -6972,7 +6739,6 @@ extern int ungetc(int __c, FILE *__stream);
             
                     
               
-
    
                                        
                                                           
@@ -6991,7 +6757,6 @@ extern int ungetc(int __c, FILE *__stream);
                              
                               
                                                                  
-
                       
                  
                       
@@ -7106,7 +6871,6 @@ extern int ungetc(int __c, FILE *__stream);
                  
                  
               
-
    
                                             
                                                                
@@ -7114,7 +6878,6 @@ extern int ungetc(int __c, FILE *__stream);
      
                                     
                
-
                                           
                          
        
@@ -7161,15 +6924,12 @@ static size_t heapify_down(void **array, size_t count, size_t initial,
 static void heapify_up(void **array, size_t count,
                        int (*compare___0)(void const *, void const *));
                                                                
-
                   
-
  
 struct heap *heap_alloc(int (*compare___0)(void const *, void const *),
                         size_t n_reserve) {
   struct heap *heap;
   struct heap *tmp;
-
   {
     tmp = (struct heap *)xmalloc(sizeof(*heap));
     heap = tmp;
@@ -7189,19 +6949,14 @@ struct heap *heap_alloc(int (*compare___0)(void const *, void const *),
   }
 }
 void heap_free(struct heap *heap) {
-
    
-
     free((void *)heap->array);
     free((void *)heap);
            
    
-
 }
 int heap_insert(struct heap *heap, void *item) {
-
    
-
                                               
                                                                              
                                                                 
@@ -7211,12 +6966,10 @@ int heap_insert(struct heap *heap, void *item) {
                                                         
     return (0);
    
-
 }
 void *heap_remove_top(struct heap *heap) {
   void *top;
              
-
   {
                              
                          
@@ -7236,12 +6989,10 @@ void *heap_remove_top(struct heap *heap) {
                
           
               
-
    
                                  
                      
                
-
                                      
                          
        
@@ -7271,12 +7022,10 @@ void *heap_remove_top(struct heap *heap) {
            
                     
           
-
    
               
                                
                
-
                      
                                                               
                                                         
@@ -7299,13 +7048,10 @@ size_t hash_string(char const *string, size_t n_buckets)
 _Bool(__attribute__((__warn_unused_result__))
       hash_rehash)(Hash_table *table___0, size_t candidate);
                                                  
-
    
-
                                                                       
                                   
    
-
  
                                                                            
                                                             
@@ -7313,7 +7059,6 @@ _Bool(__attribute__((__warn_unused_result__))
                                                         
            
              
-
    
                                                                     
             
@@ -7328,7 +7073,6 @@ size_t hash_string(char const *string, size_t n_buckets)
                                                           
                
                    
-
    
                       
                
@@ -7349,12 +7093,10 @@ static _Bool is_prime(size_t candidate) __attribute__((__const__));
                  
                 
           
-
    
                         
                                
                
-
                                
                                      
                            
@@ -7379,15 +7121,12 @@ static size_t next_prime(size_t candidate) __attribute__((__const__));
 static size_t next_prime(size_t candidate) __attribute__((__const__));
                                             
             
-
    
-
                            
                              
      
                      
                
-
                                               
                                   
                   
@@ -7401,12 +7140,10 @@ static size_t next_prime(size_t candidate) __attribute__((__const__));
                
                        
    
-
  
                                                       
              
              
-
    
                                    
               
@@ -7414,14 +7151,11 @@ static size_t next_prime(size_t candidate) __attribute__((__const__));
    
  
                                                            
-
                                                               
-
  
                                                   
                             
                 
-
    
                                
                                                                     
@@ -7453,10 +7187,8 @@ static size_t next_prime(size_t candidate) __attribute__((__const__));
                                                                   
                       
           
-
    
                                 
-
                      
                                                                      
                                                          
@@ -7464,7 +7196,6 @@ static size_t next_prime(size_t candidate) __attribute__((__const__));
        
                                         
      
-
                                       
                                               
                
@@ -7484,7 +7215,6 @@ static size_t next_prime(size_t candidate) __attribute__((__const__));
                                                            
                         
             
-
    
                                                               
                            
@@ -7529,7 +7259,6 @@ static size_t next_prime(size_t candidate) __attribute__((__const__));
  
                                                                  
                          
-
    
                                      
                                        
@@ -7541,15 +7270,12 @@ static size_t next_prime(size_t candidate) __attribute__((__const__));
    
  
                                                                          
-
    
-
                             
                                              
                                        
            
    
-
  
                                                                       
                                                                              
@@ -7562,7 +7288,6 @@ static size_t next_prime(size_t candidate) __attribute__((__const__));
                  
                               
                 
-
    
                                                             
                  
@@ -7573,15 +7298,12 @@ static size_t next_prime(size_t candidate) __attribute__((__const__));
                                                               
               
             
-
                                                                               
                     
-
          
                              
                      
                              
-
                                 
                             
                                         
@@ -7591,12 +7313,9 @@ static size_t next_prime(size_t candidate) __attribute__((__const__));
          
                       
        
-
      
-
                     
                
-
                           
                          
        
@@ -7630,19 +7349,15 @@ static size_t next_prime(size_t candidate) __attribute__((__const__));
                                 
                                
                          
-
    
-
                          
                
-
                                                                         
                          
        
                          
                               
                    
-
                         
                                  
            
@@ -7688,7 +7403,6 @@ static size_t next_prime(size_t candidate) __attribute__((__const__));
                
                       
    
-
  
                                              
                                                              
@@ -7699,7 +7413,6 @@ static size_t next_prime(size_t candidate) __attribute__((__const__));
                 
                 
                 
-
    
                                                                     
                    
@@ -7760,9 +7473,7 @@ static size_t next_prime(size_t candidate) __attribute__((__const__));
                 
                                
                              
-
    
-
                  
               
      
@@ -7820,7 +7531,6 @@ static size_t next_prime(size_t candidate) __attribute__((__const__));
                                   
                
    
-
  
                                               
                                                                
@@ -7829,7 +7539,6 @@ static size_t next_prime(size_t candidate) __attribute__((__const__));
           
                       
                 
-
    
                                                                 
               
@@ -7855,7 +7564,6 @@ static size_t next_prime(size_t candidate) __attribute__((__const__));
                             
                           
                 
-
    
                                                                 
                 
@@ -7885,7 +7593,6 @@ static size_t next_prime(size_t candidate) __attribute__((__const__));
                          
                                                 
                        
-
                             
                                  
                
@@ -7908,7 +7615,6 @@ size_t triple_hash(void const *x, size_t table_size) __attribute__((__pure__));
                            
              
                  
-
    
                                    
                                                           
@@ -7923,7 +7629,6 @@ _Bool triple_compare_ino_str(void const *x, void const *y)
                            
               
               
-
    
                                    
                                    
@@ -7948,12 +7653,10 @@ size_t hash_pjw(void const *x, size_t tablesize) __attribute__((__pure__));
                                                   
                 
            
-
    
                   
                         
                
-
                 
                          
        
@@ -7978,14 +7681,12 @@ extern __attribute__((__nothrow__)) char *(__attribute__((__leaf__))
                 
               
               
-
    
                     
                                                                        
             
             
               
-
                                  
                            
                           
@@ -8039,15 +7740,11 @@ __off_t(__attribute__((__leaf__)) lseek)(int __fd, __off_t __offset,
           
                 
               
-
    
                                                                              
-
                                              
                                               
-
                                                                              
-
                            
                                                
                         
@@ -8058,11 +7755,8 @@ __off_t(__attribute__((__leaf__)) lseek)(int __fd, __off_t __offset,
                             
                      
          
-
        
-
      
-
                                          
                      
    
@@ -8083,7 +7777,6 @@ FILE *fopen_safer(char const *file, char const *mode) {
                
                
               
-
   {
     tmp = fopen(file, mode);
     fp = tmp;
@@ -8129,25 +7822,20 @@ int filevercmp(char const *s1, char const *s2);
                    
             
                 
-
    
                                       
                           
                
-
                      
                          
        
                        
-
                               
                                       
                    
                                     
-
                                               
            
-
          
                
                                  
@@ -8173,12 +7861,9 @@ int filevercmp(char const *s1, char const *s2);
                                             
             
                 
-
    
-
                                 
                   
-
                  
              
                               
@@ -8193,7 +7878,6 @@ int filevercmp(char const *s1, char const *s2);
        
      
    
-
  
                                     
                                                                          
@@ -8212,13 +7896,10 @@ int filevercmp(char const *s1, char const *s2);
                 
                 
                 
-
    
-
                        
                        
                
-
                                
                                  
                            
@@ -8226,7 +7907,6 @@ int filevercmp(char const *s1, char const *s2);
        
                      
                  
-
                               
                                                    
                         
@@ -8265,7 +7945,6 @@ int filevercmp(char const *s1, char const *s2);
        
                      
                  
-
                                                    
                                
          
@@ -8273,7 +7952,6 @@ int filevercmp(char const *s1, char const *s2);
        
                      
                  
-
                                                    
                                
          
@@ -8313,7 +7991,6 @@ int filevercmp(char const *s1, char const *s2);
                
                                               
    
-
  
                                                 
                      
@@ -8333,9 +8010,7 @@ int filevercmp(char const *s1, char const *s2);
                       
               
               
-
    
-
                          
                      
                           
@@ -8364,14 +8039,10 @@ int filevercmp(char const *s1, char const *s2);
                  
      
                                  
-
                                    
-
                     
        
-
      
-
                                  
                                    
                    
@@ -8421,28 +8092,23 @@ int filevercmp(char const *s1, char const *s2);
      
                      
    
-
  
 #pragma GCC diagnostic ignored "-Wsuggest-attribute=const"
 extern int fflush(FILE *__stream);
 extern __attribute__((__nothrow__)) int(__attribute__((__leaf__))
                                         __freading)(FILE *__fp);
                                                                         
-
    
-
                            
                                   
      
            
    
-
  
                               
           
               
               
-
    
                                                               
                            
@@ -8465,9 +8131,7 @@ extern __attribute__((__nothrow__)) int(__attribute__((__leaf__))
         
                
                
-
    
-
                   
                     
                             
@@ -8482,7 +8146,6 @@ extern __attribute__((__nothrow__)) int(__attribute__((__leaf__))
      
                 
    
-
  
 extern int fcntl(int __fd, int __cmd, ...);
                                   
@@ -8500,7 +8163,6 @@ extern int fcntl(int __fd, int __cmd, ...);
               
           
                 
-
    
                 
                                     
@@ -8532,7 +8194,6 @@ extern int fcntl(int __fd, int __cmd, ...);
      
                       
                                      
-
                                    
                         
                         
@@ -8550,7 +8211,6 @@ extern int fcntl(int __fd, int __cmd, ...);
            
          
        
-
      
                       
                  
@@ -8575,7 +8235,6 @@ int(__attribute__((__nonnull__(1))) rpl_fclose)(FILE *fp) {
                   
               
                
-
   {
                     
                
@@ -8626,7 +8285,6 @@ void fadvise(FILE *fp, fadvice_t advice);
                                                                   
           
           
-
    
                                                       
               
@@ -8635,7 +8293,6 @@ void fadvise(FILE *fp, fadvice_t advice);
  
                                           
           
-
    
              
                        
@@ -8647,7 +8304,6 @@ void fadvise(FILE *fp, fadvice_t advice);
                                             
                        
           
-
    
                               
                  
@@ -8726,15 +8382,12 @@ size_t(__attribute__((__nonnull__(2), __leaf__))
        strxfrm)(char *__restrict __dest, char const *__restrict __src,
                 size_t __n);
                                                           
-
    
-
                       
                                           
      
            
    
-
  
 extern __attribute__((__nothrow__)) char *(__attribute__((__leaf__))
                                            ngettext)(char const *__msgid1,
@@ -8748,7 +8401,6 @@ extern __attribute__((__nothrow__)) char *(__attribute__((
     __leaf__)) bindtextdomain)(char const *__domainname, char const *__dirname);
                                                           
                 
-
    
                                     
               
@@ -8776,7 +8428,6 @@ extern __attribute__((__nothrow__)) void(__attribute__((__leaf__))
               
                 
                 
-
    
                                        
                                                   
@@ -8807,7 +8458,6 @@ extern __attribute__((__nothrow__)) void(__attribute__((__leaf__))
  
                                           
             
-
    
                                                                
                                                      
@@ -8852,7 +8502,6 @@ static void die(char const *message, char const *file) {
             
   char const *tmp___0;
   int *tmp___1;
-
   {
               {
       tmp___0 = file;
@@ -8888,9 +8537,7 @@ __attribute__((__noreturn__)) void usage(int status);
                  
                  
                  
-
    
-
                       
                       
             
@@ -9004,7 +8651,6 @@ __attribute__((__noreturn__)) void usage(int status);
      
                  
    
-
  
 static char const short_options[31] = {
     (char const)'-', (char const)'b', (char const)'c',   (char const)'C',
@@ -9061,7 +8707,6 @@ static struct option const long_options___1[31] = {
                                         
                           
           
-
    
                                                                             
                                      
@@ -9069,22 +8714,18 @@ static struct option const long_options___1[31] = {
    
  
                                                
-
    
-
                        
                                                                                 
      
            
    
-
  
                                           
                                                        
                            
                                                                  
                               
-
    
                                           
                                                 
@@ -9093,7 +8734,6 @@ static struct option const long_options___1[31] = {
                                                                  
                             
                             
-
    
                                      
                                      
@@ -9114,7 +8754,6 @@ static _Bool delete_proc(pid_t pid);
                                          
                                          
                 
-
    
               
               
@@ -9161,7 +8800,6 @@ static _Bool delete_proc(pid_t pid);
  
                                                   
             
-
    
                    
                                                                              
@@ -9183,9 +8821,7 @@ static _Bool delete_proc(pid_t pid);
                        
                         
                        
-
    
-
                    
                                                                          
                
@@ -9195,11 +8831,9 @@ static _Bool delete_proc(pid_t pid);
                           
                       
    
-
  
                                   
             
-
    
                            
               
@@ -9210,7 +8844,6 @@ static _Bool delete_proc(pid_t pid);
  
                                
             
-
    
                
                     
@@ -9229,21 +8862,15 @@ static _Bool delete_proc(pid_t pid);
    
  
                              
-
    
-
              
                   
            
    
-
  
                             
-
    
-
                
-
                           
                          
        
@@ -9252,15 +8879,12 @@ static _Bool delete_proc(pid_t pid);
                
            
    
-
  
                            
                               
-
    
                                              
                
-
                   
                          
        
@@ -9275,9 +8899,7 @@ static _Bool delete_proc(pid_t pid);
 static void exit_cleanup(void) {
                       
                        
-
    
-
                    
                        
                
@@ -9287,7 +8909,6 @@ static void exit_cleanup(void) {
     close_stdout();
            
    
-
 }
 static struct tempnode *create_temp_file(int *pfd, _Bool survive_fd_exhaustion);
                                    
@@ -9312,7 +8933,6 @@ static struct tempnode *create_temp_file(int *pfd, _Bool survive_fd_exhaustion);
                 
                
                
-
    
                                              
                            
@@ -9366,7 +8986,6 @@ static FILE *stream_open(char const *file, char const *how) {
   FILE *fp;
   int tmp;
                 
-
   {
     if (!file) {
       return (stdout);
@@ -9390,7 +9009,6 @@ static FILE *xfopen(char const *file, char const *how) {
   FILE *fp;
   FILE *tmp;
   char *tmp___0;
-
   {
     tmp = stream_open(file, how);
     fp = tmp;
@@ -9408,7 +9026,6 @@ static FILE *xfopen(char const *file, char const *how) {
               
                 
               
-
    
                      
                    
@@ -9446,7 +9063,6 @@ static FILE *xfopen(char const *file, char const *how) {
             
                
               
-
    
                                  
                       
@@ -9470,7 +9086,6 @@ static FILE *xfopen(char const *file, char const *how) {
                  
                
                
-
    
                       
                         
@@ -9540,7 +9155,6 @@ static FILE *xfopen(char const *file, char const *how) {
                
               
                 
-
    
                                                            
                
@@ -9582,7 +9196,6 @@ static FILE *xfopen(char const *file, char const *how) {
  
                                                  
                        
-
    
                                            
                  
@@ -9603,7 +9216,6 @@ static FILE *xfopen(char const *file, char const *how) {
                   
                
                
-
    
                              
                                 
@@ -9663,7 +9275,6 @@ static FILE *xfopen(char const *file, char const *how) {
  
                                            
              
-
    
                                            
                                                                                
@@ -9684,7 +9295,6 @@ static FILE *xfopen(char const *file, char const *how) {
                       
            
                 
-
    
                      
                       
@@ -9723,7 +9333,6 @@ static FILE *xfopen(char const *file, char const *how) {
                              
                              
           
-
    
                                       
                                       
@@ -9749,11 +9358,9 @@ static FILE *xfopen(char const *file, char const *how) {
                         
                                  
                         
-
    
                   
                
-
                          
                          
        
@@ -9790,7 +9397,6 @@ static FILE *xfopen(char const *file, char const *how) {
                        
                     
                  
-
                           
                                
          
@@ -9802,7 +9408,6 @@ static FILE *xfopen(char const *file, char const *how) {
                       
               
                    
-
                              
                                  
            
@@ -9845,7 +9450,6 @@ static FILE *xfopen(char const *file, char const *how) {
                 
                 
                  
-
    
          
                                                                                
@@ -9900,7 +9504,6 @@ static void specify_sort_size(int oi, char c, char const *s) {
   enum strtol_error tmp;
              
                  
-
   {
     tmp = xstrtoumax(s, &suffix, 10, &n, "EgGkKmMPtTYZ");
     e = tmp;
@@ -9963,7 +9566,6 @@ static void specify_sort_size(int oi, char c, char const *s) {
                       
                         
                 
-
    
                                                                
             
@@ -9996,7 +9598,6 @@ static void specify_sort_size(int oi, char c, char const *s) {
               
               
                  
-
    
                               
                 
@@ -10057,13 +9658,11 @@ static size_t sort_buffer_size(FILE *const *fps, size_t nfps,
               
               
               
-
   {
     worst_case_per_input_byte = line_bytes + 1UL;
     size = worst_case_per_input_byte + 1UL;
     i = (size_t)0;
               {
-
                           
                          
        
@@ -10118,7 +9717,6 @@ static size_t sort_buffer_size(FILE *const *fps, size_t nfps,
 static void initbuf(struct buffer *buf___1, size_t line_bytes, size_t alloc) {
   size_t tmp;
   size_t tmp___0;
-
   {
               {
                                                                  
@@ -10144,9 +9742,7 @@ static void initbuf(struct buffer *buf___1, size_t line_bytes, size_t alloc) {
   }
 }
 __inline static struct line *buffer_linelim(struct buffer const *buf___1) {
-
      return ((struct line *)(buf___1->buf + buf___1->alloc));  
-
 }
                                                                             
             
@@ -10158,7 +9754,6 @@ __inline static struct line *buffer_linelim(struct buffer const *buf___1) {
                         
                  
                         
-
    
                              
                                    
@@ -10166,7 +9761,6 @@ __inline static struct line *buffer_linelim(struct buffer const *buf___1) {
                                
                      
                  
-
                                                       
                       
                   
@@ -10177,7 +9771,6 @@ __inline static struct line *buffer_linelim(struct buffer const *buf___1) {
                            
          
                    
-
                                                         
                                       
                                    
@@ -10195,7 +9788,6 @@ __inline static struct line *buffer_linelim(struct buffer const *buf___1) {
                  
             
                  
-
                                                       
                           
                   
@@ -10206,7 +9798,6 @@ __inline static struct line *buffer_linelim(struct buffer const *buf___1) {
                                
          
                    
-
                                                         
                                      
                                    
@@ -10219,7 +9810,6 @@ __inline static struct line *buffer_linelim(struct buffer const *buf___1) {
          
                        
                    
-
                                                         
                                      
                                   
@@ -10236,7 +9826,6 @@ __inline static struct line *buffer_linelim(struct buffer const *buf___1) {
      
                            
                  
-
                                                       
                                    
                                  
@@ -10267,7 +9856,6 @@ __inline static struct line *buffer_linelim(struct buffer const *buf___1) {
                         
                  
                         
-
    
                              
                                    
@@ -10278,7 +9866,6 @@ __inline static struct line *buffer_linelim(struct buffer const *buf___1) {
      
                      
                  
-
                                                       
                       
                   
@@ -10289,7 +9876,6 @@ __inline static struct line *buffer_linelim(struct buffer const *buf___1) {
                            
          
                    
-
                                                         
                                       
                                    
@@ -10313,7 +9899,6 @@ __inline static struct line *buffer_linelim(struct buffer const *buf___1) {
                  
             
                  
-
                                                       
                           
                   
@@ -10324,7 +9909,6 @@ __inline static struct line *buffer_linelim(struct buffer const *buf___1) {
                                
          
                    
-
                                                         
                                      
                                    
@@ -10337,7 +9921,6 @@ __inline static struct line *buffer_linelim(struct buffer const *buf___1) {
          
                        
                    
-
                                                         
                                      
                                   
@@ -10355,7 +9938,6 @@ __inline static struct line *buffer_linelim(struct buffer const *buf___1) {
                        
                              
                    
-
                                                         
                                      
                                    
@@ -10369,7 +9951,6 @@ __inline static struct line *buffer_linelim(struct buffer const *buf___1) {
                        
        
                                                               
-
                   
                
                      
@@ -10403,7 +9984,6 @@ static _Bool fillbuf___7(struct buffer *buf___1, FILE *fp, char const *file) {
                         
   struct line *tmp___8;
                     
-
   {
                                            
     eol = eolchar;
@@ -10432,7 +10012,6 @@ static _Bool fillbuf___7(struct buffer *buf___1, FILE *fp, char const *file) {
       }
       line_start = tmp___0;
                 {
-
                                           
                                
          
@@ -10449,7 +10028,6 @@ static _Bool fillbuf___7(struct buffer *buf___1, FILE *fp, char const *file) {
            
                                       
                         
-
                                     
             if ((unsigned long)buf___1->buf == (unsigned long)ptrlim) {
               return ((_Bool)0);
@@ -10462,7 +10040,6 @@ static _Bool fillbuf___7(struct buffer *buf___1, FILE *fp, char const *file) {
               }
             }
            
-
         }
         while (1) {
           p = (char *)memchr((void const *)ptr, (int)eol,
@@ -10526,7 +10103,6 @@ static _Bool fillbuf___7(struct buffer *buf___1, FILE *fp, char const *file) {
                                                              
                                                         
     }
-
                       
   }
 }
@@ -10592,13 +10168,11 @@ static _Bool fillbuf___7(struct buffer *buf___1, FILE *fp, char const *file) {
                       
                 
               
-
    
                                                      
                                  
                 
                
-
                  
                 
             
@@ -10647,7 +10221,6 @@ static _Bool fillbuf___7(struct buffer *buf___1, FILE *fp, char const *file) {
                                         
               
               
-
    
                
                                
@@ -10681,7 +10254,6 @@ static _Bool fillbuf___7(struct buffer *buf___1, FILE *fp, char const *file) {
                     
                         
               
-
    
                
                                
@@ -10707,7 +10279,6 @@ static _Bool fillbuf___7(struct buffer *buf___1, FILE *fp, char const *file) {
                 
                 
           
-
    
                                        
                                           
@@ -10731,7 +10302,6 @@ static _Bool fillbuf___7(struct buffer *buf___1, FILE *fp, char const *file) {
               
               
               
-
    
                            
             
@@ -10790,9 +10360,7 @@ static _Bool fillbuf___7(struct buffer *buf___1, FILE *fp, char const *file) {
                         
                         
                         
-
    
-
                    
                     
                
@@ -10808,7 +10376,6 @@ static _Bool fillbuf___7(struct buffer *buf___1, FILE *fp, char const *file) {
                 
                             
                  
-
                   
                    
                             
@@ -10841,7 +10408,6 @@ static _Bool fillbuf___7(struct buffer *buf___1, FILE *fp, char const *file) {
                    
                
    
-
  
                                        
                                                               
@@ -10851,7 +10417,6 @@ static _Bool fillbuf___7(struct buffer *buf___1, FILE *fp, char const *file) {
                 
                 
               
-
    
                                                        
             
@@ -10882,7 +10447,6 @@ static _Bool fillbuf___7(struct buffer *buf___1, FILE *fp, char const *file) {
                 
                 
                
-
    
                              
              
@@ -10929,7 +10493,6 @@ static _Bool fillbuf___7(struct buffer *buf___1, FILE *fp, char const *file) {
            
               
                  
-
    
                   
                        
@@ -11051,10 +10614,8 @@ static _Bool fillbuf___7(struct buffer *buf___1, FILE *fp, char const *file) {
          
                                                                               
                          
-
                                                     
          
-
        
                        
      
@@ -11066,12 +10627,10 @@ static _Bool fillbuf___7(struct buffer *buf___1, FILE *fp, char const *file) {
                
              
                       
-
    
                                                            
                 
                
-
                                                         
                          
        
@@ -11086,7 +10645,6 @@ static _Bool fillbuf___7(struct buffer *buf___1, FILE *fp, char const *file) {
                                                    
              
                 
-
    
                
                    
@@ -11116,7 +10674,6 @@ static _Bool fillbuf___7(struct buffer *buf___1, FILE *fp, char const *file) {
  
                                                                
           
-
    
                        
               
@@ -11124,16 +10681,12 @@ static _Bool fillbuf___7(struct buffer *buf___1, FILE *fp, char const *file) {
                                  
                 
               
-
                                  
                   
                 
-
                   
          
-
        
-
      
                         
    
@@ -11159,7 +10712,6 @@ static _Bool fillbuf___7(struct buffer *buf___1, FILE *fp, char const *file) {
                  
                
                  
-
    
                               
                
@@ -11218,7 +10770,6 @@ static _Bool fillbuf___7(struct buffer *buf___1, FILE *fp, char const *file) {
                                         
                                              
                                  
-
                                    
                                       
                               
@@ -11281,7 +10832,6 @@ static _Bool fillbuf___7(struct buffer *buf___1, FILE *fp, char const *file) {
  
                                                  
                              
-
    
                                            
                
@@ -11308,7 +10858,6 @@ static _Bool fillbuf___7(struct buffer *buf___1, FILE *fp, char const *file) {
                                                               
             
               
-
    
                       
                   
@@ -11316,15 +10865,12 @@ static _Bool fillbuf___7(struct buffer *buf___1, FILE *fp, char const *file) {
                            
                     
               
-
                                
                       
                 
-
                                  
                         
                   
-
                                    
                       
                           
@@ -11332,29 +10878,20 @@ static _Bool fillbuf___7(struct buffer *buf___1, FILE *fp, char const *file) {
                                
                             
                       
-
                                    
                               
                         
-
                                     
                                 
                           
-
                                 
                    
-
                  
-
                
-
              
            
-
          
-
        
-
      
                             
    
@@ -11371,7 +10908,6 @@ static _Bool fillbuf___7(struct buffer *buf___1, FILE *fp, char const *file) {
                 
                 
                 
-
    
                            
                      
@@ -11483,13 +11019,11 @@ static _Bool fillbuf___7(struct buffer *buf___1, FILE *fp, char const *file) {
                  
                  
                  
-
    
                                      
                  
                                            
                
-
                  
                          
        
@@ -11746,9 +11280,7 @@ static _Bool fillbuf___7(struct buffer *buf___1, FILE *fp, char const *file) {
                          
                          
                
-
    
-
                   
                               
                               
@@ -11801,7 +11333,6 @@ static _Bool fillbuf___7(struct buffer *buf___1, FILE *fp, char const *file) {
                                   
                               
                                
-
                                         
                                              
                        
@@ -11828,7 +11359,6 @@ static _Bool fillbuf___7(struct buffer *buf___1, FILE *fp, char const *file) {
                                   
                               
                                
-
                                         
                                              
                        
@@ -11918,11 +11448,8 @@ static _Bool fillbuf___7(struct buffer *buf___1, FILE *fp, char const *file) {
                              
                                   
                                
-
                                  
-
                                    
-
                                                                            
                                                        
                                                             
@@ -11935,7 +11462,6 @@ static _Bool fillbuf___7(struct buffer *buf___1, FILE *fp, char const *file) {
                          
                                        
                                    
-
                                                                            
                                                        
                                                             
@@ -11973,11 +11499,8 @@ static _Bool fillbuf___7(struct buffer *buf___1, FILE *fp, char const *file) {
                                    
                           
                                
-
                                  
-
                                    
-
                                                                            
                                                         
                                                              
@@ -11990,7 +11513,6 @@ static _Bool fillbuf___7(struct buffer *buf___1, FILE *fp, char const *file) {
                          
                                        
                                    
-
                                                                            
                                                         
                                                              
@@ -12034,7 +11556,6 @@ static _Bool fillbuf___7(struct buffer *buf___1, FILE *fp, char const *file) {
                             
                                       
                                    
-
                                                                            
                                                                                 
                                                     
@@ -12105,7 +11626,6 @@ static _Bool fillbuf___7(struct buffer *buf___1, FILE *fp, char const *file) {
                                 
                                
                      
-
                                                              
                                           
                                       
@@ -12118,7 +11638,6 @@ static _Bool fillbuf___7(struct buffer *buf___1, FILE *fp, char const *file) {
            
                           
                      
-
                                                              
                                           
                                       
@@ -12145,7 +11664,6 @@ static _Bool fillbuf___7(struct buffer *buf___1, FILE *fp, char const *file) {
      
                       
    
-
  
 static int compare(struct line const *a, struct line const *b) {
   int diff;
@@ -12153,7 +11671,6 @@ static int compare(struct line const *a, struct line const *b) {
   size_t blen;
   size_t tmp;
   int tmp___0;
-
   {
                   
                               
@@ -12177,12 +11694,10 @@ static int compare(struct line const *a, struct line const *b) {
                         
                  
               
-
                               
                                                              
                                                               
                 
-
           if (alen < blen) {
             tmp = alen;
           } else {
@@ -12197,9 +11712,7 @@ static int compare(struct line const *a, struct line const *b) {
             }
           }
          
-
        
-
     }
     if (reverse) {
       tmp___0 = -diff;
@@ -12221,7 +11734,6 @@ static void write_line(struct line const *line, FILE *fp,
               
                 
   size_t tmp___3;
-
   {
     buf___1 = (char *)line->text;
     n_bytes = (size_t)line->length;
@@ -12230,7 +11742,6 @@ static void write_line(struct line const *line, FILE *fp,
                   
                                   
                    
-
                                                           
                              
            
@@ -12293,7 +11804,6 @@ static void write_line(struct line const *line, FILE *fp,
               
               
                 
-
    
                                      
              
@@ -12387,14 +11897,12 @@ static void write_line(struct line const *line, FILE *fp,
         
                 
                 
-
    
                                                   
                 
               
           
                
-
                                   
                          
        
@@ -12453,7 +11961,6 @@ static void write_line(struct line const *line, FILE *fp,
                                 
           
                
-
    
                                                              
                  
@@ -12469,7 +11976,6 @@ static void write_line(struct line const *line, FILE *fp,
                                          
                   
                
-
                           
                          
        
@@ -12497,7 +12003,6 @@ static void write_line(struct line const *line, FILE *fp,
                  
               
                    
-
                               
                                  
            
@@ -12511,7 +12016,6 @@ static void write_line(struct line const *line, FILE *fp,
               
                   
                
-
                           
                              
        
@@ -12521,7 +12025,6 @@ static void write_line(struct line const *line, FILE *fp,
                   
                   
                
-
                           
                              
        
@@ -12553,7 +12056,6 @@ static void write_line(struct line const *line, FILE *fp,
                                                         
                                                      
                        
-
                                
                                                      
                                      
@@ -12594,7 +12096,6 @@ static void write_line(struct line const *line, FILE *fp,
                 
                         
                      
-
                                 
                                    
              
@@ -12613,7 +12114,6 @@ static void write_line(struct line const *line, FILE *fp,
                                                    
                          
                      
-
                                 
                                    
              
@@ -12627,7 +12127,6 @@ static void write_line(struct line const *line, FILE *fp,
                         
                         
                      
-
                                 
                                    
              
@@ -12643,7 +12142,6 @@ static void write_line(struct line const *line, FILE *fp,
                  
                         
                  
-
                          
                                
          
@@ -12668,7 +12166,6 @@ static void write_line(struct line const *line, FILE *fp,
                                         
                     
                  
-
                                             
                                
          
@@ -12700,7 +12197,6 @@ static void write_line(struct line const *line, FILE *fp,
                  
              
                 
-
    
                                                 
                   
@@ -12720,7 +12216,6 @@ static void mergelines(struct line *__restrict t, size_t nlines,
   size_t nhi;
   struct line *hi;
   int tmp;
-
   {
     nlo = nlines / 2UL;
     nhi = nlines - nlo;
@@ -12756,7 +12251,6 @@ static void mergelines(struct line *__restrict t, size_t nlines,
         }
       }
     }
-
            
   }
 }
@@ -12771,7 +12265,6 @@ static void sequential_sort(struct line *__restrict lines, size_t nlines,
   size_t tmp___0;
   struct line *dest;
   struct line const *sorted_lo;
-
   {
     if (nlines == 2UL) {
       tmp = compare((struct line const *)(lines + -1),
@@ -12802,10 +12295,8 @@ static void sequential_sort(struct line *__restrict lines, size_t nlines,
         sequential_sort(lo, nlo, temp, (_Bool)(!to_temp));
       } else {
                        
-
           *(temp + -1) = *(lo + -1);
          
-
       }
       if (to_temp) {
         dest = (struct line *)temp;
@@ -12832,7 +12323,6 @@ static struct merge_node *merge_tree_init(size_t nthreads, size_t nlines,
                        
                        
   size_t tmp___3;
-
   {
     tmp = (struct merge_node *)xmalloc((2UL * sizeof(*merge_tree)) * nthreads);
     merge_tree = tmp;
@@ -12857,13 +12347,10 @@ static struct merge_node *merge_tree_init(size_t nthreads, size_t nlines,
   }
 }
 static void merge_tree_destroy(struct merge_node *merge_tree) {
-
    
-
     free((void *)merge_tree);
            
    
-
 }
 static struct merge_node *init_node(struct merge_node *__restrict parent,
                                     struct merge_node *__restrict node_pool,
@@ -12885,7 +12372,6 @@ static struct merge_node *init_node(struct merge_node *__restrict parent,
                     
                              
                              
-
   {
                       
                         
@@ -12940,7 +12426,6 @@ static struct merge_node *init_node(struct merge_node *__restrict parent,
 static int compare_nodes(void const *a, void const *b) {
   struct merge_node const *nodea;
   struct merge_node const *nodeb;
-
   {
     nodea = (struct merge_node const *)a;
     nodeb = (struct merge_node const *)b;
@@ -12951,50 +12436,36 @@ static int compare_nodes(void const *a, void const *b) {
   }
 }
                                                          
-
    
-
                                     
            
    
-
  
                                                            
-
    
-
                                       
            
    
-
  
 static void queue_destroy(struct merge_node_queue *queue) {
-
    
-
     heap_free(queue->priority_queue);
                                        
                                          
            
    
-
 }
 static void queue_init(struct merge_node_queue *queue, size_t nthreads) {
-
    
-
     queue->priority_queue = heap_alloc(&compare_nodes, 2UL * nthreads);
                                                                                 
                                                                              
            
    
-
 }
 static void queue_insert(struct merge_node_queue *queue,
                          struct merge_node *node) {
-
    
-
                                       
     heap_insert(queue->priority_queue, (void *)node);
                             
@@ -13002,11 +12473,9 @@ static void queue_insert(struct merge_node_queue *queue,
                                       
            
    
-
 }
 static struct merge_node *queue_pop(struct merge_node_queue *queue) {
   struct merge_node *node;
-
   {
                                       
               {
@@ -13027,7 +12496,6 @@ static struct line saved;
 static void write_unique(struct line const *line, FILE *tfp,
                          char const *temp_output) {
   int tmp;
-
   {
     if (unique) {
       if (saved.text) {
@@ -13059,7 +12527,6 @@ static void mergelines_node(struct merge_node *__restrict node,
                  
                  
                  
-
   {
     lo_orig = node->lo;
     hi_orig = node->hi;
@@ -13067,7 +12534,6 @@ static void mergelines_node(struct merge_node *__restrict node,
                            
                            
                  
-
                                                                      
                                                                        
                                
@@ -13098,7 +12564,6 @@ static void mergelines_node(struct merge_node *__restrict node,
                                                
                                    
                    
-
                                                                        
                                
                        
@@ -13116,7 +12581,6 @@ static void mergelines_node(struct merge_node *__restrict node,
               
                                      
                      
-
                                                                          
                                  
                          
@@ -13136,7 +12600,6 @@ static void mergelines_node(struct merge_node *__restrict node,
                            
            {
                 {
-
         if ((unsigned long)node->lo != (unsigned long)node->end_lo) {
           if ((unsigned long)node->hi != (unsigned long)node->end_hi) {
                                
@@ -13165,7 +12628,6 @@ static void mergelines_node(struct merge_node *__restrict node,
       merged_hi = (size_t)(hi_orig - node->hi);
       if (node->nhi == merged_hi) {
                   {
-
                                                                        
                                
                        
@@ -13182,7 +12644,6 @@ static void mergelines_node(struct merge_node *__restrict node,
       } else {
         if (node->nlo == merged_lo) {
                     {
-
                                                                          
                                  
                          
@@ -13213,10 +12674,8 @@ static void queue_check_insert(struct merge_node_queue *queue,
   int tmp;
   int tmp___0;
   int tmp___1;
-
   {
                         
-
       lo_avail = (_Bool)(node->lo - node->end_lo != 0L);
       hi_avail = (_Bool)(node->hi - node->end_hi != 0L);
       if (lo_avail) {
@@ -13233,7 +12692,6 @@ static void queue_check_insert(struct merge_node_queue *queue,
       } else {
         if (hi_avail) {
                            
-
             tmp___0 = 1;
                    
                         
@@ -13247,35 +12705,28 @@ static void queue_check_insert(struct merge_node_queue *queue,
         queue_insert(queue, node);
       }
      
-
            
   }
 }
 static void queue_check_insert_parent(struct merge_node_queue *queue,
                                       struct merge_node *node) {
-
    
-
                            
                               
                                               
                                 
             
-
       if (node->nlo + node->nhi == 0UL) {
         queue_insert(queue, node->parent);
       }
      
-
            
    
-
 }
 static void merge_loop(struct merge_node_queue *queue, size_t total_lines,
                        FILE *tfp, char const *temp_output) {
   struct merge_node *node;
   struct merge_node *tmp;
-
   {
     while (1) {
       tmp = queue_pop(queue);
@@ -13300,9 +12751,7 @@ static void sortlines(struct line *__restrict lines, size_t nthreads,
                       char const *temp_output);
                                            
                                  
-
    
-
                                             
                                                                  
                                                                          
@@ -13310,7 +12759,6 @@ static void sortlines(struct line *__restrict lines, size_t nthreads,
                                                
                        
    
-
  
 static void sortlines(struct line *__restrict lines, size_t nthreads,
                       size_t total_lines, struct merge_node *node,
@@ -13325,7 +12773,6 @@ static void sortlines(struct line *__restrict lines, size_t nthreads,
   size_t nhi;
   struct line *temp;
           
-
   {
                                    
                                 
@@ -13352,7 +12799,6 @@ static void sortlines(struct line *__restrict lines, size_t nthreads,
                     
        
             
-
            
        nlo = node->nlo;
       nhi = node->nhi;
@@ -13370,7 +12816,6 @@ static void sortlines(struct line *__restrict lines, size_t nthreads,
       queue_insert(queue, node);
       merge_loop(queue, total_lines, tfp, temp_output);
      
-
                                        
            
   }
@@ -13394,13 +12839,11 @@ static void sortlines(struct line *__restrict lines, size_t nthreads,
               
               
              
-
    
                            
                                               
                
                
-
                           
                          
        
@@ -13436,11 +12879,9 @@ static void sortlines(struct line *__restrict lines, size_t nthreads,
                                       
                             
                 
-
                                                      
                             
          
-
                            
                                                 
                                                   
@@ -13505,17 +12946,14 @@ static void sortlines(struct line *__restrict lines, size_t nthreads,
                             
                   
                   
-
    
                
-
                                        
                          
        
                      
                
                  
-
                                                
                                
          
@@ -13596,11 +13034,9 @@ static void sortlines(struct line *__restrict lines, size_t nthreads,
          
               
                              
-
                                             
                                                                
          
-
        
                  
                   
@@ -13660,13 +13096,11 @@ static void sort(char *const *files, size_t nfiles, char const *output_file,
                         
                              
                            
-
   {
                        
                                    
                               
               {
-
                     
                          
        
@@ -13677,7 +13111,6 @@ static void sort(char *const *files, size_t nfiles, char const *output_file,
                             
                          
                    
-
                                       
                                  
            
@@ -13714,11 +13147,8 @@ static void sort(char *const *files, size_t nfiles, char const *output_file,
         line = buffer_linelim((struct buffer const *)(&buf___1));
                          {
                         
-
                           
-
                                   
-
                                   
                 tfp = xfopen(output_file, "w");
                 temp_output = output_file;
@@ -13773,7 +13203,6 @@ static void sort(char *const *files, size_t nfiles, char const *output_file,
                           
                     
                  
-
                     
                                
          
@@ -13794,13 +13223,11 @@ static void sort(char *const *files, size_t nfiles, char const *output_file,
                       
                        
                        
-
    
                                                                           
               
                  
                
-
                 
                          
        
@@ -13822,7 +13249,6 @@ static __attribute__((__noreturn__)) void badfieldspec(char const *spec,
                   
                 
                 
-
    
                       
                              
@@ -13837,7 +13263,6 @@ static __attribute__((__noreturn__)) void
 incompatible_options(char const *opts___1);
                                                         
             
-
    
                                                       
                                              
@@ -13849,11 +13274,9 @@ incompatible_options(char const *opts___1);
                                        
             
                 
-
    
                   
                
-
                  
                          
        
@@ -13883,7 +13306,6 @@ static char const *parse_field_count(char const *string, size_t *val,
   char const *tmp___0;
   char *tmp___1;
   char *tmp___2;
-
   {
                                                   
                                   
@@ -13924,11 +13346,8 @@ static char const *parse_field_count(char const *string, size_t *val,
 }
 static char *set_ordering(char const *s, struct keyfield *key,
                           enum blanktype blanktype) {
-
    
-
               {
-
                 
                          
        
@@ -14022,28 +13441,21 @@ static char *set_ordering(char const *s, struct keyfield *key,
               ;
                        
    
-
 }
 static struct keyfield *key_init(struct keyfield *key) {
-
    
-
     memset((void *)key, 0, sizeof(*key));
                                       
     return (key);
    
-
 }
                                      
-
    
-
               
                                       
                    
            
    
-
  
 int main(int argc, char **argv);
                                                                        
@@ -14153,7 +13565,6 @@ int main(int argc, char **argv) {
                       
                  
                
-
   {
                          
           
@@ -14199,7 +13610,6 @@ int main(int argc, char **argv) {
                                  
                   
                
-
                         
                          
        
@@ -14216,7 +13626,6 @@ int main(int argc, char **argv) {
                      
                   
                
-
                         
                              
        
@@ -14273,17 +13682,14 @@ int main(int argc, char **argv) {
                         
            
                 
-
                
            c = getopt_long(argc, (char *const *)argv, short_options,
                           long_options___1, &oi);
           if (c == -1) {
              
                                   
-
               goto while_break___1;
              
-
                              
                      
                              
@@ -14608,12 +14014,10 @@ int main(int argc, char **argv) {
                                   
                                       
                       
-
                 tmp___23 = quote((char const *)optarg);
                 tmp___24 = gettext("multi-character tab %s");
                 error(2, 0, (char const *)tmp___24, tmp___23);
                
-
             }
                              
                                        
@@ -14637,7 +14041,6 @@ int main(int argc, char **argv) {
                                                         
                                        
                          
-
                                                       
                                        
                  
@@ -14665,7 +14068,6 @@ int main(int argc, char **argv) {
           switch_break:;
           }
          
-
       }
     }
   while_break___1:;
@@ -14711,7 +14113,6 @@ int main(int argc, char **argv) {
                            
                           
                    
-
                                   
                                  
            
@@ -14740,7 +14141,6 @@ int main(int argc, char **argv) {
      
                   
                
-
                  
                              
        
@@ -14847,7 +14247,6 @@ int main(int argc, char **argv) {
                            
                         
                  
-
                                 
                                
          

@@ -184,7 +184,6 @@ static void make_table(int nchar, uch *bitlen, int tablebits, ush *table);
                    
               
               
-
    
                                      
      
@@ -201,11 +200,9 @@ static void make_table(int nchar, uch *bitlen, int tablebits, ush *table);
                                     
                 
            
-
                                     
                               
            
-
          
                                           
                                    
@@ -222,7 +219,6 @@ static void make_table(int nchar, uch *bitlen, int tablebits, ush *table);
  
                                     
                  
-
    
      
                                        
@@ -233,9 +229,7 @@ static void make_table(int nchar, uch *bitlen, int tablebits, ush *table);
    
  
                                 
-
    
-
      
                       
                      
@@ -244,7 +238,6 @@ static void make_table(int nchar, uch *bitlen, int tablebits, ush *table);
      
            
    
-
  
                                                                            
                 
@@ -266,7 +259,6 @@ static void make_table(int nchar, uch *bitlen, int tablebits, ush *table);
                     
                     
                     
-
    
                
      
@@ -308,10 +300,8 @@ static void make_table(int nchar, uch *bitlen, int tablebits, ush *table);
      
                                         
        
-
                                      
        
-
      
                                              
                
@@ -429,7 +419,6 @@ static void make_table(int nchar, uch *bitlen, int tablebits, ush *table);
               
               
               
-
    
                                
                  
@@ -542,7 +531,6 @@ static void make_table(int nchar, uch *bitlen, int tablebits, ush *table);
               
               
               
-
    
                             
                  
@@ -607,18 +595,14 @@ static void make_table(int nchar, uch *bitlen, int tablebits, ush *table);
                     
                            
                  
-
                                    
                                       
                  
-
                       
                  
-
                                        
                                            
                  
-
                
              
              
@@ -662,7 +646,6 @@ static void make_table(int nchar, uch *bitlen, int tablebits, ush *table);
                                     
                      
                     
-
    
                           
        
@@ -682,7 +665,6 @@ static void make_table(int nchar, uch *bitlen, int tablebits, ush *table);
                         
                                                         
        
-
                    
                                         
                                             
@@ -697,7 +679,6 @@ static void make_table(int nchar, uch *bitlen, int tablebits, ush *table);
          
                                    
        
-
      
                                     
                    
@@ -707,7 +688,6 @@ static void make_table(int nchar, uch *bitlen, int tablebits, ush *table);
                      
                     
                    
-
    
                                                                                
                        
@@ -731,33 +711,26 @@ static void make_table(int nchar, uch *bitlen, int tablebits, ush *table);
                                     
                       
        
-
                                          
                                            
        
-
      
                    
    
  
                                     
-
    
-
      
                      
                      
      
            
    
-
  
              
                 
                                 
-
    
-
      
                          
             
@@ -765,14 +738,12 @@ static void make_table(int nchar, uch *bitlen, int tablebits, ush *table);
      
            
    
-
  
                       
                                                              
                  
                  
                    
-
    
            
      
@@ -792,7 +763,6 @@ static void make_table(int nchar, uch *bitlen, int tablebits, ush *table);
                                  
      
      
-
                  
                                           
                            
@@ -832,14 +802,11 @@ static void make_table(int nchar, uch *bitlen, int tablebits, ush *table);
        
                                      
      
-
    
  
                             
                  
-
    
-
      
                
                 
@@ -855,10 +822,8 @@ static void make_table(int nchar, uch *bitlen, int tablebits, ush *table);
                     
                        
              
-
                                                            
              
-
            
          
        
@@ -866,7 +831,6 @@ static void make_table(int nchar, uch *bitlen, int tablebits, ush *table);
      
                
    
-
  
 unsigned int outcnt;
                
@@ -902,7 +866,6 @@ static void build_tree(void);
                
                     
                     
-
    
                       
           
@@ -918,11 +881,9 @@ static void build_tree(void);
                                     
                 
            
-
                                     
                               
            
-
          
                                                   
             
@@ -935,19 +896,15 @@ static void build_tree(void);
                                     
             
        
-
                                 
                           
        
-
      
                       
                        
        
-
                                                                            
        
-
      
           
             
@@ -963,11 +920,9 @@ static void build_tree(void);
                                         
                 
            
-
                                     
                               
            
-
          
                               
                          
@@ -977,10 +932,8 @@ static void build_tree(void);
      
                   
        
-
                                                          
        
-
      
                         
              
@@ -1007,11 +960,9 @@ static void build_tree(void);
                                              
                     
                
-
                                          
                                     
                
-
              
                                              
                 
@@ -1032,7 +983,6 @@ static void build_tree(void);
                
                
           
-
    
               
                   
@@ -1109,9 +1059,7 @@ static void build_tree(void);
               
                        
                     
-
    
-
      
                
                 
@@ -1137,11 +1085,9 @@ static void build_tree(void);
                                         
                     
                
-
                                         
                                   
                
-
              
                                                           
                        
@@ -1173,11 +1119,9 @@ static void build_tree(void);
                                                   
                           
                      
-
                                               
                                         
                      
-
                    
                                                                 
                              
@@ -1202,10 +1146,8 @@ static void build_tree(void);
                                                                       
                                
            
-
                            
            
-
          
                      
        
@@ -1214,14 +1156,11 @@ static void build_tree(void);
                        
                                      
        
-
                                                                
        
-
      
                
    
-
  
 extern ssize_t read(int __fd, void *__buf, size_t __nbytes);
 extern struct _IO_FILE *stderr;
@@ -1272,32 +1211,26 @@ int unlzw(int in, int out);
                     
                     
                     
-
    
-
                          
                   
               
                                 
             
        
-
                                 
                           
        
-
      
                                
                               
                    
          
-
                                                     
                                                                                 
                                                                   
                                                   
          
-
        
                            
                       
@@ -1306,7 +1239,6 @@ int unlzw(int in, int out);
                   
                                
                        
-
        
                 
                                               
@@ -1317,7 +1249,6 @@ int unlzw(int in, int out);
        
                  
      
-
                         
                
                                   
@@ -1373,10 +1304,8 @@ int unlzw(int in, int out);
            
                             
              
-
                            
              
-
            
                                         
                                                         
@@ -1415,10 +1344,8 @@ int unlzw(int in, int out);
                                  
                                  
                  
-
                                                   
                  
-
                
                                
                        
@@ -1450,12 +1377,10 @@ int unlzw(int in, int out);
                             
                                    
                      
-
                                                                
                                                       
                                                                        
                      
-
                    
                  
                                 
@@ -1487,7 +1412,6 @@ int unlzw(int in, int out);
                                                                  
                                           
                
-
                            
                                                     
                                                
@@ -1495,23 +1419,19 @@ int unlzw(int in, int out);
                    
                                   
                      
-
                                                                          
                                                                     
                                             
                                       
                      
-
                    
                                         
                                 
                        
-
                                                                  
                                                         
                                                                          
                        
-
                      
                                
                    
@@ -1523,15 +1443,12 @@ int unlzw(int in, int out);
                  
                                                
                
-
                     
                
-
                                                                    
                                                                               
                                 
                
-
              
                             
                                     
@@ -1552,23 +1469,18 @@ int unlzw(int in, int out);
                 
                        
          
-
                                                                           
                                                            
          
-
        
      
                
    
-
  
 int lzw(int in, int out);
                         
                           
-
    
-
                    
                  
      
@@ -1583,7 +1495,6 @@ int lzw(int in, int out);
      
                
    
-
  
 extern __attribute__((__nothrow__)) unsigned short const **(
     __attribute__((__leaf__)) __ctype_b_loc)(void)__attribute__((__const__));
@@ -1637,9 +1548,7 @@ ulg crc_32_tab[256];
                            
            
                
-
    
-
      
                                
                
@@ -1669,22 +1578,18 @@ ulg crc_32_tab[256];
        
                           
          
-
                        
          
-
        
      
                          
                
    
-
  
 static ulg crc = (ulg)4294967295L;
 ulg updcrc(uch *s, unsigned int n) {
   register ulg c;
   uch *tmp;
-
   {
                                                          
                            
@@ -1692,7 +1597,6 @@ ulg updcrc(uch *s, unsigned int n) {
       c = crc;
       if (n) {
          
-
           while (1) {
                                          ;
             tmp = s;
@@ -1705,7 +1609,6 @@ ulg updcrc(uch *s, unsigned int n) {
           }
         while_break: /* CIL Label */;
          
-
       }
     }
     crc = c;
@@ -1713,9 +1616,7 @@ ulg updcrc(uch *s, unsigned int n) {
   }
 }
                        
-
    
-
                 
                
                    
@@ -1723,12 +1624,10 @@ ulg updcrc(uch *s, unsigned int n) {
                          
            
    
-
  
 int fill_inbuf(int eof_ok) {
   int len;
            
-
   {
     {
       insize = 0U;
@@ -1768,52 +1667,38 @@ int fill_inbuf(int eof_ok) {
   }
 }
 void flush_outbuf(void) {
-
    
-
                        
              
      
      
-
       write_buf(ofd, (voidp)((char *)(outbuf)), outcnt);
                                                        
       outcnt = 0U;
      
-
            
    
-
 }
 void flush_window(void) {
-
    
-
                        
              
      
                                
                 
-
        
-
         write_buf(ofd, (voidp)((char *)(window)), outcnt);
        
-
      
-
                                                      
                 
            
    
-
 }
 void write_buf(int fd, voidp buf, unsigned int cnt) {
   unsigned int n;
-
   {
      
-
                 {
                                      ;
         { n = (unsigned int)write(fd, (void const *)buf, (size_t)cnt); }
@@ -1822,26 +1707,21 @@ void write_buf(int fd, voidp buf, unsigned int cnt) {
          
                               {
            
-
             write_error();
            
-
         }
                  
                                        
       }
                                 ;
      
-
            
   }
 }
                        
           
                                  
-
    
-
           
      
                  
@@ -1861,11 +1741,9 @@ void write_buf(int fd, voidp buf, unsigned int cnt) {
      
                
    
-
  
 char *basename(char *fname) {
   char *p;
-
   {
     { p = strrchr((char const *)fname, '/'); }
                                                         {
@@ -1896,7 +1774,6 @@ char *basename(char *fname) {
                
                     
                     
-
    
      
                      
@@ -1952,10 +1829,8 @@ char *basename(char *fname) {
      
                                                              
        
-
                                        
        
-
      
                    
                    
@@ -1963,10 +1838,8 @@ char *basename(char *fname) {
             
                       
        
-
                                  
        
-
      
                     
             
@@ -2023,24 +1896,18 @@ char *basename(char *fname) {
    
  
 void error(char *m) {
-
    
-
      
-
       fprintf((FILE * /* __restrict  */) stderr,
               (char const * /* __restrict  */) "\n%s: %s: %s\n", progname,
               ifname, m);
                    
      
-
            
    
-
 }
                        
            
-
    
      
                                                 
@@ -2049,42 +1916,32 @@ void error(char *m) {
      
                     
        
-
                                        
        
-
             
        
-
                                                   
                                                                                 
                         
        
-
      
                      
            
    
  
 void write_error(void) {
-
    
-
      
-
                                                 
                                                                    
       perror((char const *)(ofname));
                    
      
-
            
    
-
 }
                                                     
              
-
    
                     
                  
@@ -2097,14 +1954,11 @@ void write_error(void) {
      
                      
        
-
                             
                        
        
-
             
                                
-
      
      
                                               
@@ -2118,7 +1972,6 @@ void write_error(void) {
            
             
                    
-
    
      
                                  
@@ -2126,10 +1979,8 @@ void write_error(void) {
      
                                                           
        
-
                                        
        
-
      
                 
    
@@ -2275,7 +2126,6 @@ int huft_build(unsigned int *b, unsigned int n, unsigned int s, ush *d, ush *e,
                     
                     
                   
-
   {
     {
       memset((voidp)(c), 0, sizeof(c));
@@ -2441,7 +2291,6 @@ int huft_build(unsigned int *b, unsigned int n, unsigned int s, ush *d, ush *e,
                               
                              
                    
-
                     while (1) {
                                                        ;
                       j___0++;
@@ -2457,7 +2306,6 @@ int huft_build(unsigned int *b, unsigned int n, unsigned int s, ush *d, ush *e,
                     }
                   while_break___8: /* CIL Label */;
                    
-
                 }
                 {
                   z = (unsigned int)(1 << j___0);
@@ -2468,10 +2316,8 @@ int huft_build(unsigned int *b, unsigned int n, unsigned int s, ush *d, ush *e,
                     (unsigned long)((struct huft *)((void *)0))) {
                           
                      
-
                                       
                      
-
                    
                   return (3);
                 }
@@ -2571,9 +2417,7 @@ int huft_build(unsigned int *b, unsigned int n, unsigned int s, ush *d, ush *e,
                                
                           
                           
-
    
-
           
      
                  
@@ -2593,7 +2437,6 @@ int huft_build(unsigned int *b, unsigned int n, unsigned int s, ush *d, ush *e,
      
                
    
-
  
 int inflate_codes(struct huft *tl, struct huft *td, int bl, int bd) {
   register unsigned int e;
@@ -2627,7 +2470,6 @@ int inflate_codes(struct huft *tl, struct huft *td, int bl, int bd) {
   unsigned int tmp___19;
   unsigned int tmp___20;
   unsigned int tmp___21;
-
   {
     b = bb;
     k = bk;
@@ -2649,11 +2491,9 @@ int inflate_codes(struct huft *tl, struct huft *td, int bl, int bd) {
               tmp___1 = (int)inbuf[tmp];
             }       
                
-
                                         
                                   
                
-
              
             b |= (ulg)((uch)tmp___1) << k;
             k += 8U;
@@ -2664,7 +2504,6 @@ int inflate_codes(struct huft *tl, struct huft *td, int bl, int bd) {
         e = (unsigned int)t->e;
         if (e > 16U) {
            
-
                       {
                                                ;
                              
@@ -2685,11 +2524,9 @@ int inflate_codes(struct huft *tl, struct huft *td, int bl, int bd) {
                     tmp___4 = (int)inbuf[tmp___2];
                   }       
                      
-
                                               
                                         
                      
-
                    
                   b |= (ulg)((uch)tmp___4) << k;
                   k += 8U;
@@ -2704,7 +2541,6 @@ int inflate_codes(struct huft *tl, struct huft *td, int bl, int bd) {
             }
                                           ;
            
-
         }
         b >>= (int)t->b;
         k -= (unsigned int)t->b;
@@ -2714,12 +2550,10 @@ int inflate_codes(struct huft *tl, struct huft *td, int bl, int bd) {
           window[tmp___5] = (uch)t->v.n;
           if (w == 32768U) {
              
-
                          
               flush_window();
               w = 0U;
              
-
           }
         } else {
           if (e == 15U) {
@@ -2737,11 +2571,9 @@ int inflate_codes(struct huft *tl, struct huft *td, int bl, int bd) {
                 tmp___8 = (int)inbuf[tmp___6];
               } else {
                  
-
                   tmp___7 = fill_inbuf(0);
                   tmp___8 = tmp___7;
                  
-
               }
               b |= (ulg)((uch)tmp___8) << k;
               k += 8U;
@@ -2764,11 +2596,9 @@ int inflate_codes(struct huft *tl, struct huft *td, int bl, int bd) {
                 tmp___11 = (int)inbuf[tmp___9];
               }       
                  
-
                                            
                                       
                  
-
                
               b |= (ulg)((uch)tmp___11) << k;
               k += 8U;
@@ -2779,7 +2609,6 @@ int inflate_codes(struct huft *tl, struct huft *td, int bl, int bd) {
           e = (unsigned int)t->e;
           if (e > 16U) {
              
-
               while (1) {
                                                  ;
                                
@@ -2800,11 +2629,9 @@ int inflate_codes(struct huft *tl, struct huft *td, int bl, int bd) {
                                                       
                             
                        
-
                                                  
                                             
                        
-
                      
                                                    
                             
@@ -2819,7 +2646,6 @@ int inflate_codes(struct huft *tl, struct huft *td, int bl, int bd) {
               }
             while_break___5: /* CIL Label */;
              
-
           }
           b >>= (int)t->b;
           k -= (unsigned int)t->b;
@@ -2835,11 +2661,9 @@ int inflate_codes(struct huft *tl, struct huft *td, int bl, int bd) {
                 tmp___17 = (int)inbuf[tmp___15];
               }       
                  
-
                                            
                                       
                  
-
                
               b |= (ulg)((uch)tmp___17) << k;
               k += 8U;
@@ -2868,17 +2692,14 @@ int inflate_codes(struct huft *tl, struct huft *td, int bl, int bd) {
               n -= e;
                                
                  
-
                                                                 
                                                                       
                                     
                          
                          
                  
-
                      {
                  
-
                   while (1) {
                                                      ;
                     tmp___20 = w;
@@ -2893,16 +2714,13 @@ int inflate_codes(struct huft *tl, struct huft *td, int bl, int bd) {
                   }
                 while_break___9: /* CIL Label */;
                  
-
               }
               if (w == 32768U) {
                  
-
                   outcnt = w;
                   flush_window();
                   w = 0U;
                  
-
               }
               if (!n) {
                 goto while_break___8;
@@ -2936,9 +2754,7 @@ int inflate_codes(struct huft *tl, struct huft *td, int bl, int bd) {
               
                        
                        
-
    
-
            
            
                
@@ -2957,11 +2773,9 @@ int inflate_codes(struct huft *tl, struct huft *td, int bl, int bd) {
                                     
                 
            
-
                                     
                               
            
-
          
                                       
                 
@@ -2983,11 +2797,9 @@ int inflate_codes(struct huft *tl, struct huft *td, int bl, int bd) {
                                         
                 
            
-
                                     
                               
            
-
          
                                       
                 
@@ -3019,11 +2831,9 @@ int inflate_codes(struct huft *tl, struct huft *td, int bl, int bd) {
                                             
                     
                
-
                                         
                                   
                
-
              
                                           
                     
@@ -3035,12 +2845,10 @@ int inflate_codes(struct huft *tl, struct huft *td, int bl, int bd) {
                                  
                           
            
-
                        
                            
                    
            
-
          
                 
                 
@@ -3052,7 +2860,6 @@ int inflate_codes(struct huft *tl, struct huft *td, int bl, int bd) {
            
                
    
-
  
                          
             
@@ -3063,7 +2870,6 @@ int inflate_codes(struct huft *tl, struct huft *td, int bl, int bd) {
                       
           
                    
-
    
               
      
@@ -3199,7 +3005,6 @@ int inflate_dynamic(void) {
                         
   int tmp___30;
                     
-
   {
     b = bb;
     k = bk;
@@ -3215,11 +3020,9 @@ int inflate_dynamic(void) {
           tmp___1 = (int)inbuf[tmp];
         }       
            
-
                                     
                               
            
-
          
         b |= (ulg)((uch)tmp___1) << k;
         k += 8U;
@@ -3241,11 +3044,9 @@ int inflate_dynamic(void) {
                                         
                 
            
-
                                     
                               
            
-
          
                                       
                 
@@ -3267,11 +3068,9 @@ int inflate_dynamic(void) {
           tmp___7 = (int)inbuf[tmp___5];
         }       
            
-
                                     
                               
            
-
          
         b |= (ulg)((uch)tmp___7) << k;
         k += 8U;
@@ -3307,11 +3106,9 @@ int inflate_dynamic(void) {
               tmp___10 = (int)inbuf[tmp___8];
             }       
                
-
                                         
                                    
                
-
              
             b |= (ulg)((uch)tmp___10) << k;
             k += 8U;
@@ -3344,10 +3141,8 @@ int inflate_dynamic(void) {
     if (i___0 != 0) {
                        
          
-
                         
          
-
        
       return (i___0);
     }
@@ -3373,11 +3168,9 @@ int inflate_dynamic(void) {
               tmp___13 = (int)inbuf[tmp___11];
             }       
                
-
                                          
                                     
                
-
              
             b |= (ulg)((uch)tmp___13) << k;
             k += 8U;
@@ -3396,7 +3189,6 @@ int inflate_dynamic(void) {
           ll[tmp___14] = l;
         } else {
                              
-
              
                          
                                                   
@@ -3409,11 +3201,9 @@ int inflate_dynamic(void) {
                                                   
                         
                    
-
                                              
                                         
                    
-
                  
                                                
                         
@@ -3454,11 +3244,9 @@ int inflate_dynamic(void) {
                                                     
                           
                      
-
                                                
                                           
                      
-
                    
                                                  
                           
@@ -3499,11 +3287,9 @@ int inflate_dynamic(void) {
                                                     
                           
                      
-
                                                
                                           
                      
-
                    
                                                  
                           
@@ -3547,13 +3333,11 @@ int inflate_dynamic(void) {
                      
                        
          
-
                   
                                                 
                                                                              
                         
          
-
        
                      
      
@@ -3564,13 +3348,11 @@ int inflate_dynamic(void) {
                      
                        
          
-
                   
                                                 
                                                                               
                         
          
-
        
                         
                      
@@ -3599,7 +3381,6 @@ int inflate_block(int *e) {
   int tmp___5;
               
               
-
   {
     b = bb;
     k = bk;
@@ -3615,11 +3396,9 @@ int inflate_block(int *e) {
           tmp___1 = (int)inbuf[tmp];
         }       
            
-
                                     
                               
            
-
          
         b |= (ulg)((uch)tmp___1) << k;
         k += 8U;
@@ -3641,11 +3420,9 @@ int inflate_block(int *e) {
                                         
                 
            
-
                                     
                               
            
-
          
                                       
                 
@@ -3682,7 +3459,6 @@ int inflate(void) {
   int e;
   int r;
                  
-
   {
                 
             
@@ -3734,9 +3510,7 @@ int check_zipfile(int in);
                    
                            
          
-
    
-
                       
              
                                                                   
@@ -3769,9 +3543,7 @@ int check_zipfile(int in);
      
                            
                       
-
                         
-
          
                                                     
                              
@@ -3782,9 +3554,7 @@ int check_zipfile(int in);
          
                    
        
-
      
-
                                 
                        
        
@@ -3801,7 +3571,6 @@ int check_zipfile(int in);
               
                
    
-
  
 int unzip(int in, int out) {
                
@@ -3833,7 +3602,6 @@ int unzip(int in, int out) {
                     
                     
                     
-
   {
     {
                         
@@ -3863,17 +3631,13 @@ int unzip(int in, int out) {
       }
                     {
          
-
           error((char *)"out of memory");
          
-
       }       
                        
            
-
                                                                       
            
-
          
        
     }       
@@ -3896,7 +3660,6 @@ int unzip(int in, int out) {
                                   
                                                     
              
-
                                                         
                                                                             
                             
@@ -3907,7 +3670,6 @@ int unzip(int in, int out) {
                                    
                                                                         
              
-
            
            
                        
@@ -3923,11 +3685,9 @@ int unzip(int in, int out) {
                                               
                       
                  
-
                                           
                                     
                  
-
                
                                
                                
@@ -3935,10 +3695,8 @@ int unzip(int in, int out) {
                                   
                                      
                  
-
                                  
                  
-
                
              
                                        
@@ -3946,11 +3704,9 @@ int unzip(int in, int out) {
                              
                 
                                                                
-
          
               
                                                              
-
        
      
                  
@@ -3967,11 +3723,9 @@ int unzip(int in, int out) {
                                           
                   
              
-
                                       
                                 
              
-
            
                                 
               
@@ -4002,11 +3756,9 @@ int unzip(int in, int out) {
                                              
                     
                
-
                                          
                                     
                
-
              
                                    
                 
@@ -4028,17 +3780,13 @@ int unzip(int in, int out) {
                                       
                                
        
-
                                                             
        
-
      
                                          
        
-
                                                                
        
-
      
                 
                                 
@@ -4050,14 +3798,12 @@ int unzip(int in, int out) {
                           
                          
                
-
                         
                                                       
                                                                                 
                                                                              
                                       
                
-
              
                                  
                             
@@ -4094,27 +3840,21 @@ int (*read_buf)(char *buf, unsigned int size);
 static unsigned short bi_buf;
 static int bi_valid;
 void bi_init(file_t zipfile) {
-
    
-
                     
                                
                  
                       
-
       read_buf = &file_read;
      
-
            
    
-
 }
 void send_bits(int value, int length) {
                    
                        
   unsigned int tmp___1;
   unsigned int tmp___2;
-
   {
     if (bi_valid > (int)(16UL * sizeof(char)) - length) {
       bi_buf = (unsigned short)((int)bi_buf | (value << bi_valid));
@@ -4131,20 +3871,16 @@ void send_bits(int value, int length) {
         outbuf[tmp___1] = (uch)((int)bi_buf & 255);
                                
            
-
                            
            
-
          
         tmp___2 = outcnt;
         outcnt++;
         outbuf[tmp___2] = (uch)((int)bi_buf >> 8);
                               {
            
-
             flush_outbuf();
            
-
         }
       }
       bi_buf = (unsigned short)((int)((ush)value) >> (16UL * sizeof(char) -
@@ -4160,7 +3896,6 @@ void send_bits(int value, int length) {
 }
 unsigned int bi_reverse(unsigned int code, int len) {
   register unsigned int res;
-
   {
     res = 0U;
     {
@@ -4185,7 +3920,6 @@ void bi_windup(void) {
                        
                        
   unsigned int tmp___3;
-
   {
                        
                             
@@ -4201,40 +3935,30 @@ void bi_windup(void) {
                                                    
                                
            
-
                            
            
-
          
                          
                  
                                                   
                                
            
-
                            
            
-
          
        
             
-
                          
-
         tmp___3 = outcnt;
         outcnt++;
         outbuf[tmp___3] = (uch)bi_buf;
                                
            
-
                            
            
-
          
        
-
      
-
                                
                  
            
@@ -4252,7 +3976,6 @@ void bi_windup(void) {
                        
                 
                        
-
    
                     
                  
@@ -4269,20 +3992,16 @@ void bi_windup(void) {
                                                        
                                
            
-
                            
            
-
          
                          
                  
                                                       
                                
            
-
                            
            
-
          
        
                             
@@ -4298,20 +4017,16 @@ void bi_windup(void) {
                                                           
                                
            
-
                            
            
-
          
                          
                  
                                                          
                                
            
-
                            
            
-
          
        
      
@@ -4330,10 +4045,8 @@ void bi_windup(void) {
                                         
                                
            
-
                            
            
-
          
        
                                  
@@ -4412,7 +4125,6 @@ void ct_init(ush *attr, int *methodp) {
               
               
               
-
   {
                      
                           
@@ -4591,7 +4303,6 @@ void ct_init(ush *attr, int *methodp) {
 }
 static void init_block(void) {
   int n;
-
   {
     n = 0;
     {
@@ -4643,7 +4354,6 @@ static void init_block(void) {
 static void pqdownheap(ct_data *tree, int k) {
   int v;
   int j___0;
-
   {
     v = heap[k];
     j___0 = k << 1;
@@ -4699,7 +4409,6 @@ static void gen_bitlen(tree_desc *desc) {
             
         
                
-
   {
     tree = desc->dyn_tree;
                              
@@ -4823,7 +4532,6 @@ static void gen_codes(ct_data *tree, int max_code) {
   int len;
   ush tmp;
                     
-
   {
                   
     bits = 1;
@@ -4877,7 +4585,6 @@ static void build_tree___0(tree_desc *desc) {
   int tmp___1;
   ush tmp___2;
   int tmp___3;
-
   {
     tree = desc->dyn_tree;
                               
@@ -4999,7 +4706,6 @@ static void scan_tree(ct_data *tree, int max_code) {
   int count;
   int max_count;
   int min_count;
-
   {
                  
     nextlen = (int)(tree + 0)->dl.len;
@@ -5034,7 +4740,6 @@ static void scan_tree(ct_data *tree, int max_code) {
                 (ush)((int)bl_tree[curlen].fc.freq + count);
           } else {
                               
-
                                      {
                 bl_tree[curlen].fc.freq =
                     (ush)((int)bl_tree[curlen].fc.freq + 1);
@@ -5079,7 +4784,6 @@ static void send_tree(ct_data *tree, int max_code) {
   int count;
   int max_count;
   int min_count;
-
   {
                  
     nextlen = (int)(tree + 0)->dl.len;
@@ -5110,7 +4814,6 @@ static void send_tree(ct_data *tree, int max_code) {
         _L:
           if (count < min_count) {
              
-
               while (1) {
                                                  ;
                 {
@@ -5124,18 +4827,14 @@ static void send_tree(ct_data *tree, int max_code) {
               }
             while_break___0: /* CIL Label */;
              
-
           } else {
                               
-
                                      {
                  
-
                   send_bits((int)bl_tree[curlen].fc.code,
                             (int)bl_tree[curlen].dl.len);
                   count--;
                  
-
               }
               {
                 send_bits((int)bl_tree[16].fc.code, (int)bl_tree[16].dl.len);
@@ -5144,18 +4843,14 @@ static void send_tree(ct_data *tree, int max_code) {
                      
                                 
                  
-
                                                                                
                                           
                  
-
                       
                  
-
                                                                                
                                            
                  
-
                
              
           }
@@ -5184,7 +4879,6 @@ static void send_tree(ct_data *tree, int max_code) {
 }
 static int build_bl_tree(void) {
   int max_blindex;
-
   {
     {
       scan_tree(dyn_ltree, l_desc.max_code);
@@ -5211,7 +4905,6 @@ static int build_bl_tree(void) {
 }
 static void send_all_trees(int lcodes, int dcodes, int blcodes) {
   int rank;
-
   {
     {
       send_bits(lcodes - 257, 5);
@@ -5243,15 +4936,12 @@ ulg flush_block(char *buf, ulg stored_len, int eof) {
                
                   
   int max_blindex;
-
   {
     flag_buf[last_flags] = flags;
                                    
        
-
                         
        
-
      
     {
       build_tree___0(&l_desc);
@@ -5279,52 +4969,40 @@ ulg flush_block(char *buf, ulg stored_len, int eof) {
                                          
                                                                
            
-
                               
                             
                                                                       
                                                       
                                                          
            
-
                 
                   
          
                
-
          
                                       
            
-
                                          
                                                        
                                                
            
-
                  
-
            
-
             send_bits((2 << 1) + eof, 3);
             send_all_trees(l_desc.max_code + 1, d_desc.max_code + 1,
                            max_blindex + 1);
             compress_block(dyn_ltree, dyn_dtree);
                                             
            
-
          
-
        
-
     }
     { init_block(); }
     if (eof) {
        
-
         bi_windup();
                               
        
-
     }
     return (compressed_len >> 3);
   }
@@ -5338,7 +5016,6 @@ int ct_tally(int dist, int lc) {
   ulg in_length;
   int dcode;
   int tmp___3;
-
   {
     tmp = last_lit;
     last_lit++;
@@ -5399,10 +5076,8 @@ int ct_tally(int dist, int lc) {
                                 
                     
               
-
         tmp___3 = 0;
        
-
     }
     return (tmp___3);
   }
@@ -5419,7 +5094,6 @@ static void compress_block(ct_data *ltree, ct_data *dtree) {
   unsigned int tmp;
   unsigned int tmp___0;
   unsigned int tmp___1;
-
   {
     lx = 0U;
     dx = 0U;
@@ -5427,7 +5101,6 @@ static void compress_block(ct_data *ltree, ct_data *dtree) {
                   
                         {
        
-
         while (1) {
                                        ;
           if ((lx & 7U) == 0U) {
@@ -5440,10 +5113,8 @@ static void compress_block(ct_data *ltree, ct_data *dtree) {
           lc = (int)inbuf[tmp___0];
           if (((int)flag & 1) == 0) {
              
-
               send_bits((int)(ltree + lc)->fc.code, (int)(ltree + lc)->dl.len);
              
-
           } else {
             {
               code = (unsigned int)length_code[lc];
@@ -5453,11 +5124,9 @@ static void compress_block(ct_data *ltree, ct_data *dtree) {
             }
                             {
                
-
                 lc -= base_length[code];
                 send_bits(lc, extra);
                
-
             }
             tmp___1 = dx;
             dx++;
@@ -5474,11 +5143,9 @@ static void compress_block(ct_data *ltree, ct_data *dtree) {
             }
                             {
                
-
                 dist -= (unsigned int)base_dist[code];
                 send_bits((int)dist, extra);
                
-
             }
           }
           flag = (uch)((int)flag >> 1);
@@ -5488,7 +5155,6 @@ static void compress_block(ct_data *ltree, ct_data *dtree) {
         }
       while_break: /* CIL Label */;
        
-
     }
     { send_bits((int)(ltree + 256)->fc.code, (int)(ltree + 256)->dl.len); }
            
@@ -5501,7 +5167,6 @@ static void compress_block(ct_data *ltree, ct_data *dtree) {
           
               
               
-
    
           
                     
@@ -5582,21 +5247,16 @@ void lm_init(int pack_level, ush *flags___0) {
   unsigned int tmp;
                    
                    
-
   {
                          
        
-
                                         
        
-
             
                            
          
-
                                           
          
-
        
      
     {
@@ -5679,7 +5339,6 @@ int longest_match(IPos cur_match) {
   register uch *strend;
                          
                         
-
   {
     chain_length = max_chain_length;
     scan = window + strstart;
@@ -5706,7 +5365,6 @@ int longest_match(IPos cur_match) {
                                                                  
                         
                   
-
             if ((int)*match != (int)*scan) {
               goto __Cont;
             } else {
@@ -5716,7 +5374,6 @@ int longest_match(IPos cur_match) {
                
             }
            
-
         }
         scan += 2;
         match++;
@@ -5732,23 +5389,18 @@ int longest_match(IPos cur_match) {
                        
                         
                                                 
-
                          
                           
                                                   
-
                            
                             
                                                     
-
                              
                               
                                                       
-
                                
                                 
                                                         
-
                           scan++;
                           match++;
                                                           
@@ -5816,7 +5468,6 @@ static void fill_window(void) {
   unsigned int more;
   unsigned int tmp;
   unsigned int tmp___0;
-
   {
     more = (unsigned int)((window_size - (ulg)lookahead) - (ulg)strstart);
                               
@@ -5881,10 +5532,8 @@ static void fill_window(void) {
                                
                      
                 
-
           lookahead += n;
          
-
       }
     }
            
@@ -5897,7 +5546,6 @@ static void fill_window(void) {
             
                 
               
-
    
                       
                      
@@ -5957,12 +5605,10 @@ static void fill_window(void) {
            
                 
            
-
                                                        
                         
                        
            
-
          
                     
                                   
@@ -6013,7 +5659,6 @@ ulg deflate(void) {
   int tmp___2;
   char *tmp___3;
   ulg tmp___4;
-
   {
     match_available = 0;
     match_length = 2U;
@@ -6140,10 +5785,8 @@ ulg deflate(void) {
     }
                           
        
-
                                                 
        
-
      
                            {
       tmp___3 = (char *)(&window[(unsigned int)block_start]);
@@ -6199,7 +5842,6 @@ int zip(int in, int out) {
                         
                     
                     
-
   {
                        
                   
@@ -6213,30 +5855,24 @@ int zip(int in, int out) {
     outbuf[tmp] = (uch) * ("\037\213" + 0);
                            
        
-
                        
        
-
      
     tmp___0 = outcnt;
     outcnt++;
     outbuf[tmp___0] = (uch) * ("\037\213" + 1);
                            
        
-
                        
        
-
      
     tmp___1 = outcnt;
     outcnt++;
     outbuf[tmp___1] = (uch)8;
                            
        
-
                        
        
-
      
                          
                                             
@@ -6246,10 +5882,8 @@ int zip(int in, int out) {
                                 
                            
        
-
                        
        
-
      
                          {
       tmp___3 = outcnt;
@@ -6264,20 +5898,16 @@ int zip(int in, int out) {
                                                             
                              
          
-
                          
          
-
        
                        
                
                                                                       
                              
          
-
                          
          
-
        
      
                          {
@@ -6293,20 +5923,16 @@ int zip(int in, int out) {
                                                                
                              
          
-
                          
          
-
        
                         
                
                                                                          
                              
          
-
                          
          
-
        
      
     {
@@ -6320,20 +5946,16 @@ int zip(int in, int out) {
     }
                            
        
-
                        
        
-
      
     tmp___12 = outcnt;
     outcnt++;
     outbuf[tmp___12] = (uch)3;
                            
        
-
                        
        
-
      
                          
        
@@ -6348,10 +5970,8 @@ int zip(int in, int out) {
                                      
                                  
              
-
                              
              
-
            
                        
               
@@ -6379,20 +5999,16 @@ int zip(int in, int out) {
                                                             
                              
          
-
                          
          
-
        
                         
                
                                                                      
                              
          
-
                          
          
-
        
      
                          {
@@ -6408,20 +6024,16 @@ int zip(int in, int out) {
                                                         
                              
          
-
                          
          
-
        
                         
                
                                                                  
                              
          
-
                          
          
-
        
      
                          {
@@ -6437,20 +6049,16 @@ int zip(int in, int out) {
                                                            
                              
          
-
                          
          
-
        
                         
                
                                                                      
                              
          
-
                          
          
-
        
      
                          {
@@ -6466,20 +6074,16 @@ int zip(int in, int out) {
                                                               
                              
          
-
                          
          
-
        
                         
                
                                                                        
                              
          
-
                          
          
-
        
      
     {
@@ -6491,7 +6095,6 @@ int zip(int in, int out) {
 }
 int file_read(char *buf, unsigned int size) {
   unsigned int len;
-
   {
     { len = (unsigned int)read(ifd, (void *)buf, (size_t)size); }
                              
@@ -6669,9 +6272,7 @@ int (*work)(int infile, int outfile) = &zip;
 static void treat_dir(char *dir);
 static void reset_times(char *name, struct stat *statb);
                          
-
    
-
      
                                                 
                                                                                 
@@ -6680,7 +6281,6 @@ static void reset_times(char *name, struct stat *statb);
      
            
    
-
  
 static char *help_msg[18] = {
     (char *)" -c --stdout      write on standard output, keep original files "
@@ -6709,7 +6309,6 @@ static char *help_msg[18] = {
 static void help(void) {
   char **p;
   char **tmp;
-
   {
     {
       p = help_msg;
@@ -6739,7 +6338,6 @@ static void help(void) {
 static void license(void) {
   char **p;
   char **tmp;
-
   {
     {
       p = license_msg;
@@ -6766,11 +6364,8 @@ static void license(void) {
   }
 }
 static void version(void) {
-
    
-
      
-
       fprintf((FILE * /* __restrict  */) stderr,
               (char const * /* __restrict  */) "%s %s (%s)\n", progname,
               "1.2.4", "18 Aug 93");
@@ -6784,10 +6379,8 @@ static void version(void) {
       fprintf((FILE * /* __restrict  */) stderr,
               (char const * /* __restrict  */) "\n");
      
-
            
    
-
 }
 int main(int argc, char **argv) {
   int file_count;
@@ -6805,7 +6398,6 @@ int main(int argc, char **argv) {
   int tmp___8;
                     
                     
-
   {
     {
       progname = basename(*(argv + 0));
@@ -6829,26 +6421,20 @@ int main(int argc, char **argv) {
      
                      
        
-
                                                 
        
-
      
                                                
                                                                       
        
-
                                                  
        
-
      
                                               
                                                                       
        
-
                                                 
        
-
      
                                                                    
                        
@@ -7099,26 +6685,22 @@ int main(int argc, char **argv) {
                 
                    
          
-
                                                     
                                                                                 
                                                                       
                             
          
-
        
      
                      
                         
          
-
                   
                                                 
                                                                                
                                 
                      
          
-
               
                 
        
@@ -7126,14 +6708,12 @@ int main(int argc, char **argv) {
        
                        
          
-
                   
                                                 
                                                                                
                                 
                      
          
-
        
      
                  
@@ -7164,7 +6744,6 @@ int main(int argc, char **argv) {
                     
        
        
-
                   {
                                            ;
                                  
@@ -7178,19 +6757,15 @@ int main(int argc, char **argv) {
         }
                                       ;
        
-
     } else {
          treat_stdin();  
-
     }
                
                    
                              
            
-
                             
            
-
          
        
      
@@ -7218,11 +6793,9 @@ static void treat_stdin(void) {
                     
                     
                     
-
   {
                 {
                   
-
                          
                           
                {
@@ -7256,7 +6829,6 @@ static void treat_stdin(void) {
           }
         }
        
-
     }
                      
                   
@@ -7295,21 +6867,17 @@ static void treat_stdin(void) {
               
            {
                      
-
             {
         tmp___6 = fileno(stdin);
         tmp___7 = fstat(tmp___6, &istat);
       }
                            
            
-
                                           
            
-
          
         time_stamp = istat.st_mtim.tv_sec;
        
-
     }
      
                        
@@ -7319,16 +6887,12 @@ static void treat_stdin(void) {
      
     if (decompress) {
        
-
         method = get_method(ifd);
        
-
                        
          
-
                              
          
-
        
     }
                
@@ -7370,21 +6934,17 @@ static void treat_stdin(void) {
                   
                  
          
-
                                                     
                                                             
          
-
               
                           
            
-
                                                                           
                                   
                                                       
                                                            
            
-
          
        
      
@@ -7411,7 +6971,6 @@ static void treat_file(char *iname) {
                     
                     
                     
-
   {
                                                
                    
@@ -7429,23 +6988,19 @@ static void treat_file(char *iname) {
                                              
                       
          
-
                      
                            
                                   
          
-
               
                      
            
-
                     
                                                   
                            
                                                                                
                                   
            
-
          
                              
                         
@@ -7456,14 +7011,12 @@ static void treat_file(char *iname) {
                                                 
                    
          
-
                   
                                                 
                                                                                 
                                                                           
                                 
          
-
        
                            
                       
@@ -7507,11 +7060,9 @@ static void treat_file(char *iname) {
                   
                     
            
-
                                                       
                                                               
            
-
                 
                       
          
@@ -7526,7 +7077,6 @@ static void treat_file(char *iname) {
      
                {
                         
-
         tmp___3 = 0;
                
                     
@@ -7568,10 +7118,8 @@ static void treat_file(char *iname) {
      
                     
        
-
                              
        
-
             
                                      
                          
@@ -7582,13 +7130,11 @@ static void treat_file(char *iname) {
                          
                          
                
-
                                                           
                                    
                                                                               
                                                   
                
-
              
            
          
@@ -7651,56 +7197,44 @@ static void treat_file(char *iname) {
        
                      
          
-
                         
          
-
        
      
                        
                        
          
-
                                          
          
-
        
              
      
                   
                  
          
-
                                                     
                                                           
          
-
               
                          
            
-
                                                                            
                                   
            
-
                 
            
-
                                                                           
                                   
            
-
          
        
                   
                          
            
-
                                                       
                                                                             
                             
            
-
          
        
        
@@ -7710,10 +7244,8 @@ static void treat_file(char *iname) {
      
                      
        
-
                           
        
-
      
            
   }
@@ -7725,16 +7257,12 @@ static void treat_file(char *iname) {
               
               
                    
-
    
-
                     
                 
                        
-
                         
        
-
      
      
                  
@@ -7778,14 +7306,12 @@ static void treat_file(char *iname) {
                          
                        
              
-
                       
                                                     
                              
                                                                                 
                                     
              
-
            
                                
                           
@@ -7801,13 +7327,11 @@ static void treat_file(char *iname) {
                                  
      
    
-
  
                                                    
            
               
               
-
    
      
                                
@@ -7843,9 +7367,7 @@ static void treat_file(char *iname) {
               
               
                     
-
    
-
      
                            
                                                   
@@ -7856,18 +7378,14 @@ static void treat_file(char *iname) {
                                                
                      
        
-
                                                   
                                                      
        
-
             
        
-
                                                   
                                                                            
        
-
      
      
                      
@@ -7900,7 +7418,6 @@ static void treat_file(char *iname) {
      
                                  
    
-
  
                                                                       
                                                                               
@@ -7912,9 +7429,7 @@ static int get_istat(char *iname, struct stat *sbuf) {
                
               
               
-
    
-
     {
                      
       strcpy((char * /* __restrict  */)(ifname),
@@ -7983,7 +7498,6 @@ static int get_istat(char *iname, struct stat *sbuf) {
      
                
    
-
 }
                               
              
@@ -7991,9 +7505,7 @@ static int get_istat(char *iname, struct stat *sbuf) {
               
                    
                    
-
    
-
      
                                                 
                                                        
@@ -8018,14 +7530,12 @@ static int get_istat(char *iname, struct stat *sbuf) {
                
                            
                  
-
                           
                                                         
                                                                                 
                                                                       
                                         
                  
-
                
                                    
                               
@@ -8041,20 +7551,16 @@ static int get_istat(char *iname, struct stat *sbuf) {
        
                      
          
-
                                                 
                                                           
          
-
               
                                                          
                            
            
-
                                                   
                                                             
            
-
                 
                                
          
@@ -8063,25 +7569,21 @@ static int get_istat(char *iname, struct stat *sbuf) {
                                                               
                       
            
-
                                                       
                                                                              
                                                                              
                                             
            
-
                 
                            
                          
                
-
                         
                                                       
                                                                              
                                                                              
                                             
                
-
              
            
          
@@ -8091,17 +7593,14 @@ static int get_istat(char *iname, struct stat *sbuf) {
                    
               
          
-
                              
                                                     
                                                              
          
-
        
      
                
    
-
  
 static int get_method(int in) {
                 
@@ -8178,7 +7677,6 @@ static int get_method(int in) {
                
                     
                     
-
   {
                 
                       
@@ -8188,11 +7686,9 @@ static int get_method(int in) {
                                     
                 
            
-
                                     
                               
            
-
          
                                  
                              
@@ -8201,11 +7697,9 @@ static int get_method(int in) {
                                         
                 
            
-
                                     
                               
            
-
          
                                  
               
@@ -8219,11 +7713,9 @@ static int get_method(int in) {
                                       
               {
          
-
           tmp___6 = fill_inbuf(0);
                             
          
-
       }
                                
                           {
@@ -8232,11 +7724,9 @@ static int get_method(int in) {
                                        
       }       
          
-
                                   
                              
          
-
        
                                 
     }
@@ -8256,7 +7746,6 @@ static int get_method(int in) {
                                                                                
        
                           
-
              
                              {
           tmp___11 = inptr;
@@ -8264,11 +7753,9 @@ static int get_method(int in) {
           tmp___13 = (int)inbuf[tmp___11];
         }       
            
-
                                      
                                 
            
-
          
         method = tmp___13;
         if (method != 8) {
@@ -8289,11 +7776,9 @@ static int get_method(int in) {
                                           
         }       
            
-
                                      
                                 
            
-
          
                                   
                                          
@@ -8340,11 +7825,9 @@ static int get_method(int in) {
                                           
         }       
            
-
                                      
                                 
            
-
          
                               
                             {
@@ -8353,11 +7836,9 @@ static int get_method(int in) {
                                           
         }       
            
-
                                      
                                 
            
-
          
                                     
                             {
@@ -8366,11 +7847,9 @@ static int get_method(int in) {
                                           
         }       
            
-
                                      
                                 
            
-
          
                                      
                             {
@@ -8379,11 +7858,9 @@ static int get_method(int in) {
                                           
         }       
            
-
                                      
                                 
            
-
          
                                      
                            
@@ -8396,14 +7873,12 @@ static int get_method(int in) {
           inptr++;
         }       
                              
-
          
                             {
                            
           inptr++;
         }       
                              
-
          
                                         
                                
@@ -8412,11 +7887,9 @@ static int get_method(int in) {
                                             
                   
              
-
                                        
                                   
              
-
            
                                         
                                
@@ -8425,22 +7898,18 @@ static int get_method(int in) {
                                             
                   
              
-
                                        
                                   
              
-
            
                                               
                         
              
-
                       
                                                     
                                                                               
                                           
              
-
            
          
                                         
@@ -8450,11 +7919,9 @@ static int get_method(int in) {
                                             
                   
              
-
                                        
                                   
              
-
            
                                        
                                
@@ -8463,22 +7930,18 @@ static int get_method(int in) {
                                             
                   
              
-
                                        
                                   
              
-
            
                                              
                         
              
-
                                                         
                                                                                 
                                                                             
                                              
              
-
            
            
                        
@@ -8493,7 +7956,6 @@ static int get_method(int in) {
                         
                       
                                    
-
                
              
                                        
@@ -8521,11 +7983,9 @@ static int get_method(int in) {
                                               
                           
                      
-
                                                
                                          
                      
-
                    
                                        
                                          
@@ -8548,11 +8008,9 @@ static int get_method(int in) {
                                                       
                             
                        
-
                                                  
                                             
                        
-
                      
                                         
                                  
@@ -8563,10 +8021,8 @@ static int get_method(int in) {
                                            
                                                                    
                        
-
                                                                                 
                        
-
                      
                    
                                                  
@@ -8582,7 +8038,6 @@ static int get_method(int in) {
          
                                          
            
-
                        
                                                 
                                    
@@ -8591,11 +8046,9 @@ static int get_method(int in) {
                                                 
                       
                  
-
                                            
                                       
                  
-
                
                                      
                                      
@@ -8603,7 +8056,6 @@ static int get_method(int in) {
              
                                            
            
-
          
                            
                                                                            
@@ -8693,14 +8145,12 @@ static int get_method(int in) {
             
                    
          
-
                   
                                                 
                                                                              
                                                                             
                                 
          
-
        
                            
                       
@@ -8721,27 +8171,22 @@ static int get_method(int in) {
                   
                 
                    
-
    
                      
                             
                        
                       
            
-
                     
                                                                                 
            
-
          
                      
            
-
                    
                                                                               
                                                                         
            
-
          
               
                 
@@ -8758,20 +8203,16 @@ static int get_method(int in) {
          
                       
            
-
                                                                                 
                                                                    
                                         
            
-
                 
                        
              
-
                                                                              
                                 
              
-
            
          
          
@@ -8798,10 +8239,8 @@ static int get_method(int in) {
            
                                                       
              
-
                            
              
-
            
                                                                            
                                                            
@@ -8822,11 +8261,9 @@ static int get_method(int in) {
      
                   
        
-
                                                                   
                                                    
        
-
      
      
                                                                      
@@ -8861,11 +8298,9 @@ static int get_method(int in) {
  
                                                               
           
-
    
                                          
                                            
-
                 
                
                 
@@ -8886,7 +8321,6 @@ static int get_method(int in) {
               
               
                     
-
    
      
                                             
@@ -8902,7 +8336,6 @@ static int get_method(int in) {
                                            
        
                     
-
                     
                
                     
@@ -8928,7 +8361,6 @@ static int get_method(int in) {
                     
                     
                     
-
    
      
                                   
@@ -8938,10 +8370,8 @@ static int get_method(int in) {
                      
                      
          
-
                                           
          
-
        
                                          
              
@@ -8949,10 +8379,8 @@ static int get_method(int in) {
                              
                                                          
        
-
                                                  
        
-
      
                       
                        
@@ -9025,10 +8453,8 @@ static int get_method(int in) {
                                                                
                                                                
          
-
                                                           
          
-
        
                                    
                 
@@ -9062,9 +8488,7 @@ static int get_method(int in) {
                     
                     
                     
-
    
-
      
                                
                
@@ -9121,13 +8545,11 @@ static int get_method(int in) {
          
               
          
-
                                                     
                              
                                                                                 
                                             
          
-
        
                     
                  
@@ -9147,7 +8569,6 @@ static int get_method(int in) {
          
                       
            
-
                                                       
                                                                        
                                                                              
@@ -9156,7 +8577,6 @@ static int get_method(int in) {
                                                 
                                                     
            
-
          
        
                                      
@@ -9191,12 +8611,10 @@ static int get_method(int in) {
      
                
    
-
  
                                                          
                        
           
-
    
      
                                            
@@ -9207,21 +8625,17 @@ static int get_method(int in) {
                                                    
                      
            
-
                                                       
                                                                        
            
-
          
                              
                         
          
                      
            
-
                                            
            
-
          
        
      
@@ -9231,7 +8645,6 @@ static int get_method(int in) {
                                             
           
               
-
    
                      
                              
@@ -9239,13 +8652,11 @@ static int get_method(int in) {
                                               
                             
              
-
                       
                                                     
                                                                                
                           
              
-
            
          
        
@@ -9257,21 +8668,17 @@ static int get_method(int in) {
               
                    
          
-
                                                     
                                                                      
          
-
        
                            
                       
        
                    
          
-
                                          
          
-
        
      
      
@@ -9283,21 +8690,17 @@ static int get_method(int in) {
                   
                    
          
-
                                                     
                                                                      
          
-
        
                            
                       
        
                    
          
-
                                          
          
-
        
      
            
@@ -9313,7 +8716,6 @@ static int get_method(int in) {
               
                  
                     
-
    
                                           
                                                             
@@ -9362,14 +8764,12 @@ static int get_method(int in) {
            
                 
            
-
                                                       
                                
                                                                                
                                                
                           
            
-
          
        
                                  
@@ -9380,52 +8780,37 @@ static int get_method(int in) {
  
                        
 static void do_exit(int exitcode) {
-
    
-
                   
        
-
                        
        
-
      
                 
                                                            
        
-
                           
                                   
        
-
      
                                                             
        
-
                                      
                                     
        
-
      
        exit(exitcode);  
-
    
-
 }
                        
-
    
-
                         
        
-
                    
                                        
        
-
      
                    
            
    
-
  

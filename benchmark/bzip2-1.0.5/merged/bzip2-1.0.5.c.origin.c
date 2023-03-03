@@ -303,7 +303,6 @@ void BZ2_hbMakeCodeLengths(UChar *len, Int32 *freq, Int32 alphaSize,
   void *__cil_tmp29;
   void *__cil_tmp30;
   void *__cil_tmp31;
-
   {
     i = 0;
     {
@@ -516,7 +515,6 @@ void BZ2_hbAssignCodes(Int32 *code, UChar *length, Int32 minLen, Int32 maxLen,
   Int32 n;
   Int32 vec;
   Int32 i;
-
   {
     vec = 0;
     n = minLen;
@@ -556,7 +554,6 @@ void BZ2_hbCreateDecodeTables(Int32 *limit, Int32 *base, Int32 *perm,
   Int32 i;
   Int32 j;
   Int32 vec;
-
   {
     pp = 0;
     i = minLen;
@@ -670,7 +667,6 @@ Int32 BZ2_indexIntoF(Int32 indx, Int32 *cftab);
 Int32 BZ2_decompress(DState *s);
 static void makeMaps_d(DState *s) {
   Int32 i;
-
   {
     s->nInUse = 0;
     i = 0;
@@ -780,7 +776,6 @@ Int32 BZ2_decompress(DState *s) {
   UInt32 v___39;
   UInt32 v___40;
   void *__cil_tmp92;
-
   {
     strm = s->strm;
     if (s->state == 10) {
@@ -3159,7 +3154,6 @@ void BZ2_blockSort(EState *s);
 void BZ2_compressBlock(EState *s, Bool is_last_block);
 void BZ2_bsInitWrite(EState *s);
 void BZ2_bsInitWrite(EState *s) {
-
   {
     s->bsLive = 0;
     s->bsBuff = (UInt32)0;
@@ -3167,7 +3161,6 @@ void BZ2_bsInitWrite(EState *s) {
   }
 }
 static void bsFinishWrite(EState *s) {
-
   {
     {
       while (1) {
@@ -3186,7 +3179,6 @@ static void bsFinishWrite(EState *s) {
   }
 }
 __inline static void bsW(EState *s, Int32 n, UInt32 v) {
-
   {
     {
       while (1) {
@@ -3207,7 +3199,6 @@ __inline static void bsW(EState *s, Int32 n, UInt32 v) {
   }
 }
 static void bsPutUInt32(EState *s, UInt32 u) {
-
   {
     {
       bsW(s, 8, (UInt32)((long)(u >> 24) & 255L));
@@ -3219,7 +3210,6 @@ static void bsPutUInt32(EState *s, UInt32 u) {
   }
 }
 static void bsPutUChar(EState *s, UChar c) {
-
   {
     { bsW(s, 8, (UInt32)c); }
     return;
@@ -3227,7 +3217,6 @@ static void bsPutUChar(EState *s, UChar c) {
 }
 static void makeMaps_e(EState *s) {
   Int32 i;
-
   {
     s->nInUse = 0;
     i = 0;
@@ -3264,7 +3253,6 @@ static void generateMTFValues(EState *s) {
   register UChar rll_i;
   register UChar rtmp2;
   void *__cil_tmp16;
-
   {
     {
       ptr = s->ptr;
@@ -3437,7 +3425,6 @@ static void sendMTFValues(EState *s) {
   void *__cil_tmp41;
   void *__cil_tmp42;
   void *__cil_tmp43;
-
   {
     mtfv = s->mtfv;
     if (s->verbosity >= 3) {
@@ -4539,7 +4526,6 @@ static void sendMTFValues(EState *s) {
   }
 }
 void BZ2_compressBlock(EState *s, Bool is_last_block) {
-
   {
     if (s->nblock > 0) {
       s->blockCRC = ~s->blockCRC;
@@ -4620,7 +4606,6 @@ extern struct _IO_FILE *stdin;
 extern struct _IO_FILE *stdout;
 extern int fclose(FILE *__stream);
 extern int fflush(FILE *__stream);
-
 extern __attribute__((__nothrow__))
 FILE *(__attribute__((__leaf__)) fdopen)(int __fd, char const *__modes);
 extern int fgetc(FILE *__stream);
@@ -4662,7 +4647,6 @@ void BZ2_bzWriteClose64(int *bzerror, BZFILE *b, int abandon,
 char const *BZ2_bzlibVersion(void);
 void BZ2_bz__AssertH__fail(int errcode) {
   char const *tmp;
-
   {
     {
       tmp = BZ2_bzlibVersion();
@@ -4724,7 +4708,6 @@ void BZ2_bz__AssertH__fail(int errcode) {
   }
 }
 static int bz_config_ok(void) {
-
   {
     if (sizeof(int) != 4UL) {
       return (0);
@@ -4741,7 +4724,6 @@ static int bz_config_ok(void) {
 static void *default_bzalloc(void *opaque, Int32 items, Int32 size) {
   void *v;
   void *tmp;
-
   {
     {
       tmp = malloc((size_t)(items * size));
@@ -4751,7 +4733,6 @@ static void *default_bzalloc(void *opaque, Int32 items, Int32 size) {
   }
 }
 static void default_bzfree(void *opaque, void *addr) {
-
   {
     if ((unsigned long)addr != (unsigned long)((void *)0)) {
       {
@@ -4763,7 +4744,6 @@ static void default_bzfree(void *opaque, void *addr) {
 }
 static void prepare_new_block(EState *s) {
   Int32 i;
-
   {
     s->nblock = 0;
     s->numZ = 0;
@@ -4786,7 +4766,6 @@ static void prepare_new_block(EState *s) {
   }
 }
 static void init_RL(EState *s) {
-
   {
     s->state_in_ch = (UInt32)256;
     s->state_in_len = 0;
@@ -4794,7 +4773,6 @@ static void init_RL(EState *s) {
   }
 }
 static Bool isempty_RL(EState *s) {
-
   {
     if (s->state_in_ch < 256U) {
       if (s->state_in_len > 0) {
@@ -4812,7 +4790,6 @@ int BZ2_bzCompressInit(bz_stream *strm, int blockSize100k___0,
   Int32 n;
   EState *s;
   int tmp;
-
   {
     { tmp = bz_config_ok(); }
     if (!tmp) {
@@ -4922,7 +4899,6 @@ int BZ2_bzCompressInit(bz_stream *strm, int blockSize100k___0,
 static void add_pair_to_block(EState *s) {
   Int32 i;
   UChar ch;
-
   {
     ch = (UChar)s->state_in_ch;
     i = 0;
@@ -4987,7 +4963,6 @@ static void add_pair_to_block(EState *s) {
   }
 }
 static void flush_RL(EState *s) {
-
   {
     if (s->state_in_ch < 256U) {
       {
@@ -5004,7 +4979,6 @@ static Bool copy_input_until_stop(EState *s) {
   UChar ch;
   UInt32 zchh___0;
   UChar ch___0;
-
   {
     progress_in = (Bool)0;
     if (s->mode == 2) {
@@ -5123,7 +5097,6 @@ static Bool copy_input_until_stop(EState *s) {
 }
 static Bool copy_output_until_stop(EState *s) {
   Bool progress_out;
-
   {
     progress_out = (Bool)0;
     {
@@ -5159,7 +5132,6 @@ static Bool handle_compress(bz_stream *strm) {
   Bool tmp___1;
   Bool tmp___2;
   int tmp___3;
-
   {
     progress_in = (Bool)0;
     progress_out = (Bool)0;
@@ -5250,7 +5222,6 @@ int BZ2_bzCompress(bz_stream *strm, int action) {
   int tmp;
   Bool tmp___0;
   Bool tmp___1;
-
   {
     if ((unsigned long)strm == (unsigned long)((void *)0)) {
       return (-2);
@@ -5358,7 +5329,6 @@ int BZ2_bzCompress(bz_stream *strm, int action) {
 }
 int BZ2_bzCompressEnd(bz_stream *strm) {
   EState *s;
-
   {
     if ((unsigned long)strm == (unsigned long)((void *)0)) {
       return (-2);
@@ -5395,7 +5365,6 @@ int BZ2_bzCompressEnd(bz_stream *strm) {
 int BZ2_bzDecompressInit(bz_stream *strm, int verbosity___0, int small) {
   DState *s;
   int tmp;
-
   {
     { tmp = bz_config_ok(); }
     if (!tmp) {
@@ -5465,7 +5434,6 @@ static Bool unRLE_obuf_to_output_FAST(DState *s) {
   UInt32 avail_out_INIT;
   Int32 s_save_nblockPP;
   unsigned int total_out_lo32_old;
-
   {
     if (s->blockRandomised) {
       {
@@ -5777,7 +5745,6 @@ Int32 BZ2_indexIntoF(Int32 indx, Int32 *cftab) {
   Int32 nb;
   Int32 na;
   Int32 mid;
-
   {
     nb = 0;
     na = 256;
@@ -5806,7 +5773,6 @@ static Bool unRLE_obuf_to_output_SMALL(DState *s) {
   int tmp___1;
   int tmp___2;
   int tmp___3;
-
   {
     if (s->blockRandomised) {
       {
@@ -6132,7 +6098,6 @@ int BZ2_bzDecompress(bz_stream *strm) {
   DState *s;
   Int32 r;
   Int32 tmp;
-
   {
     if ((unsigned long)strm == (unsigned long)((void *)0)) {
       return (-2);
@@ -6224,7 +6189,6 @@ int BZ2_bzDecompress(bz_stream *strm) {
 }
 int BZ2_bzDecompressEnd(bz_stream *strm) {
   DState *s;
-
   {
     if ((unsigned long)strm == (unsigned long)((void *)0)) {
       return (-2);
@@ -6261,7 +6225,6 @@ int BZ2_bzDecompressEnd(bz_stream *strm) {
 static Bool myfeof(FILE *f) {
   Int32 c;
   Int32 tmp;
-
   {
     {
       tmp = fgetc(f);
@@ -6280,7 +6243,6 @@ BZFILE *BZ2_bzWriteOpen(int *bzerror, FILE *f, int blockSize100k___0,
   bzFile *bzf;
   int tmp;
   void *__cil_tmp10;
-
   {
     bzf = (bzFile *)((void *)0);
     if ((unsigned long)bzerror != (unsigned long)((void *)0)) {
@@ -6385,7 +6347,6 @@ void BZ2_bzWrite(int *bzerror, BZFILE *b, void *buf, int len) {
   bzFile *bzf;
   int tmp;
   int tmp___0;
-
   {
     bzf = (bzFile *)b;
     if ((unsigned long)bzerror != (unsigned long)((void *)0)) {
@@ -6510,7 +6471,6 @@ void BZ2_bzWriteClose64(int *bzerror, BZFILE *b, int abandon,
   int tmp___0;
   int tmp___1;
   int tmp___2;
-
   {
     bzf = (bzFile *)b;
     if ((unsigned long)bzf == (unsigned long)((void *)0)) {
@@ -6657,7 +6617,6 @@ BZFILE *BZ2_bzReadOpen(int *bzerror, FILE *f, int verbosity___0, int small,
   int ret;
   int tmp;
   void *__cil_tmp11;
-
   {
     bzf = (bzFile *)((void *)0);
     if ((unsigned long)bzerror != (unsigned long)((void *)0)) {
@@ -6777,7 +6736,6 @@ BZFILE *BZ2_bzReadOpen(int *bzerror, FILE *f, int verbosity___0, int small,
 }
 void BZ2_bzReadClose(int *bzerror, BZFILE *b) {
   bzFile *bzf;
-
   {
     bzf = (bzFile *)b;
     if ((unsigned long)bzerror != (unsigned long)((void *)0)) {
@@ -6821,7 +6779,6 @@ int BZ2_bzRead(int *bzerror, BZFILE *b, void *buf, int len) {
   int tmp___0;
   Bool tmp___1;
   Bool tmp___2;
-
   {
     bzf = (bzFile *)b;
     if ((unsigned long)bzerror != (unsigned long)((void *)0)) {
@@ -6962,7 +6919,6 @@ int BZ2_bzRead(int *bzerror, BZFILE *b, void *buf, int len) {
 }
 void BZ2_bzReadGetUnused(int *bzerror, BZFILE *b, void **unused, int *nUnused) {
   bzFile *bzf;
-
   {
     bzf = (bzFile *)b;
     if ((unsigned long)bzf == (unsigned long)((void *)0)) {
@@ -7010,7 +6966,6 @@ void BZ2_bzReadGetUnused(int *bzerror, BZFILE *b, void **unused, int *nUnused) {
 }
 char const *BZ2_bzlibVersion(void) {
   char *__cil_tmp1;
-
   { return ("1.0.5, 10-Dec-2007"); }
 }
 static char const *bzerrorstrings[16] = {"OK",           "SEQUENCE_ERROR",
@@ -7109,7 +7064,6 @@ static void copyFileName(Char *to, Char *from);
 static void *myMalloc(Int32 n);
 static void applySavedFileAttrToOutputFile(IntNative fd);
 static void uInt64_from_UInt32s(UInt64 *n, UInt32 lo32, UInt32 hi32) {
-
   {
     n->b[7] = (UChar)((hi32 >> 24) & 255U);
     n->b[6] = (UChar)((hi32 >> 16) & 255U);
@@ -7126,7 +7080,6 @@ static double uInt64_to_double(UInt64 *n) {
   Int32 i;
   double base;
   double sum;
-
   {
     base = 1.0;
     sum = 0.0;
@@ -7148,7 +7101,6 @@ static double uInt64_to_double(UInt64 *n) {
 }
 static Bool uInt64_isZero(UInt64 *n) {
   Int32 i;
-
   {
     i = 0;
     {
@@ -7171,7 +7123,6 @@ static Int32 uInt64_qrm10(UInt64 *n) {
   UInt32 rem;
   UInt32 tmp;
   Int32 i;
-
   {
     rem = (UInt32)0;
     i = 7;
@@ -7200,7 +7151,6 @@ static void uInt64_toAscii(char *outbuf, UInt64 *n) {
   Bool tmp;
   void *__cil_tmp9;
   void *__cil_tmp10;
-
   {
     nBuf = 0;
     n_copy = *n;
@@ -7238,7 +7188,6 @@ static void uInt64_toAscii(char *outbuf, UInt64 *n) {
 static Bool myfeof___0(FILE *f) {
   Int32 c;
   Int32 tmp;
-
   {
     {
       tmp = fgetc(f);
@@ -7283,7 +7232,6 @@ static void compressStream(FILE *stream, FILE *zStream) {
   void *__cil_tmp32;
   char *__cil_tmp33;
   char *__cil_tmp34;
-
   {
     {
       bzf = (void *)0;
@@ -7476,7 +7424,6 @@ static Bool uncompressStream(FILE *zStream, FILE *stream) {
   char *__cil_tmp30;
   char *__cil_tmp31;
   char *__cil_tmp32;
-
   {
     {
       bzf = (void *)0;
@@ -7756,7 +7703,6 @@ static Bool testStream(FILE *zStream) {
   char *__cil_tmp20;
   char *__cil_tmp21;
   char *__cil_tmp22;
-
   {
     {
       bzf = (void *)0;
@@ -7938,7 +7884,6 @@ static Bool testStream(FILE *zStream) {
   }
 }
 static void setExit(Int32 v) {
-
   {
     if (v > exitValue) {
       exitValue = v;
@@ -7947,7 +7892,6 @@ static void setExit(Int32 v) {
   }
 }
 static void cadvise(void) {
-
   {
     if (noisy) {
       {
@@ -7967,7 +7911,6 @@ static void cadvise(void) {
   }
 }
 static void showFileNames(void) {
-
   {
     if (noisy) {
       {
@@ -7986,7 +7929,6 @@ static void cleanUpAndFail(Int32 ec) {
   IntNative retVal;
   struct stat statBuf;
   void *__cil_tmp4;
-
   {
     if (srcMode == 3) {
       if (opMode != 3) {
@@ -8073,7 +8015,6 @@ static void cleanUpAndFail(Int32 ec) {
 }
 static __attribute__((__noreturn__)) void panic(Char const *s);
 static void panic(Char const *s) {
-
   {
     {
       fprintf(
@@ -8090,7 +8031,6 @@ static void panic(Char const *s) {
 }
 static __attribute__((__noreturn__)) void crcError(void);
 static void crcError(void) {
-
   {
     {
       fprintf((FILE * /* __restrict  */) stderr,
@@ -8105,7 +8045,6 @@ static void crcError(void) {
 }
 static __attribute__((__noreturn__)) void compressedStreamEOF(void);
 static void compressedStreamEOF(void) {
-
   {
     if (noisy) {
       {
@@ -8125,7 +8064,6 @@ static void compressedStreamEOF(void) {
 }
 static __attribute__((__noreturn__)) void ioError(void);
 static void ioError(void) {
-
   {
     {
       fprintf(
@@ -8140,7 +8078,6 @@ static void ioError(void) {
   }
 }
 static void mySignalCatcher(IntNative n) {
-
   {
     {
       fprintf((FILE * /* __restrict  */) stderr,
@@ -8152,7 +8089,6 @@ static void mySignalCatcher(IntNative n) {
   }
 }
 static void mySIGSEGVorSIGBUScatcher(IntNative n) {
-
   {
     if (opMode == 1) {
       {
@@ -8236,7 +8172,6 @@ static void mySIGSEGVorSIGBUScatcher(IntNative n) {
 }
 static __attribute__((__noreturn__)) void outOfMemory(void);
 static void outOfMemory(void) {
-
   {
     {
       fprintf(
@@ -8251,7 +8186,6 @@ static void outOfMemory(void) {
 }
 static __attribute__((__noreturn__)) void configError(void);
 static void configError(void) {
-
   {
     {
       fprintf(
@@ -8273,7 +8207,6 @@ static void pad(Char *s) {
   Int32 i;
   size_t tmp;
   size_t tmp___0;
-
   {
     { tmp = strlen((char const *)s); }
     if ((Int32)tmp >= longestFileName) {
@@ -8300,7 +8233,6 @@ static void pad(Char *s) {
 }
 static void copyFileName(Char *to, Char *from) {
   size_t tmp;
-
   {
     { tmp = strlen((char const *)from); }
     if (tmp > 1024UL) {
@@ -8328,7 +8260,6 @@ static Bool fileExists(Char *name) {
   FILE *tmp;
   FILE *tmp___0;
   Bool exists;
-
   {
     {
       tmp___0 = fopen((char const * /* __restrict  */)name,
@@ -8347,7 +8278,6 @@ static Bool fileExists(Char *name) {
 static FILE *fopen_output_safely(Char *name, char const *mode) {
   FILE *fp;
   IntNative fh;
-
   {
     { fh = open((char const *)name, 193, 384); }
     if (fh == -1) {
@@ -8366,7 +8296,6 @@ static Bool notAStandardFile(Char *name) {
   IntNative i;
   struct stat statBuf;
   void *__cil_tmp4;
-
   {
     {
       i = lstat((char const * /* __restrict  */)name,
@@ -8385,7 +8314,6 @@ static Int32 countHardLinks(Char *name) {
   IntNative i;
   struct stat statBuf;
   void *__cil_tmp4;
-
   {
     {
       i = lstat((char const * /* __restrict  */)name,
@@ -8400,7 +8328,6 @@ static Int32 countHardLinks(Char *name) {
 static struct stat fileMetaInfo;
 static void saveInputFileMetaInfo(Char *srcName) {
   IntNative retVal;
-
   {
     {
       retVal = stat((char const * /* __restrict  */)srcName,
@@ -8417,7 +8344,6 @@ static void saveInputFileMetaInfo(Char *srcName) {
 static void applySavedTimeInfoToOutputFile(Char *dstName) {
   IntNative retVal;
   struct utimbuf uTimBuf;
-
   {
     {
       uTimBuf.actime = fileMetaInfo.st_atim.tv_sec;
@@ -8434,7 +8360,6 @@ static void applySavedTimeInfoToOutputFile(Char *dstName) {
 }
 static void applySavedFileAttrToOutputFile(IntNative fd) {
   IntNative retVal;
-
   {
     { retVal = fchmod(fd, fileMetaInfo.st_mode); }
     if (retVal != 0) {
@@ -8447,7 +8372,6 @@ static void applySavedFileAttrToOutputFile(IntNative fd) {
   }
 }
 static Bool containsDubiousChars(Char *name) {
-
   { return ((Bool)0); }
 }
 Char const *zSuffix[4] = {".bz2", ".bz", ".tbz2", ".tbz"};
@@ -8458,7 +8382,6 @@ static Bool hasSuffix(Char *s, Char const *suffix) {
   Int32 nx;
   Int32 tmp___0;
   int tmp___1;
-
   {
     {
       tmp = (Int32)strlen((char const *)s);
@@ -8481,7 +8404,6 @@ static Bool mapSuffix(Char *name, Char const *oldSuffix,
   Bool tmp;
   size_t tmp___0;
   size_t tmp___1;
-
   {
     { tmp = hasSuffix(name, oldSuffix); }
     if (!tmp) {
@@ -8533,7 +8455,6 @@ static void compress(Char *name) {
   char *__cil_tmp34;
   char *__cil_tmp35;
   char *__cil_tmp36;
-
   {
     deleteOutputOnInterrupt = (Bool)0;
     if ((unsigned long)name == (unsigned long)((void *)0)) {
@@ -8924,7 +8845,6 @@ static void uncompress(Char *name) {
   char *__cil_tmp36;
   char *__cil_tmp37;
   char *__cil_tmp38;
-
   {
     deleteOutputOnInterrupt = (Bool)0;
     if ((unsigned long)name == (unsigned long)((void *)0)) {
@@ -9320,7 +9240,6 @@ static void testf(Char *name) {
   char *__cil_tmp15;
   char *__cil_tmp16;
   char *__cil_tmp17;
-
   {
     deleteOutputOnInterrupt = (Bool)0;
     if ((unsigned long)name == (unsigned long)((void *)0)) {
@@ -9499,7 +9418,6 @@ static void testf(Char *name) {
 }
 static void license(void) {
   char const *tmp;
-
   {
     {
       tmp = BZ2_bzlibVersion();
@@ -9528,7 +9446,6 @@ static void license(void) {
 }
 static void usage(Char *fullProgName) {
   char const *tmp;
-
   {
     {
       tmp = BZ2_bzlibVersion();
@@ -9573,7 +9490,6 @@ static void usage(Char *fullProgName) {
   }
 }
 static void redundant(Char *flag) {
-
   {
     {
       fprintf((FILE * /* __restrict  */) stderr,
@@ -9586,7 +9502,6 @@ static void redundant(Char *flag) {
 }
 static void *myMalloc(Int32 n) {
   void *p;
-
   {
     { p = malloc((size_t)n); }
     if ((unsigned long)p == (unsigned long)((void *)0)) {
@@ -9599,7 +9514,6 @@ static void *myMalloc(Int32 n) {
 }
 static Cell *mkCell(void) {
   Cell *c;
-
   {
     {
       c = (Cell *)myMalloc((Int32)sizeof(Cell));
@@ -9614,7 +9528,6 @@ static Cell *snocString(Cell *root, Char *name) {
   Cell *tmp___0;
   size_t tmp___1;
   Cell *tmp___3;
-
   {
     if ((unsigned long)root == (unsigned long)((void *)0)) {
       {
@@ -9651,7 +9564,6 @@ static void addFlagsFromEnvVar(Cell **argList, Char *varName) {
   Char *p;
   unsigned short const **tmp;
   unsigned short const **tmp___0;
-
   {
     { envbase = getenv((char const *)varName); }
     if ((unsigned long)envbase != (unsigned long)((void *)0)) {
@@ -9765,7 +9677,6 @@ IntNative main(IntNative argc, Char **argv) {
   char *__cil_tmp43;
   char *__cil_tmp44;
   char *__cil_tmp45;
-
   {
     if (sizeof(Int32) != 4UL) {
       {
@@ -10466,7 +10377,6 @@ __inline static void fallbackSimpleSort(UInt32 *fmap, UInt32 *eclass, Int32 lo,
   Int32 j;
   Int32 tmp;
   UInt32 ec_tmp;
-
   {
     if (lo == hi) {
       return;
@@ -10565,7 +10475,6 @@ static void fallbackQSort3(UInt32 *fmap, UInt32 *eclass, Int32 loSt,
   Int32 zztmp___3;
   void *__cil_tmp30;
   void *__cil_tmp31;
-
   {
     r = (UInt32)0;
     sp = 0;
@@ -10754,7 +10663,6 @@ static void fallbackSort(UInt32 *fmap, UInt32 *eclass, UInt32 *bhtab,
   UChar *eclass8;
   void *__cil_tmp19;
   void *__cil_tmp20;
-
   {
     eclass8 = (UChar *)eclass;
     if (verb >= 4) {
@@ -11075,7 +10983,6 @@ __inline static Bool mainGtU(UInt32 i1, UInt32 i2, UChar *block,
   UChar c2;
   UInt16 s1;
   UInt16 s2;
-
   {
     c1 = *(block + i1);
     c2 = *(block + i2);
@@ -11292,7 +11199,6 @@ static void mainSimpleSort(UInt32 *ptr, UChar *block, UInt16 *quadrant,
   Bool tmp;
   Bool tmp___0;
   Bool tmp___1;
-
   {
     bigN = (hi - lo) + 1;
     if (bigN < 2) {
@@ -11411,7 +11317,6 @@ static void mainSimpleSort(UInt32 *ptr, UChar *block, UInt16 *quadrant,
 }
 __inline static UChar mmed3(UChar a, UChar b, UChar c) {
   UChar t;
-
   {
     if ((int)a > (int)b) {
       t = a;
@@ -11467,7 +11372,6 @@ static void mainQSort3(UInt32 *ptr, UChar *block, UInt16 *quadrant,
   void *__cil_tmp44;
   void *__cil_tmp45;
   void *__cil_tmp46;
-
   {
     sp = 0;
     stackLo[sp] = loSt;
@@ -11714,7 +11618,6 @@ static void mainSort(UInt32 *ptr, UChar *block, UInt16 *quadrant, UInt32 *ftab,
   void *__cil_tmp32;
   void *__cil_tmp33;
   void *__cil_tmp34;
-
   {
     if (verb >= 4) {
       {
@@ -12113,7 +12016,6 @@ void BZ2_blockSort(EState *s) {
   Int32 budgetInit;
   Int32 i;
   int tmp;
-
   {
     ptr = s->ptr;
     block = s->block;

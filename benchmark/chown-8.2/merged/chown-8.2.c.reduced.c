@@ -368,7 +368,6 @@ DIR *rpl_fdopendir(int fd) {
           
                
   DIR *tmp___1;
-
   {
                          
               
@@ -390,9 +389,7 @@ int fd_safer(int fd) {
         
                
                
-
    
-
                   
                     
                             
@@ -407,7 +404,6 @@ int fd_safer(int fd) {
      
     return (fd);
    
-
 }
                           
 int volatile exit_failure = (int volatile)1;
@@ -455,14 +451,11 @@ size_t(__attribute__((__leaf__))
                 size_t __n, mbstate_t *__restrict __p);
                                      
                                         
-
    
-
                                                                     
                                                       
                          
    
-
  
 size_t strnlen1(char const *string, size_t maxlen);
                                                                      
@@ -471,7 +464,6 @@ size_t strnlen1(char const *string, size_t maxlen);
                  
               
                 
-
    
                           
              
@@ -537,7 +529,6 @@ void *xrealloc(void *p, size_t n);
 extern int fcntl(int __fd, int __cmd, ...);
 int dup_safer(int fd) {
   int tmp;
-
   {
     tmp = fcntl(fd, 0, 3);
     return (tmp);
@@ -675,25 +666,18 @@ extern __attribute__((__nothrow__)) int(__attribute__((__leaf__))
 void cycle_check_init(struct cycle_check_state *state);
 _Bool cycle_check(struct cycle_check_state *state, struct stat const *sb);
                                                             
-
                                                 
-
  
                                                         
-
    
-
                                         
                            
            
    
-
  
                                                                            
             
-
    
-
                                      
                                               
                                                                    
@@ -718,7 +702,6 @@ _Bool cycle_check(struct cycle_check_state *state, struct stat const *sb);
      
                       
    
-
  
 extern void error(int __status, int __errnum, char const *__format, ...);
 char const *quote(char const *name);
@@ -739,18 +722,15 @@ void close_stdout(void) {
               
                
               
-
   {
                                    
                        
-
                          
                                      
                                 
                   
          
               
-
          
          tmp = (char const *)gettext("write error");
         write_error = tmp;
@@ -764,9 +744,7 @@ void close_stdout(void) {
         }
                                  
        
-
      
-
                                    
                        
                                
@@ -785,9 +763,7 @@ size_t(__attribute__((__leaf__)) __fpending)(FILE *__fp);
               
                
                
-
    
-
                              
                                        
                                       
@@ -801,7 +777,6 @@ size_t(__attribute__((__leaf__)) __fpending)(FILE *__fp);
                            
                       
                 
-
                                        
                               
                  
@@ -812,12 +787,10 @@ size_t(__attribute__((__leaf__)) __fpending)(FILE *__fp);
                         
            
          
-
        
      
                
    
-
  
 int set_cloexec_flag(int desc, _Bool value);
                                              
@@ -826,9 +799,7 @@ int set_cloexec_flag(int desc, _Bool value);
                
               
               
-
    
-
                             
                 
                      
@@ -849,7 +820,6 @@ int set_cloexec_flag(int desc, _Bool value);
      
                 
    
-
  
 extern __attribute__((__nothrow__)) int(__attribute__((__leaf__))
                                         fchdir)(int __fd);
@@ -870,12 +840,10 @@ _Bool triple_compare_ino_str(void const *x, void const *y);
                    
                 
                   
-
    
                     
                          
                
-
                                         
                          
        
@@ -884,7 +852,6 @@ _Bool triple_compare_ino_str(void const *x, void const *y);
               
              
                
-
                 
                              
        
@@ -926,7 +893,6 @@ __inline static void *xnmalloc(size_t n, size_t s) __attribute__((__malloc__));
                                                     
           
                 
-
    
                                               
                
@@ -946,9 +912,7 @@ extern __attribute__((__nothrow__)) unsigned long(__attribute__((
     __nonnull__(1), __leaf__)) strtoul)(char const *__restrict __nptr,
                                         char **__restrict __endptr, int __base);
                                                                        
-
    
-
                                                                   
                                 
                                
@@ -956,14 +920,12 @@ extern __attribute__((__nothrow__)) unsigned long(__attribute__((
                                       
                              
    
-
  
                                                                       
                                                        
                    
                    
               
-
    
                           
                
@@ -997,7 +959,6 @@ extern __attribute__((__nothrow__)) unsigned long(__attribute__((
                         
                 
                 
-
    
                           
                            
@@ -1037,17 +998,13 @@ extern __attribute__((__nothrow__)) unsigned long(__attribute__((
                                      
                                                 
                            
-
                     
-
                                                        
                         
                       
                   
-
                                      
            
-
                  
                                    
          
@@ -1207,24 +1164,19 @@ void *xmalloc(size_t n) __attribute__((__malloc__));
 void *xmalloc(size_t n) {
   void *p;
   void *tmp;
-
   {
     tmp = malloc(n);
     p = tmp;
     if (!p) {
                      
-
         xalloc_die();
        
-
     }
     return (p);
   }
 }
                                    
-
    
-
                       
              
                      
@@ -1233,13 +1185,11 @@ void *xmalloc(size_t n) {
      
                
    
-
  
 void *xmemdup(void const *p, size_t s) __attribute__((__malloc__));
 void *xmemdup(void const *p, size_t s) {
   void *tmp;
   void *tmp___0;
-
   {
     tmp = xmalloc(s);
     tmp___0 = memcpy(tmp, p, s);
@@ -1250,7 +1200,6 @@ char *xstrdup(char const *string) __attribute__((__malloc__));
 char *xstrdup(char const *string) {
   size_t tmp;
   char *tmp___0;
-
   {
     tmp = strlen(string);
     tmp___0 = (char *)xmemdup((void const *)string, tmp + 1UL);
@@ -1269,7 +1218,6 @@ FTS *xfts_open(char *const *argv, int options,
   FTS *fts;
   FTS *tmp;
                
-
   {
     tmp = fts_open(argv, options | 512, compar);
     fts = tmp;
@@ -1288,7 +1236,6 @@ FTS *xfts_open(char *const *argv, int options,
 }
                                                                  
           
-
    
                                 
                                     
@@ -1299,11 +1246,8 @@ FTS *xfts_open(char *const *argv, int options,
             
        
                                    
-
                                    
-
                                      
-
                     
                    
                     
@@ -1321,7 +1265,6 @@ FTS *xfts_open(char *const *argv, int options,
 __attribute__((__noreturn__)) void xalloc_die(void);
 void xalloc_die(void) {
   char *tmp;
-
   {
     tmp = gettext("memory exhausted");
     error((int)exit_failure, 0, "%s", tmp);
@@ -1354,7 +1297,6 @@ void version_etc(FILE *stream, char const *command_name, char const *package,
                 
                 
                  
-
    
                        
                                                                       
@@ -1464,11 +1406,9 @@ void version_etc(FILE *stream, char const *command_name, char const *package,
                    
                           
                   
-
    
                           
                
-
                              
                                                       
                                  
@@ -1491,7 +1431,6 @@ void version_etc(FILE *stream, char const *command_name, char const *package,
                                                                              
                                             
                   
-
    
                                          
                                                                     
@@ -1552,7 +1491,6 @@ static char const *parse_with_separator(char const *spec, char const *separator,
                         
                        
   char const *tmp___9;
-
   {
                                 
                 
@@ -1564,10 +1502,8 @@ static char const *parse_with_separator(char const *spec, char const *separator,
                             
     if ((unsigned long)separator == (unsigned long)((void *)0)) {
                   
-
         u = xstrdup(spec);
        
-
     } else {
       ulen = (size_t)(separator - spec);
                        {
@@ -1581,10 +1517,8 @@ static char const *parse_with_separator(char const *spec, char const *separator,
                                                
                                       
               
-
         g = separator + 1;
        
-
     }
                                                         {
                           
@@ -1607,7 +1541,6 @@ static char const *parse_with_separator(char const *spec, char const *separator,
                               
                                  
                 
-
                    
                                                                                 
                                             
@@ -1621,12 +1554,9 @@ static char const *parse_with_separator(char const *spec, char const *separator,
                                          
              
                   
-
             error_msg = E_invalid_user;
            
-
          
-
       } else {
                            
                                                              
@@ -1699,7 +1629,6 @@ char const *parse_user_spec(char const *spec, uid_t *uid, gid_t *gid,
                   
                       
                       
-
   {
     tmp = (char const *)strchr(spec, ':');
     colon = tmp;
@@ -1724,7 +1653,6 @@ char const *parse_user_spec(char const *spec, uid_t *uid, gid_t *gid,
                                                                       
                                                                           
           
-
    
                                                                       
                  
@@ -1749,7 +1677,6 @@ char const *parse_user_spec(char const *spec, uid_t *uid, gid_t *gid,
                                                     
                   
                   
-
    
                                                                      
               
@@ -1765,20 +1692,15 @@ struct dev_ino *get_root_dev_ino(struct dev_ino *root_d_i);
                                                             
                       
           
-
    
-
                                
               
-
                                              
      
-
                                       
                                       
                       
    
-
  
                                    
                                         
@@ -1792,7 +1714,6 @@ __inline static char *xcharalloc(size_t n) __attribute__((__malloc__));
             
                 
                 
-
    
                               
                        
@@ -1821,7 +1742,6 @@ extern __attribute__((__nothrow__)) int(__attribute__((__leaf__))
                               
             
         
-
    
                           
             
@@ -1839,7 +1759,6 @@ extern __attribute__((__nothrow__)) int(__attribute__((__leaf__))
                              
                                                       
                            
-
    
                     
                 
@@ -1850,7 +1769,6 @@ extern __attribute__((__nothrow__)) int(__attribute__((__leaf__))
 static char const *gettext_quote(char const *msgid, enum quoting_style s) {
   char const *translation;
   char const *tmp;
-
   {
     tmp = (char const *)gettext(msgid);
     translation = tmp;
@@ -1893,7 +1811,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
               
   int tmp___6;
                  
-
   {
     len = (size_t)0;
                                    
@@ -1936,7 +1853,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
          
                               
                  
-
                                
                                        
          
@@ -1961,20 +1877,16 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
                              {
       quote_string = left_quote;
                 {
-
                              
                                
          
                    
-
-
                                 {
             *(buffer + len) = (char)*quote_string;
           }
           len++;
                                
          
-
                       
                         
       }
@@ -1990,7 +1902,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
          
                               
                  
-
                                
                                        
          
@@ -2010,7 +1921,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
                
      i = (size_t)0;
     while (1) {
-
                                            {
         tmp___6 = (int const) * (arg + i) == 0;
       }       
@@ -2348,7 +2258,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
                                          
          
                    
-
                                  
                                          
            
@@ -2360,7 +2269,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
                                               
                                                         
                          
-
                                        
                                               
                  
@@ -2369,7 +2277,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
                
                              
                          
-
                                        
                                               
                  
@@ -2439,7 +2346,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
                                                   
                      
                        
-
                                      
                                             
                
@@ -2448,7 +2354,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
              
                            
                        
-
                                      
                                              
                
@@ -2457,7 +2362,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
              
                            
                        
-
                                      
                                              
                
@@ -2466,7 +2370,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
              
                            
                        
-
                                      
                                             
                
@@ -2554,7 +2457,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
                                          
          
                    
-
                                  
                                          
            
@@ -2563,7 +2465,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
          
                         
                    
-
                                  
                                          
            
@@ -2572,7 +2473,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
          
                         
                    
-
                                  
                                          
            
@@ -2609,7 +2509,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
                                                   
                                      
                            
-
                                         
                                             
                                             
@@ -2626,7 +2525,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
                                                           
                                   
                                
-
                                          
                                               
                        
@@ -2679,14 +2577,12 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
                  
                          
                        
-
                                       
                                  
                                            
                                                    
                    
                              
-
                                            
                                                    
                      
@@ -2695,7 +2591,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
                    
                                   
                              
-
                                            
                                                                    
                      
@@ -2704,7 +2599,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
                    
                                   
                              
-
                                            
                                                                          
                      
@@ -2720,7 +2614,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
                  
                                      
                              
-
                                            
                                                    
                      
@@ -2735,7 +2628,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
                                       
                
                          
-
                                        
                                             
                  
@@ -2778,7 +2670,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
                                        
        
                  
-
                                
                                        
          
@@ -2788,7 +2679,6 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
                       
             
                  {
-
                               {
           *(buffer + len) = (char)c;
         }
@@ -2809,30 +2699,22 @@ quotearg_buffer_restyled(char *buffer, size_t buffersize, char const *arg,
      
                       {
                                 
-
                   {
-
                                
                                   
            
                      
-
-
                                    
-
               *(buffer + len) = (char)*quote_string;
              
-
                   
                                   
            
-
                          
                           
         }
                        ;
        
-
     }
                            
                                      
@@ -2865,7 +2747,6 @@ static char *quotearg_n_options(int n, char const *arg, size_t argsize,
                
   size_t tmp___2;
                
-
   {
                              
              
@@ -2929,7 +2810,6 @@ char *quotearg_n_style(int n, enum quoting_style s, char const *arg) {
   struct quoting_options o;
                              
   char *tmp___0;
-
   {
                                         
             
@@ -2941,7 +2821,6 @@ char *quotearg_n_style(int n, enum quoting_style s, char const *arg) {
                                                                    
                                  
             
-
    
                                       
                                       
@@ -2952,7 +2831,6 @@ char *quotearg_n_style(int n, enum quoting_style s, char const *arg) {
  
                                                
             
-
    
                                                  
                  
@@ -2960,7 +2838,6 @@ char *quotearg_n_style(int n, enum quoting_style s, char const *arg) {
  
                                        
             
-
    
                                         
                  
@@ -2968,7 +2845,6 @@ char *quotearg_n_style(int n, enum quoting_style s, char const *arg) {
  
 char const *quote_n(int n, char const *name) {
   char const *tmp;
-
   {
     tmp = (char const *)quotearg_n_style(n, (enum quoting_style)6, name);
     return (tmp);
@@ -2976,7 +2852,6 @@ char const *quote_n(int n, char const *name) {
 }
 char const *quote(char const *name) {
   char const *tmp;
-
   {
     tmp = quote_n(0, name);
     return (tmp);
@@ -2993,7 +2868,6 @@ extern int fputs(char const *__restrict __s, FILE *__restrict __stream);
                    
           
               
-
    
                                                              
                                                                                 
@@ -3039,7 +2913,6 @@ extern
               
                
                
-
    
                         
              
@@ -3048,7 +2921,6 @@ extern
                    
                     
                       
-
                                   
                       
                                    
@@ -3062,7 +2934,6 @@ extern
                        
                      
          
-
        
      
                 
@@ -3074,7 +2945,6 @@ int openat_safer(int fd, char const *file, int flags, ...) {
              
   int tmp;
   int tmp___0;
-
   {
     mode = (mode_t)0;
                      
@@ -3092,7 +2962,6 @@ int openat_safer(int fd, char const *file, int flags, ...) {
              
           
               
-
    
                      
                      
@@ -3134,7 +3003,6 @@ int openat_safer(int fd, char const *file, int flags, ...) {
                
                                   
                   
-
    
                                                  
                  
@@ -3325,14 +3193,12 @@ int i_ring_pop(I_ring *ir);
 _Bool i_ring_empty(I_ring const *ir);
                                                
         
-
    
                             
                       
                      
           
                
-
                      
                          
        
@@ -3345,14 +3211,11 @@ _Bool i_ring_empty(I_ring const *ir);
    
  
                                       
-
                                     
-
  
                                       
                         
               
-
    
                                                                    
                                     
@@ -3368,7 +3231,6 @@ _Bool i_ring_empty(I_ring const *ir);
                             
               
             
-
    
                                            
               
@@ -3388,13 +3250,10 @@ _Bool(__attribute__((__warn_unused_result__))
       hash_rehash)(Hash_table *table___0, size_t candidate);
 void *hash_delete(Hash_table *table___0, void const *entry);
                                                  
-
    
-
                                                                       
                                   
    
-
  
                                                   
                                                                 
@@ -3403,7 +3262,6 @@ void *hash_delete(Hash_table *table___0, void const *entry);
              
                                   
                 
-
    
                                                                       
                                                                   
@@ -3415,7 +3273,6 @@ void *hash_delete(Hash_table *table___0, void const *entry);
      
                     
                
-
                     
                          
        
@@ -3436,7 +3293,6 @@ void *hash_delete(Hash_table *table___0, void const *entry);
                                                           
                
                    
-
    
                       
                
@@ -3455,12 +3311,10 @@ void *hash_delete(Hash_table *table___0, void const *entry);
                  
                 
           
-
    
                         
                                
                
-
                                
                                      
                            
@@ -3483,15 +3337,12 @@ void *hash_delete(Hash_table *table___0, void const *entry);
  
                                             
             
-
    
-
                            
                              
      
                      
                
-
                                               
                                   
                   
@@ -3505,12 +3356,10 @@ void *hash_delete(Hash_table *table___0, void const *entry);
                
                        
    
-
  
                                                       
              
              
-
    
                                    
               
@@ -3518,14 +3367,11 @@ void *hash_delete(Hash_table *table___0, void const *entry);
    
  
                                                            
-
                                                               
-
  
                                                   
                             
                 
-
    
                                
                                                                     
@@ -3556,10 +3402,8 @@ void *hash_delete(Hash_table *table___0, void const *entry);
                                                                                 
                       
           
-
    
                                 
-
                      
                                                                      
                                                          
@@ -3567,7 +3411,6 @@ void *hash_delete(Hash_table *table___0, void const *entry);
        
                                         
      
-
                                       
                                               
                
@@ -3587,7 +3430,6 @@ void *hash_delete(Hash_table *table___0, void const *entry);
                                                            
                         
             
-
    
                                                               
                            
@@ -3634,13 +3476,11 @@ void *hash_delete(Hash_table *table___0, void const *entry);
                             
                             
                           
-
    
                                 
                                  
                                    
                    
-
                                        
                                                           
                              
@@ -3648,7 +3488,6 @@ void *hash_delete(Hash_table *table___0, void const *entry);
                              
                             
                        
-
                             
                                      
                
@@ -3664,13 +3503,11 @@ void *hash_delete(Hash_table *table___0, void const *entry);
      
                                
                
-
                                                                               
                              
        
                             
                  
-
                       
                                
          
@@ -3684,7 +3521,6 @@ void *hash_delete(Hash_table *table___0, void const *entry);
                   
                                         
                
-
                     
                              
        
@@ -3700,7 +3536,6 @@ void *hash_delete(Hash_table *table___0, void const *entry);
  
                                                                  
                          
-
    
                                      
                                        
@@ -3712,15 +3547,12 @@ void *hash_delete(Hash_table *table___0, void const *entry);
    
  
                                                                          
-
    
-
                             
                                              
                                        
            
    
-
  
                                                                       
                                                                              
@@ -3733,9 +3565,7 @@ void *hash_delete(Hash_table *table___0, void const *entry);
                  
                               
                 
-
    
-
                                                               
                                      
                                                                             
@@ -3766,7 +3596,6 @@ void *hash_delete(Hash_table *table___0, void const *entry);
      
                     
                
-
                           
                          
        
@@ -3791,7 +3620,6 @@ void *hash_delete(Hash_table *table___0, void const *entry);
                
                        
    
-
  
                                                                              
                             
@@ -3803,19 +3631,15 @@ void *hash_delete(Hash_table *table___0, void const *entry);
                  
                                
                              
-
    
-
                          
                
-
                                                                         
                          
        
                          
                               
                    
-
                         
                                  
            
@@ -3869,7 +3693,6 @@ void *hash_delete(Hash_table *table___0, void const *entry);
                
                       
    
-
  
                                              
                                                              
@@ -3880,7 +3703,6 @@ void *hash_delete(Hash_table *table___0, void const *entry);
                 
                 
                 
-
    
                                                             
                    
@@ -3941,9 +3763,7 @@ void *hash_delete(Hash_table *table___0, void const *entry);
                 
                                
                              
-
    
-
                  
               
      
@@ -3998,7 +3818,6 @@ void *hash_delete(Hash_table *table___0, void const *entry);
                                   
                            
    
-
  
                                                              
              
@@ -4009,7 +3828,6 @@ void *hash_delete(Hash_table *table___0, void const *entry);
                             
                           
                 
-
    
                                                                 
                 
@@ -4039,7 +3857,6 @@ void *hash_delete(Hash_table *table___0, void const *entry);
                          
                                                 
                        
-
                             
                                  
                
@@ -4061,7 +3878,6 @@ size_t hash_pjw(void const *x, size_t tablesize);
                            
              
                  
-
    
                                    
                                                           
@@ -4074,7 +3890,6 @@ size_t hash_pjw(void const *x, size_t tablesize);
                            
               
               
-
    
                                    
                                    
@@ -4097,7 +3912,6 @@ size_t hash_pjw(void const *x, size_t tablesize);
  
                            
                      
-
    
                              
                           
@@ -4108,12 +3922,10 @@ size_t hash_pjw(void const *x, size_t tablesize);
                                                   
                 
            
-
    
                   
                         
                
-
                 
                          
        
@@ -4155,13 +3967,11 @@ static int fts_safe_changedir(FTS *sp, FTSENT *p, int fd, char const *dir);
                               
                               
           
-
    
                                       
                                       
                              
                                
-
                 
                
                 
@@ -4174,16 +3984,13 @@ static int fts_safe_changedir(FTS *sp, FTSENT *p, int fd, char const *dir);
  
                                                          
                               
-
    
                                       
                                              
    
  
                                   
-
    
-
                                  
                          
                                                                        
@@ -4201,7 +4008,6 @@ static int fts_safe_changedir(FTS *sp, FTSENT *p, int fd, char const *dir);
      
                       
    
-
  
                                                
                         
@@ -4209,7 +4015,6 @@ static int fts_safe_changedir(FTS *sp, FTSENT *p, int fd, char const *dir);
                          
                                    
                 
-
    
                                  
                                                  
@@ -4247,7 +4052,6 @@ static int fts_safe_changedir(FTS *sp, FTSENT *p, int fd, char const *dir);
                         
               
                  
-
    
                                                
                                  
@@ -4263,7 +4067,6 @@ static int fts_safe_changedir(FTS *sp, FTSENT *p, int fd, char const *dir);
                                                                 
                                       
                      
-
                                                                
                       
              
@@ -4285,27 +4088,21 @@ static int fts_safe_changedir(FTS *sp, FTSENT *p, int fd, char const *dir);
    
  
                                
-
    
-
                                 
                              
                                     
        
             
-
                                         
      
-
            
    
-
  
                                             
          
           
                 
-
    
                
                                                       
@@ -4323,11 +4120,8 @@ static int fts_safe_changedir(FTS *sp, FTSENT *p, int fd, char const *dir);
    
  
                                                               
-
    
-
                
-
                                       
                 
        
@@ -4337,13 +4131,10 @@ static int fts_safe_changedir(FTS *sp, FTSENT *p, int fd, char const *dir);
                    
                                            
             
-
                                            
      
-
            
    
-
  
 __inline static DIR *opendirat(int fd, char const *dir) {
   int new_fd;
@@ -4352,7 +4143,6 @@ __inline static DIR *opendirat(int fd, char const *dir) {
                   
                
                
-
   {
     tmp = openat_safer(fd, dir, 67840);
     new_fd = tmp;
@@ -4375,12 +4165,9 @@ static void cwd_advance_fd(FTS *sp, int fd, _Bool chdir_down_one) {
           
                       
           
-
    
-
                          
                
-
                          
                              
                   
@@ -4405,7 +4192,6 @@ static void cwd_advance_fd(FTS *sp, int fd, _Bool chdir_down_one) {
     sp->fts_cwd_fd = fd;
            
    
-
 }
                                                              
                  
@@ -4414,7 +4200,6 @@ static void cwd_advance_fd(FTS *sp, int fd, _Bool chdir_down_one) {
               
               
               
-
    
                                
                    
@@ -4463,7 +4248,6 @@ FTS *(__attribute__((__warn_unused_result__, __leaf__))
   struct _ftsent *tmp___9;
                  
                
-
   {
                                    
                                 
@@ -4527,7 +4311,6 @@ FTS *(__attribute__((__warn_unused_result__, __leaf__))
     root = (FTSENT *)((void *)0);
                        
               {
-
                                                                   
                          
        
@@ -4545,10 +4328,8 @@ FTS *(__attribute__((__warn_unused_result__, __leaf__))
                                            
                                              
                 
-
           p->fts_info = fts_stat(sp, p, (_Bool)0);
          
-
       }       
                                                 
        
@@ -4611,7 +4392,6 @@ FTS *(__attribute__((__warn_unused_result__, __leaf__))
            
              
                 
-
    
                          
                          
@@ -4652,14 +4432,11 @@ int(__attribute__((__warn_unused_result__, __leaf__)) fts_close)(FTS *sp) {
                
               
                
-
    
-
                     
                       
                       
                  
-
                                     
                            
          
@@ -4716,7 +4493,6 @@ int(__attribute__((__warn_unused_result__, __leaf__)) fts_close)(FTS *sp) {
      
     return (0);
    
-
 }
 extern
     __attribute__((__nothrow__)) int(__attribute__((__nonnull__(2), __leaf__))
@@ -4725,9 +4501,7 @@ extern
                                                           
                        
           
-
    
-
                                    
                    
                         
@@ -4743,17 +4517,13 @@ extern
                       
                  
                       
-
                       
    
-
  
                                                     
                        
           
-
    
-
                                    
                    
                         
@@ -4766,14 +4536,11 @@ extern
                       
                  
                       
-
                       
    
-
  
                                                           
                            
-
    
                                    
                                                 
@@ -4782,7 +4549,6 @@ extern
                                                         
                            
                            
-
    
                                    
                                    
@@ -4797,7 +4563,6 @@ extern
                
                      
                              
-
    
                            
                                            
@@ -4805,7 +4570,6 @@ extern
                         
      
                                                          
-
                
                                                                        
                                                                               
@@ -4815,7 +4579,6 @@ extern
                           
        
      
-
                                                
                                                               
                                                               
@@ -4835,7 +4598,6 @@ extern
                         
      
                
-
                                                        
                 
        
@@ -4887,7 +4649,6 @@ FTSENT *(__attribute__((__warn_unused_result__, __leaf__)) fts_read)(FTS *sp) {
                 
                
   FTSENT *tmp___32;
-
   {
                                                                    
                                      
@@ -4933,7 +4694,6 @@ FTSENT *(__attribute__((__warn_unused_result__, __leaf__)) fts_read)(FTS *sp) {
       } else {
         if (sp->fts_options & 64) {
                                                       
-
           _L___0:
                                        {
                                   
@@ -4950,7 +4710,6 @@ FTSENT *(__attribute__((__warn_unused_result__, __leaf__)) fts_read)(FTS *sp) {
                        
             return (p);
            
-
         }
       }
                                                                        
@@ -4968,7 +4727,6 @@ FTSENT *(__attribute__((__warn_unused_result__, __leaf__)) fts_read)(FTS *sp) {
                                                                  
                             
                      
-
                                                                     
                                    
              
@@ -5111,7 +4869,6 @@ FTSENT *(__attribute__((__warn_unused_result__, __leaf__)) fts_read)(FTS *sp) {
            
                 
                      
-
                                                    
                       
              
@@ -5145,7 +4902,6 @@ FTSENT *(__attribute__((__warn_unused_result__, __leaf__)) fts_read)(FTS *sp) {
       return (tmp___18);
     }
                
-
                                       
                 
        
@@ -5156,9 +4912,7 @@ FTSENT *(__attribute__((__warn_unused_result__, __leaf__)) fts_read)(FTS *sp) {
                              
                                       
                                    
-
                                     
-
                                       
                             
                   
@@ -5247,37 +5001,27 @@ __attribute__((__nothrow__)) int(__attribute__((__leaf__))
 int(__attribute__((__leaf__)) fts_set)(FTS *sp __attribute__((__unused__)),
                                        FTSENT *p, int instr) {
            
-
    
-
                     {
                        
-
                          
-
                            
-
             if (instr != 4) {
                                        
                         
               return (1);
             }
            
-
          
-
        
-
     }
     p->fts_instr = (unsigned short)instr;
                
    
-
 }
                                                                                 
           
               
-
    
                                                                             
                    
@@ -5294,7 +5038,6 @@ int(__attribute__((__leaf__)) fts_set)(FTS *sp __attribute__((__unused__)),
  
                                                                 
               
-
    
                       
                   
@@ -5397,12 +5140,10 @@ static FTSENT *fts_build(FTS *sp, int type) {
                
                
                  
-
   {
     cur = sp->fts_cur;
                                 {
                                   
-
         tmp___0 = opendirat(sp->fts_cwd_fd, (char const *)cur->fts_accpath);
         dirp = tmp___0;
                
@@ -5465,17 +5206,14 @@ static FTSENT *fts_build(FTS *sp, int type) {
                   
            {
                       
-
              
          tmp___5 = dirfd(dirp);
         dir_fd = tmp___5;
                                    {
                             
-
             dir_fd = dup_safer(dir_fd);
                                                
            
-
         }
                          
                   
@@ -5528,7 +5266,6 @@ static FTSENT *fts_build(FTS *sp, int type) {
                 
                        
               {
-
                 {
         dp = readdir(dirp);
                   
@@ -5769,9 +5506,7 @@ static unsigned short fts_stat(FTS *sp, FTSENT *p, _Bool follow) {
               
               
               
-
    
-
                        
                              
                                 
@@ -5800,7 +5535,6 @@ static unsigned short fts_stat(FTS *sp, FTSENT *p, _Bool follow) {
                    
          
               
-
                  
                                                                             
                       
@@ -5811,10 +5545,8 @@ static unsigned short fts_stat(FTS *sp, FTSENT *p, _Bool follow) {
                                       
          
        
-
      
                                             
-
                                  
                     
               
@@ -5840,7 +5572,6 @@ static unsigned short fts_stat(FTS *sp, FTSENT *p, _Bool follow) {
        
       return ((unsigned short)1);
      
-
                                             
                                   
      
@@ -5849,13 +5580,11 @@ static unsigned short fts_stat(FTS *sp, FTSENT *p, _Bool follow) {
      
                                
    
-
 }
                                                      
                     
                     
           
-
    
                             
                             
@@ -5871,9 +5600,7 @@ static unsigned short fts_stat(FTS *sp, FTSENT *p, _Bool follow) {
                                          
              
                    
-
    
-
                                            
                                                        
                                                                   
@@ -5906,7 +5633,6 @@ static unsigned short fts_stat(FTS *sp, FTSENT *p, _Bool follow) {
                        
              
                
-
                
                          
        
@@ -5931,12 +5657,10 @@ static unsigned short fts_stat(FTS *sp, FTSENT *p, _Bool follow) {
                                                           
                   
    
-
  
 static FTSENT *fts_alloc(FTS *sp, char const *name, size_t namelen) {
   FTSENT *p;
   size_t len;
-
   {
     len = sizeof(FTSENT) + namelen;
     p = (FTSENT *)malloc(len);
@@ -5958,7 +5682,6 @@ static FTSENT *fts_alloc(FTS *sp, char const *name, size_t namelen) {
 }
                                      
             
-
    
                
                
@@ -5976,9 +5699,7 @@ static FTSENT *fts_alloc(FTS *sp, char const *name, size_t namelen) {
           
                  
            
-
    
-
                                                
                                     
                                  
@@ -5997,22 +5718,18 @@ static FTSENT *fts_alloc(FTS *sp, char const *name, size_t namelen) {
                      
                       
    
-
  
                                                 
             
              
-
    
                         
                       
                
-
                
                          
        
                  
-
                                                                             
                                                                  
          
@@ -6025,12 +5742,10 @@ static FTSENT *fts_alloc(FTS *sp, char const *name, size_t namelen) {
               
              
                
-
                                   
                              
        
                  
-
                                                                             
                                                                  
          
@@ -6051,11 +5766,9 @@ static FTSENT *fts_alloc(FTS *sp, char const *name, size_t namelen) {
                                                 
              
              
-
    
                     
                
-
                    
                          
        
@@ -6084,7 +5797,6 @@ static int fts_safe_changedir(FTS *sp, FTSENT *p, int fd, char const *dir) {
              
                
                
-
   {
               
                               
@@ -6107,12 +5819,9 @@ static int fts_safe_changedir(FTS *sp, FTSENT *p, int fd, char const *dir) {
      
                 {
                       
-
                                     
-
                                                                      
                          
-
                                                      
             is_dotdot = (_Bool)1;
                                  
@@ -6120,11 +5829,8 @@ static int fts_safe_changedir(FTS *sp, FTSENT *p, int fd, char const *dir) {
                                               
              
            
-
          
-
        
-
     }
     newfd = fd;
                  
@@ -6212,7 +5918,6 @@ extern
 __inline static int chownat(int fd, char const *file, uid_t owner,
                             gid_t group) {
   int tmp;
-
   {
     tmp = fchownat(fd, file, owner, group, 0);
     return (tmp);
@@ -6221,7 +5926,6 @@ __inline static int chownat(int fd, char const *file, uid_t owner,
 __inline static int lchownat(int fd, char const *file, uid_t owner,
                              gid_t group) {
   int tmp;
-
   {
     tmp = fchownat(fd, file, owner, group, 256);
     return (tmp);
@@ -6235,14 +5939,10 @@ extern _Bool chown_files(char **files, int bit_flags, uid_t uid, gid_t gid,
                          uid_t required_uid, gid_t required_gid,
                          struct Chown_option const *chopt);
                                           
-
               
-
  
 extern void chopt_init(struct Chown_option *chopt) {
-
    
-
                                          
                                                         
                                               
@@ -6252,15 +5952,11 @@ extern void chopt_init(struct Chown_option *chopt) {
                                             
            
    
-
 }
                                                                                 
-
    
-
            
    
-
  
                                      
       
@@ -6271,7 +5967,6 @@ extern void chopt_init(struct Chown_option *chopt) {
                 
                 
                 
-
    
                         
               
@@ -6294,7 +5989,6 @@ extern void chopt_init(struct Chown_option *chopt) {
                 
                 
                 
-
    
                         
               
@@ -6332,7 +6026,6 @@ extern void chopt_init(struct Chown_option *chopt) {
                  
                  
                        
-
    
                                          
                                       
@@ -6438,20 +6131,14 @@ extern void chopt_init(struct Chown_option *chopt) {
                   
                
                
-
    
-
                                 
                       
                                       
-
                                         
-
                                     
        
-
      
-
                                                    
                                                   
                             
@@ -6528,7 +6215,6 @@ extern void chopt_init(struct Chown_option *chopt) {
                            
                     
    
-
  
 static _Bool change_file_owner(FTS *fts, FTSENT *ent, uid_t uid, gid_t gid,
                                uid_t required_uid, gid_t required_gid,
@@ -6585,7 +6271,6 @@ static _Bool change_file_owner(FTS *fts, FTSENT *ent, uid_t uid, gid_t gid,
                
                
                
-
   {
                                                  
     file = (char const *)ent->fts_accpath;
@@ -6724,7 +6409,6 @@ static _Bool change_file_owner(FTS *fts, FTSENT *ent, uid_t uid, gid_t gid,
                       
          
               
-
              
                                                             
                                              
@@ -6766,7 +6450,6 @@ static _Bool change_file_owner(FTS *fts, FTSENT *ent, uid_t uid, gid_t gid,
          
                                    
        
-
      
              
                                     
@@ -6960,7 +6643,6 @@ extern _Bool chown_files(char **files, int bit_flags, uid_t uid, gid_t gid,
                 
                
   int tmp___7;
-
   {
     ok = (_Bool)1;
                                      {
@@ -7034,7 +6716,6 @@ extern __attribute__((__nothrow__)) char *(__attribute__((
               
                 
                 
-
    
                                        
                                                   
@@ -7063,9 +6744,7 @@ extern __attribute__((__nothrow__)) char *(__attribute__((
    
  
                                                
-
                           
-
  
                             
 static struct option const long_options___1[14] = {
@@ -7097,9 +6776,7 @@ void usage(int status) {
                 
                 
                  
-
    
-
                       
                                                                 
                                                        
@@ -7169,7 +6846,6 @@ void usage(int status) {
      
     exit(status);
    
-
 }
                                   
 int main(int argc, char **argv) {
@@ -7205,7 +6881,6 @@ int main(int argc, char **argv) {
                  
                 
   int tmp___15;
-
   {
                              
     uid = (uid_t)-1;
