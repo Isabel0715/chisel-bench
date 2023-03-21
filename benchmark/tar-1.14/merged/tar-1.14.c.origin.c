@@ -857,7 +857,6 @@ static char *real_s_name;
 static off_t real_s_totsize;
 static off_t real_s_sizeleft;
 void clear_read_error_count(void) {
-
   {
     read_error_count = 0;
     return;
@@ -892,7 +891,6 @@ void print_total_written(void) {
   char *__cil_tmp18;
   char *__cil_tmp19;
   char *__cil_tmp20;
-
   {
     {
       written = prev_written + bytes_written;
@@ -936,11 +934,9 @@ void print_total_written(void) {
   }
 }
 off_t current_block_ordinal(void) {
-
   { return (record_start_block + (current_block - record_start)); }
 }
 void reset_eof(void) {
-
   {
     if (hit_eof) {
       hit_eof = 0;
@@ -952,7 +948,6 @@ void reset_eof(void) {
   }
 }
 union block *find_next_block(void) {
-
   {
     if ((unsigned long)current_block == (unsigned long)record_end) {
       if (hit_eof) {
@@ -968,7 +963,6 @@ union block *find_next_block(void) {
   }
 }
 void set_next_block_after(union block *block) {
-
   {
     {
       while (1) {
@@ -989,14 +983,12 @@ void set_next_block_after(union block *block) {
   }
 }
 size_t available_space_after(union block *pointer) {
-
   { return ((size_t)(record_end->buffer - pointer->buffer)); }
 }
 void xclose(int fd) {
   char *tmp;
   int tmp___0;
   char *__cil_tmp4;
-
   {
     { tmp___0 = close(fd); }
     if (tmp___0 != 0) {
@@ -1018,7 +1010,6 @@ static _Bool check_label_pattern(union block *label) {
   int tmp___3;
   char *__cil_tmp9;
   char *__cil_tmp10;
-
   {
     {
       tmp = memchr((void const *)(label->header.name), '\000',
@@ -1095,7 +1086,6 @@ void open_archive(enum access_mode wanted_access) {
   char *__cil_tmp40;
   char *__cil_tmp41;
   char *__cil_tmp42;
-
   {
     backed_up_flag = 0;
     if (index_file_name) {
@@ -1604,7 +1594,6 @@ void flush_write(void) {
   char *tmp___9;
   char *__cil_tmp14;
   char *__cil_tmp15;
-
   {
     if (checkpoint_option) {
       checkpoint++;
@@ -1795,7 +1784,6 @@ void archive_write_error(ssize_t status) {
   int e;
   int *tmp;
   int *tmp___0;
-
   {
     if (totals_option) {
       {
@@ -1815,7 +1803,6 @@ void archive_read_error(void) {
   int tmp___1;
   char *__cil_tmp4;
   char *__cil_tmp5;
-
   {
     { read_error(*archive_name_cursor); }
     if (record_start_block == 0L) {
@@ -1851,7 +1838,6 @@ static void short_read(size_t status) {
   char *tmp___4;
   void *__cil_tmp13;
   char *__cil_tmp14;
-
   {
     more = record_start->buffer + status;
     left = record_size - status;
@@ -1982,7 +1968,6 @@ void flush_read(void) {
   char *__cil_tmp41;
   char *__cil_tmp42;
   char *__cil_tmp43;
-
   {
     if (checkpoint_option) {
       checkpoint++;
@@ -2244,7 +2229,6 @@ void flush_read(void) {
   }
 }
 void flush_archive(void) {
-
   {
     record_start_block += record_end - record_start;
     current_block = record_start;
@@ -2306,7 +2290,6 @@ static void backspace_output(void) {
   __off_t tmp___11;
   off_t tmp___12;
   char *__cil_tmp17;
-
   {
     operation.mt_op = (short)4;
     operation.mt_count = 1;
@@ -2408,7 +2391,6 @@ void close_archive(void) {
   int tmp___0;
   int tmp___1;
   union block *tmp___2;
-
   {
     if (time_to_start_writing) {
       {
@@ -2477,7 +2459,6 @@ void init_volume_number(void) {
   int *tmp___5;
   char *__cil_tmp9;
   char *__cil_tmp10;
-
   {
     {
       tmp = fopen((char const * /* __restrict  */)volno_file_option,
@@ -2534,7 +2515,6 @@ void closeout_volume_number(void) {
   FILE *tmp;
   int tmp___0;
   int tmp___1;
-
   {
     {
       tmp = fopen((char const * /* __restrict  */)volno_file_option,
@@ -2608,7 +2588,6 @@ static _Bool new_volume(enum access_mode mode) {
   char *__cil_tmp40;
   char *__cil_tmp41;
   char *__cil_tmp42;
-
   {
     if (!read_file) {
       if (!info_script_option) {
@@ -3119,7 +3098,6 @@ static int diff_handle;
 static char *diff_buffer;
 void diff_init(void) {
   void *tmp;
-
   {
     {
       tmp = valloc(record_size);
@@ -3137,7 +3115,6 @@ void report_difference(struct tar_stat_info *st __attribute__((__unused__)),
                        char const *fmt, ...) {
   va_list ap;
   char *tmp;
-
   {
     if (fmt) {
       {
@@ -3160,7 +3137,6 @@ void report_difference(struct tar_stat_info *st __attribute__((__unused__)),
 }
 static int process_noop(size_t size __attribute__((__unused__)),
                         char *data __attribute__((__unused__))) {
-
   { return (1); }
 }
 static int process_rawdata(size_t bytes, char *buffer___2) {
@@ -3170,7 +3146,6 @@ static int process_rawdata(size_t bytes, char *buffer___2) {
   char *tmp___1;
   int tmp___2;
   char *__cil_tmp8;
-
   {
     {
       tmp = safe_read(diff_handle, (void *)diff_buffer, bytes);
@@ -3211,7 +3186,6 @@ static int process_dumpdir(size_t bytes, char *buffer___2) {
   char *tmp;
   int tmp___0;
   char *__cil_tmp5;
-
   {
     {
       tmp___0 =
@@ -3234,7 +3208,6 @@ static void read_and_process(off_t size, int (*processor)(size_t, char *)) {
   char *tmp;
   int tmp___0;
   char *__cil_tmp7;
-
   {
     if (multi_volume_option) {
       save_sizeleft = size;
@@ -3280,7 +3253,6 @@ static int get_stat_data(char const *file_name, struct stat *stat_data) {
   int status;
   int tmp;
   int *tmp___0;
-
   {
     {
       tmp = deref_stat(dereference_option, file_name, stat_data);
@@ -3371,7 +3343,6 @@ void diff_archive(void) {
   char *__cil_tmp65;
   char *__cil_tmp66;
   char *__cil_tmp67;
-
   {
     {
       set_next_block_after(current_header);
@@ -3824,7 +3795,6 @@ void verify_volume(void) {
   enum read_header tmp___7;
   int counter;
   char *tmp___8;
-
   {
     if (!diff_buffer) {
       {
@@ -4060,7 +4030,6 @@ void *hash_insert(Hash_table *table___0, void const *entry);
 static void to_octal(uintmax_t value, char *where, size_t size) {
   uintmax_t v;
   size_t i;
-
   {
     v = value;
     i = size;
@@ -4084,7 +4053,6 @@ static void to_base256(int negative, uintmax_t value, char *where,
   uintmax_t v;
   uintmax_t propagated_sign_bits;
   size_t i;
-
   {
     v = value;
     propagated_sign_bits = (uintmax_t)(-negative) << (8UL * sizeof(v) - 8UL);
@@ -4152,7 +4120,6 @@ static void to_chars(int negative, uintmax_t value, size_t valsize,
   char *__cil_tmp46;
   char *__cil_tmp47;
   char *__cil_tmp48;
-
   {
     if ((unsigned int)archive_format == 6U) {
       tmp___8 = 1;
@@ -4339,7 +4306,6 @@ static uintmax_t gid_substitute(int *negative) {
   gid_t r;
   int tmp;
   char *__cil_tmp4;
-
   {
     if (!gid_nobody) {
       {
@@ -4356,7 +4322,6 @@ static uintmax_t gid_substitute(int *negative) {
 }
 void gid_to_chars(gid_t v, char *p, size_t s) {
   char *__cil_tmp4;
-
   {
     {
       to_chars(v < 0U, (uintmax_t)v, sizeof(v), &gid_substitute, p, s, "gid_t");
@@ -4366,7 +4331,6 @@ void gid_to_chars(gid_t v, char *p, size_t s) {
 }
 void major_to_chars(int v, char *p, size_t s) {
   char *__cil_tmp4;
-
   {
     {
       to_chars(v < 0, (uintmax_t)v, sizeof(v), (uintmax_t(*)(int *))0, p, s,
@@ -4377,7 +4341,6 @@ void major_to_chars(int v, char *p, size_t s) {
 }
 void minor_to_chars(int v, char *p, size_t s) {
   char *__cil_tmp4;
-
   {
     {
       to_chars(v < 0, (uintmax_t)v, sizeof(v), (uintmax_t(*)(int *))0, p, s,
@@ -4402,7 +4365,6 @@ void mode_to_chars(mode_t v, char *p, size_t s) {
   int tmp___9;
   int tmp___10;
   char *__cil_tmp18;
-
   {
     if (256 >> 3 == 32) {
       if (128 >> 3 == 16) {
@@ -4519,7 +4481,6 @@ void mode_to_chars(mode_t v, char *p, size_t s) {
 }
 void off_to_chars(off_t v, char *p, size_t s) {
   char *__cil_tmp4;
-
   {
     {
       to_chars(v < 0L, (uintmax_t)v, sizeof(v), (uintmax_t(*)(int *))0, p, s,
@@ -4530,7 +4491,6 @@ void off_to_chars(off_t v, char *p, size_t s) {
 }
 void size_to_chars(size_t v, char *p, size_t s) {
   char *__cil_tmp4;
-
   {
     { to_chars(0, v, sizeof(v), (uintmax_t(*)(int *))0, p, s, "size_t"); }
     return;
@@ -4538,7 +4498,6 @@ void size_to_chars(size_t v, char *p, size_t s) {
 }
 void time_to_chars(time_t v, char *p, size_t s) {
   char *__cil_tmp4;
-
   {
     {
       to_chars(v < 0L, (uintmax_t)v, sizeof(v), (uintmax_t(*)(int *))0, p, s,
@@ -4552,7 +4511,6 @@ static uintmax_t uid_substitute(int *negative) {
   uid_t r;
   int tmp;
   char *__cil_tmp4;
-
   {
     if (!uid_nobody) {
       {
@@ -4569,7 +4527,6 @@ static uintmax_t uid_substitute(int *negative) {
 }
 void uid_to_chars(uid_t v, char *p, size_t s) {
   char *__cil_tmp4;
-
   {
     {
       to_chars(v < 0U, (uintmax_t)v, sizeof(v), &uid_substitute, p, s, "uid_t");
@@ -4579,14 +4536,12 @@ void uid_to_chars(uid_t v, char *p, size_t s) {
 }
 void uintmax_to_chars(uintmax_t v, char *p, size_t s) {
   char *__cil_tmp4;
-
   {
     { to_chars(0, v, sizeof(v), (uintmax_t(*)(int *))0, p, s, "uintmax_t"); }
     return;
   }
 }
 void string_to_chars(char *str, char *p, size_t s) {
-
   {
     {
       strncpy((char * /* __restrict  */)p, (char const * /* __restrict  */)str,
@@ -4598,7 +4553,6 @@ void string_to_chars(char *str, char *p, size_t s) {
 }
 _Bool file_dumpable_p(struct tar_stat_info *st) {
   int tmp;
-
   {
     if (dev_null_output) {
       tmp = 0;
@@ -4622,7 +4576,6 @@ void write_eot(void) {
   union block *pointer;
   union block *tmp;
   size_t tmp___0;
-
   {
     {
       tmp = find_next_block();
@@ -4638,7 +4591,6 @@ void write_eot(void) {
   }
 }
 static void tar_copy_str(char *dst, char const *src, size_t len) {
-
   {
     {
       *(dst + (len - 1UL)) = (char)0;
@@ -4656,7 +4608,6 @@ union block *start_private_header(char const *name, size_t size) {
   __gid_t tmp___1;
   char *__cil_tmp8;
   char *__cil_tmp9;
-
   {
     {
       tmp = find_next_block();
@@ -4688,7 +4639,6 @@ union block *start_private_header(char const *name, size_t size) {
 static union block *write_short_name(struct tar_stat_info *st) {
   union block *header;
   union block *tmp;
-
   {
     {
       tmp = find_next_block();
@@ -4708,7 +4658,6 @@ static void write_gnu_long_link(struct tar_stat_info *st, char const *p,
   union block *header;
   char *__cil_tmp8;
   char *__cil_tmp9;
-
   {
     {
       tmp = strlen(p);
@@ -4750,7 +4699,6 @@ static void write_gnu_long_link(struct tar_stat_info *st, char const *p,
 }
 static size_t split_long_name(char const *name, size_t length) {
   size_t i;
-
   {
     if (length > 155UL) {
       length = (size_t)157;
@@ -4784,7 +4732,6 @@ static union block *write_ustar_long_name(char const *name) {
   char *__cil_tmp10;
   char *__cil_tmp11;
   char *__cil_tmp12;
-
   {
     {
       tmp = strlen(name);
@@ -4838,7 +4785,6 @@ static void write_long_link(struct tar_stat_info *st) {
   char *tmp___0;
   char *__cil_tmp4;
   char *__cil_tmp5;
-
   {
     {
       if ((unsigned int)archive_format == 4U) {
@@ -4898,7 +4844,6 @@ static union block *write_long_name(struct tar_stat_info *st) {
   union block *tmp___3;
   char *__cil_tmp7;
   char *__cil_tmp8;
-
   {
     {
       if ((unsigned int)archive_format == 4U) {
@@ -5030,7 +4975,6 @@ static union block *write_extended(struct tar_stat_info *st,
   int __cil_tmp67;
   void *__cil_tmp68;
   void *__cil_tmp69;
-
   {
     if (extended_header.buffer) {
       return (old_header);
@@ -5060,7 +5004,6 @@ static union block *write_header_name(struct tar_stat_info *st) {
   size_t tmp___2;
   _Bool tmp___3;
   char *__cil_tmp7;
-
   {
     if ((unsigned int)archive_format == 4U) {
       {
@@ -5111,7 +5054,6 @@ union block *start_header(struct tar_stat_info *st) {
   char *__cil_tmp20;
   char *__cil_tmp21;
   char *__cil_tmp22;
-
   {
     { header = write_header_name(st); }
     if (!header) {
@@ -5424,7 +5366,6 @@ void simple_finish_header(union block *header) {
   char *tmp;
   size_t tmp___0;
   char *__cil_tmp7;
-
   {
     {
       memcpy((void * /* __restrict  */)(header->header.chksum),
@@ -5457,7 +5398,6 @@ void simple_finish_header(union block *header) {
 }
 void finish_header(struct tar_stat_info *st, union block *header,
                    off_t block_ordinal) {
-
   {
     if (verbose_option) {
       if ((int)header->header.typeflag != 75) {
@@ -5483,7 +5423,6 @@ void finish_header(struct tar_stat_info *st, union block *header,
 }
 void pad_archive(off_t size_left) {
   union block *blk;
-
   {
     {
       while (1) {
@@ -5516,7 +5455,6 @@ static enum dump_status dump_regular_file(int fd, struct tar_stat_info *st) {
   char *tmp___1;
   char *tmp___2;
   void *__cil_tmp13;
-
   {
     {
       size_left = st->stat.st_size;
@@ -5611,7 +5549,6 @@ static void dump_regular_finish(int fd, struct tar_stat_info *st,
   int tmp___3;
   void *__cil_tmp10;
   char *__cil_tmp11;
-
   {
     if (fd >= 0) {
       {
@@ -5677,7 +5614,6 @@ static void dump_dir0(char *directory, struct tar_stat_info *st, int top_level,
   void *tmp___6;
   _Bool tmp___7;
   char *__cil_tmp29;
-
   {
     {
       our_device = st->stat.st_dev;
@@ -5844,7 +5780,6 @@ static void ensure_slash(char **pstr) {
   size_t tmp;
   void *tmp___0;
   size_t tmp___1;
-
   {
     {
       tmp = strlen((char const *)*pstr);
@@ -5880,7 +5815,6 @@ static void ensure_slash(char **pstr) {
 static _Bool dump_dir(struct tar_stat_info *st, int top_level,
                       dev_t parent_device) {
   char *directory;
-
   {
     { directory = savedir((char const *)st->orig_file_name); }
     if (!directory) {
@@ -5914,7 +5848,6 @@ void create_archive(void) {
   void *tmp___5;
   _Bool tmp___6;
   _Bool tmp___7;
-
   {
     {
       open_archive((enum access_mode)1);
@@ -6062,7 +5995,6 @@ void create_archive(void) {
 static unsigned int hash_link(void const *entry, unsigned int n_buckets) {
   struct link const *l;
   uintmax_t num;
-
   {
     l = (struct link const *)entry;
     num = (uintmax_t)(l->dev ^ l->ino);
@@ -6072,7 +6004,6 @@ static unsigned int hash_link(void const *entry, unsigned int n_buckets) {
 static _Bool compare_links(void const *entry1, void const *entry2) {
   struct link const *link1;
   struct link const *link2;
-
   {
     link1 = (struct link const *)entry1;
     link2 = (struct link const *)entry2;
@@ -6084,7 +6015,6 @@ static void unknown_file_error(char *p) {
   char *tmp;
   char *tmp___0;
   char *__cil_tmp4;
-
   {
     {
       tmp = quotearg_colon((char const *)p);
@@ -6109,7 +6039,6 @@ static _Bool dump_hard_link(struct tar_stat_info *st) {
   int tmp___1;
   void *tmp___2;
   void *__cil_tmp11;
-
   {
     if (link_table) {
       if (st->stat.st_nlink > 1UL) {
@@ -6169,7 +6098,6 @@ static void file_count_links(struct tar_stat_info *st) {
   size_t tmp;
   void *tmp___0;
   void *tmp___1;
-
   {
     if (st->stat.st_nlink > 1UL) {
       {
@@ -6222,7 +6150,6 @@ void check_links(void) {
   void *tmp___0;
   char *tmp___1;
   char *__cil_tmp5;
-
   {
     if (!link_table) {
       return;
@@ -6294,7 +6221,6 @@ static void dump_file0(struct tar_stat_info *st, char *p, int top_level,
   char *__cil_tmp40;
   char *__cil_tmp41;
   char *__cil_tmp42;
-
   {
     block_ordinal = (off_t)-1;
     if (interactive_option) {
@@ -6621,7 +6547,6 @@ static void dump_file0(struct tar_stat_info *st, char *p, int top_level,
 void dump_file(char *p, int top_level, dev_t parent_device) {
   struct tar_stat_info st;
   void *__cil_tmp5;
-
   {
     {
       tar_stat_init(&st);
@@ -6668,7 +6593,6 @@ static void move_archive(off_t count) {
   off_t tmp___10;
   __off_t tmp___11;
   off_t tmp___12;
-
   {
     if (count == 0L) {
       return;
@@ -6785,7 +6709,6 @@ static void move_archive(off_t count) {
 }
 static void write_record(int move_back_flag) {
   union block *save_record;
-
   {
     save_record = record_start;
     record_start = new_record;
@@ -6816,7 +6739,6 @@ static void write_record(int move_back_flag) {
 static void write_recent_blocks(union block *h, size_t blocks) {
   size_t i;
   int tmp;
-
   {
     i = (size_t)0;
     {
@@ -6843,7 +6765,6 @@ static void write_recent_blocks(union block *h, size_t blocks) {
 static void write_recent_bytes(char *data, size_t bytes) {
   size_t blocks;
   size_t rest;
-
   {
     {
       blocks = bytes / 512UL;
@@ -6891,7 +6812,6 @@ void delete_archive_members(void) {
   char *__cil_tmp21;
   char *__cil_tmp22;
   char *__cil_tmp23;
-
   {
     {
       logical_status = (enum read_header)0;
@@ -7313,7 +7233,6 @@ static struct delayed_set_stat *delayed_set_stat_head;
 static struct delayed_symlink *delayed_symlink_head;
 void extr_init(void) {
   __uid_t tmp;
-
   {
     {
       tmp = geteuid();
@@ -7342,7 +7261,6 @@ static void set_mode(char const *file_name, struct stat const *stat_info,
   int tmp;
   int tmp___0;
   void *__cil_tmp11;
-
   {
     if (0 < same_permissions_option) {
       if ((unsigned int)permstatus != 2U) {
@@ -7401,7 +7319,6 @@ static void check_time(char const *file_name, time_t t) {
   char *tmp___2;
   char *__cil_tmp8;
   char *__cil_tmp9;
-
   {
     if (t <= 0L) {
       {
@@ -7434,7 +7351,6 @@ static void set_stat(char const *file_name, struct stat const *stat_info,
   int tmp;
   int tmp___0;
   int tmp___1;
-
   {
     if ((int)typeflag != 50) {
       if (!touch_option) {
@@ -7508,7 +7424,6 @@ static void delay_set_stat(char const *file_name, struct stat const *stat_info,
   size_t tmp;
   struct delayed_set_stat *data;
   void *tmp___0;
-
   {
     {
       tmp = strlen(file_name);
@@ -7540,7 +7455,6 @@ static void repair_delayed_set_stat(char const *dir,
   char *tmp___1;
   void *__cil_tmp8;
   char *__cil_tmp9;
-
   {
     data = delayed_set_stat_head;
     {
@@ -7594,7 +7508,6 @@ static int make_directories(char *file_name) {
   int *tmp;
   int tmp___0;
   int *tmp___1;
-
   {
     cursor0 = file_name + 0;
     did_something = 0;
@@ -7696,7 +7609,6 @@ static _Bool file_newer_p(char const *file_name,
   struct stat st;
   int tmp;
   void *__cil_tmp5;
-
   {
     {
       tmp = stat((char const * /* __restrict  */)file_name,
@@ -7723,7 +7635,6 @@ static int prepare_to_extract(char const *file_name) {
   char *tmp___2;
   _Bool tmp___3;
   char *__cil_tmp7;
-
   {
     if (to_stdout_option) {
       return (0);
@@ -7788,7 +7699,6 @@ static int maybe_recoverable(char *file_name, int *interdir_made) {
   int *tmp___4;
   int *tmp___5;
   int tmp___6;
-
   {
     {
       tmp = __errno_location();
@@ -7889,7 +7799,6 @@ static void apply_nonancestor_delayed_set_stat(char const *file_name,
   void *__cil_tmp14;
   char *__cil_tmp15;
   char *__cil_tmp16;
-
   {
     {
       tmp = strlen(file_name);
@@ -8076,7 +7985,6 @@ void extract_archive(void) {
   char *__cil_tmp89;
   char *__cil_tmp90;
   char *__cil_tmp91;
-
   {
     {
       interdir_made = 0;
@@ -8872,7 +8780,6 @@ static void apply_delayed_symlinks(void) {
   struct string_list *next;
   struct delayed_symlink *next___0;
   void *__cil_tmp12;
-
   {
     ds = delayed_symlink_head;
     {
@@ -8972,7 +8879,6 @@ static void apply_delayed_symlinks(void) {
 void extract_finish(void) {
   char *__cil_tmp1;
   char *__cil_tmp2;
-
   {
     {
       apply_nonancestor_delayed_set_stat("", (_Bool)0);
@@ -8986,7 +8892,6 @@ __attribute__((__noreturn__)) void fatal_exit(void);
 void fatal_exit(void) {
   char *tmp;
   char *__cil_tmp2;
-
   {
     {
       extract_finish();
@@ -9047,7 +8952,6 @@ static char *globexthdr_name;
 static _Bool xheader_keyword_deleted_p(char const *kw) {
   struct keyword_list *kp;
   int tmp;
-
   {
     kp = keyword_pattern_list;
     {
@@ -9070,7 +8974,6 @@ static _Bool xheader_keyword_deleted_p(char const *kw) {
 static _Bool xheader_keyword_override_p(char const *keyword) {
   struct keyword_list *kp;
   int tmp;
-
   {
     kp = keyword_override_list;
     {
@@ -9095,7 +8998,6 @@ static void xheader_list_append(struct keyword_list **root, char const *kw,
   struct keyword_list *kp;
   void *tmp;
   char *tmp___0;
-
   {
     {
       tmp = xmalloc(sizeof(*kp));
@@ -9118,7 +9020,6 @@ static void xheader_list_append(struct keyword_list **root, char const *kw,
 static void xheader_list_destroy(struct keyword_list **root) {
   struct keyword_list *kw;
   struct keyword_list *next;
-
   {
     if (root) {
       kw = *root;
@@ -9147,7 +9048,6 @@ static __attribute__((__noreturn__)) void xheader_set_single_keyword(char *kw);
 static void xheader_set_single_keyword(char *kw) {
   char *tmp;
   char *__cil_tmp3;
-
   {
     {
       tmp = gettext("Keyword %s is unknown or not yet imlemented");
@@ -9170,7 +9070,6 @@ static void xheader_set_keyword_equal(char *kw, char *eq) {
   int tmp___7;
   char *__cil_tmp14;
   char *__cil_tmp15;
-
   {
     global = (_Bool)1;
     p = eq;
@@ -9272,7 +9171,6 @@ void xheader_set_option(char *string) {
   char *token;
   char *p;
   char *tmp;
-
   {
     {
       token = strtok((char * /* __restrict  */)string,
@@ -9311,7 +9209,6 @@ static void to_decimal(uintmax_t value, char *where, size_t size) {
   size_t tmp;
   size_t tmp___0;
   char c;
-
   {
     i = (size_t)0;
     tmp = i;
@@ -9382,7 +9279,6 @@ static char *xheader_format_name(struct tar_stat_info *st, char const *fmt,
   char const *tmp___15;
   void *__cil_tmp29;
   void *__cil_tmp30;
-
   {
     {
       tmp = strlen(fmt);
@@ -9584,7 +9480,6 @@ static char *xheader_format_name(struct tar_stat_info *st, char const *fmt,
 char *xheader_xhdr_name(struct tar_stat_info *st) {
   char *tmp;
   char *__cil_tmp3;
-
   {
     if (!exthdr_name) {
       {
@@ -9606,7 +9501,6 @@ char *xheader_ghdr_name(void) {
   char *__cil_tmp8;
   char *__cil_tmp9;
   char *__cil_tmp10;
-
   {
     if (!globexthdr_name) {
       {
@@ -9639,7 +9533,6 @@ void xheader_write(char type, char *name, struct xheader *xhdr) {
   size_t size;
   char *p;
   size_t len;
-
   {
     {
       size = xhdr->size;
@@ -9685,7 +9578,6 @@ void xheader_write(char type, char *name, struct xheader *xhdr) {
 void xheader_write_global(void) {
   char *name;
   struct keyword_list *kp;
-
   {
     if (!keyword_global_override_list) {
       return;
@@ -9722,7 +9614,6 @@ struct xhdr_tab const xhdr_tab[17];
 static struct xhdr_tab const *locate_handler(char const *keyword) {
   struct xhdr_tab const *p;
   int tmp;
-
   {
     p = xhdr_tab;
     {
@@ -9745,7 +9636,6 @@ static struct xhdr_tab const *locate_handler(char const *keyword) {
 static _Bool xheader_protected_pattern_p(char const *pattern) {
   struct xhdr_tab const *p;
   int tmp;
-
   {
     p = xhdr_tab;
     {
@@ -9772,7 +9662,6 @@ static _Bool xheader_protected_pattern_p(char const *pattern) {
 static _Bool xheader_protected_keyword_p(char const *keyword) {
   struct xhdr_tab const *p;
   int tmp;
-
   {
     p = xhdr_tab;
     {
@@ -9807,7 +9696,6 @@ static _Bool decode_record(char **p,
   char *tmp___0;
   char *__cil_tmp10;
   char *__cil_tmp11;
-
   {
     start = *p;
     if ((int)*(*p) == 0) {
@@ -9865,7 +9753,6 @@ static void run_override_list(struct keyword_list *kp,
                               struct tar_stat_info *st) {
   struct xhdr_tab const *t;
   struct xhdr_tab const *tmp;
-
   {
     {
       while (1) {
@@ -9894,7 +9781,6 @@ static void decx(void *data, char const *keyword, char const *value) {
   struct tar_stat_info *st;
   _Bool tmp;
   _Bool tmp___0;
-
   {
     {
       st = (struct tar_stat_info *)data;
@@ -9921,7 +9807,6 @@ void xheader_decode(struct tar_stat_info *st) {
   char *p;
   char *endp;
   _Bool tmp;
-
   {
     {
       run_override_list(keyword_global_override_list, st);
@@ -9950,7 +9835,6 @@ void xheader_decode(struct tar_stat_info *st) {
 }
 static void decg(void *data, char const *keyword, char const *value) {
   struct keyword_list **kwl;
-
   {
     {
       kwl = (struct keyword_list **)data;
@@ -9963,7 +9847,6 @@ void xheader_decode_global(void) {
   char *p;
   char *endp;
   _Bool tmp;
-
   {
     if (extended_header.size) {
       {
@@ -9993,7 +9876,6 @@ void xheader_decode_global(void) {
 }
 static void extended_header_init(void) {
   void *tmp;
-
   {
     if (!extended_header.stk) {
       {
@@ -10011,7 +9893,6 @@ void xheader_store(char const *keyword, struct tar_stat_info const *st,
   struct xhdr_tab const *t;
   _Bool tmp;
   _Bool tmp___0;
-
   {
     if (extended_header.buffer) {
       return;
@@ -10041,7 +9922,6 @@ void xheader_read(union block *p, size_t size) {
   size_t nblocks;
   void *tmp;
   size_t len;
-
   {
     {
       j = (size_t)0;
@@ -10080,7 +9960,6 @@ static size_t format_uintmax(uintmax_t val, char *buf, size_t s) {
   char *p;
   char *tmp;
   char *tmp___0;
-
   {
     if (!buf) {
       s = (size_t)0;
@@ -10149,7 +10028,6 @@ static void xheader_print(struct xheader *xhdr, char const *keyword,
   struct obstack *__o___4;
   char *tmp___5;
   void *__cil_tmp24;
-
   {
     {
       tmp = strlen(keyword);
@@ -10257,7 +10135,6 @@ void xheader_finish(struct xheader *xhdr) {
   char *tmp;
   struct obstack *__o1;
   void *value;
-
   {
     kp = keyword_override_list;
     {
@@ -10307,7 +10184,6 @@ void xheader_destroy(struct xheader *xhdr) {
   struct obstack *__o;
   void *__obj;
   char *tmp;
-
   {
     if (xhdr->stk) {
       __o = xhdr->stk;
@@ -10339,7 +10215,6 @@ static void code_string(char const *string, char const *keyword,
                         struct xheader *xhdr) {
   char *outstr;
   _Bool tmp;
-
   {
     { tmp = utf8_convert((_Bool)1, string, &outstr); }
     if (!tmp) {
@@ -10356,7 +10231,6 @@ static void code_string(char const *string, char const *keyword,
 }
 static void decode_string(char **string, char const *arg) {
   _Bool tmp;
-
   {
     if (*string) {
       {
@@ -10381,7 +10255,6 @@ static void code_time(time_t t, unsigned long nano, char const *keyword,
   size_t tmp___0;
   size_t tmp___1;
   void *__cil_tmp10;
-
   {
     {
       tmp = format_uintmax((uintmax_t)t, (char *)((void *)0), (size_t)0);
@@ -10410,7 +10283,6 @@ static void decode_time(char const *arg, time_t *secs, unsigned long *nsecs) {
   strtol_error tmp___0;
   char *__cil_tmp8;
   char *__cil_tmp9;
-
   {
     { tmp___0 = xstrtoumax(arg, &p, 10, &u, ""); }
     if ((unsigned int)tmp___0 == 0U) {
@@ -10434,7 +10306,6 @@ static void code_num(uintmax_t value, char const *keyword,
   size_t s;
   size_t tmp;
   void *__cil_tmp7;
-
   {
     {
       tmp = format_uintmax(value, (char *)((void *)0), (size_t)0);
@@ -10451,18 +10322,15 @@ static void dummy_coder(struct tar_stat_info const *st
                         char const *keyword __attribute__((__unused__)),
                         struct xheader *xhdr __attribute__((__unused__)),
                         void *data __attribute__((__unused__))) {
-
   { return; }
 }
 static void dummy_decoder(struct tar_stat_info *st __attribute__((__unused__)),
                           char const *arg __attribute__((__unused__))) {
-
   { return; }
 }
 static void atime_coder(struct tar_stat_info const *st, char const *keyword,
                         struct xheader *xhdr,
                         void *data __attribute__((__unused__))) {
-
   {
     {
       code_time((time_t)st->stat.st_atim.tv_sec, (unsigned long)st->atime_nsec,
@@ -10472,7 +10340,6 @@ static void atime_coder(struct tar_stat_info const *st, char const *keyword,
   }
 }
 static void atime_decoder(struct tar_stat_info *st, char const *arg) {
-
   {
     { decode_time(arg, &st->stat.st_atim.tv_sec, &st->atime_nsec); }
     return;
@@ -10481,7 +10348,6 @@ static void atime_decoder(struct tar_stat_info *st, char const *arg) {
 static void gid_coder(struct tar_stat_info const *st, char const *keyword,
                       struct xheader *xhdr,
                       void *data __attribute__((__unused__))) {
-
   {
     { code_num((uintmax_t)st->stat.st_gid, keyword, xhdr); }
     return;
@@ -10491,7 +10357,6 @@ static void gid_decoder(struct tar_stat_info *st, char const *arg) {
   uintmax_t u;
   strtol_error tmp;
   char *__cil_tmp5;
-
   {
     { tmp = xstrtoumax(arg, (char **)((void *)0), 10, &u, ""); }
     if ((unsigned int)tmp == 0U) {
@@ -10503,14 +10368,12 @@ static void gid_decoder(struct tar_stat_info *st, char const *arg) {
 static void gname_coder(struct tar_stat_info const *st, char const *keyword,
                         struct xheader *xhdr,
                         void *data __attribute__((__unused__))) {
-
   {
     { code_string((char const *)st->gname, keyword, xhdr); }
     return;
   }
 }
 static void gname_decoder(struct tar_stat_info *st, char const *arg) {
-
   {
     { decode_string(&st->gname, arg); }
     return;
@@ -10519,14 +10382,12 @@ static void gname_decoder(struct tar_stat_info *st, char const *arg) {
 static void linkpath_coder(struct tar_stat_info const *st, char const *keyword,
                            struct xheader *xhdr,
                            void *data __attribute__((__unused__))) {
-
   {
     { code_string((char const *)st->link_name, keyword, xhdr); }
     return;
   }
 }
 static void linkpath_decoder(struct tar_stat_info *st, char const *arg) {
-
   {
     { decode_string(&st->link_name, arg); }
     return;
@@ -10535,7 +10396,6 @@ static void linkpath_decoder(struct tar_stat_info *st, char const *arg) {
 static void ctime_coder(struct tar_stat_info const *st, char const *keyword,
                         struct xheader *xhdr,
                         void *data __attribute__((__unused__))) {
-
   {
     {
       code_time((time_t)st->stat.st_ctim.tv_sec, (unsigned long)st->ctime_nsec,
@@ -10545,7 +10405,6 @@ static void ctime_coder(struct tar_stat_info const *st, char const *keyword,
   }
 }
 static void ctime_decoder(struct tar_stat_info *st, char const *arg) {
-
   {
     { decode_time(arg, &st->stat.st_ctim.tv_sec, &st->ctime_nsec); }
     return;
@@ -10554,7 +10413,6 @@ static void ctime_decoder(struct tar_stat_info *st, char const *arg) {
 static void mtime_coder(struct tar_stat_info const *st, char const *keyword,
                         struct xheader *xhdr,
                         void *data __attribute__((__unused__))) {
-
   {
     {
       code_time((time_t)st->stat.st_mtim.tv_sec, (unsigned long)st->mtime_nsec,
@@ -10564,7 +10422,6 @@ static void mtime_coder(struct tar_stat_info const *st, char const *keyword,
   }
 }
 static void mtime_decoder(struct tar_stat_info *st, char const *arg) {
-
   {
     { decode_time(arg, &st->stat.st_mtim.tv_sec, &st->mtime_nsec); }
     return;
@@ -10573,14 +10430,12 @@ static void mtime_decoder(struct tar_stat_info *st, char const *arg) {
 static void path_coder(struct tar_stat_info const *st, char const *keyword,
                        struct xheader *xhdr,
                        void *data __attribute__((__unused__))) {
-
   {
     { code_string((char const *)st->file_name, keyword, xhdr); }
     return;
   }
 }
 static void path_decoder(struct tar_stat_info *st, char const *arg) {
-
   {
     {
       decode_string(&st->orig_file_name, arg);
@@ -10593,7 +10448,6 @@ static void path_decoder(struct tar_stat_info *st, char const *arg) {
 static void size_coder(struct tar_stat_info const *st, char const *keyword,
                        struct xheader *xhdr,
                        void *data __attribute__((__unused__))) {
-
   {
     { code_num((uintmax_t)st->stat.st_size, keyword, xhdr); }
     return;
@@ -10604,7 +10458,6 @@ static void size_decoder(struct tar_stat_info *st, char const *arg) {
   __off_t tmp;
   strtol_error tmp___0;
   char *__cil_tmp6;
-
   {
     { tmp___0 = xstrtoumax(arg, (char **)((void *)0), 10, &u, ""); }
     if ((unsigned int)tmp___0 == 0U) {
@@ -10618,7 +10471,6 @@ static void size_decoder(struct tar_stat_info *st, char const *arg) {
 static void uid_coder(struct tar_stat_info const *st, char const *keyword,
                       struct xheader *xhdr,
                       void *data __attribute__((__unused__))) {
-
   {
     { code_num((uintmax_t)st->stat.st_uid, keyword, xhdr); }
     return;
@@ -10628,7 +10480,6 @@ static void uid_decoder(struct tar_stat_info *st, char const *arg) {
   uintmax_t u;
   strtol_error tmp;
   char *__cil_tmp5;
-
   {
     { tmp = xstrtoumax(arg, (char **)((void *)0), 10, &u, ""); }
     if ((unsigned int)tmp == 0U) {
@@ -10640,14 +10491,12 @@ static void uid_decoder(struct tar_stat_info *st, char const *arg) {
 static void uname_coder(struct tar_stat_info const *st, char const *keyword,
                         struct xheader *xhdr,
                         void *data __attribute__((__unused__))) {
-
   {
     { code_string((char const *)st->uname, keyword, xhdr); }
     return;
   }
 }
 static void uname_decoder(struct tar_stat_info *st, char const *arg) {
-
   {
     { decode_string(&st->uname, arg); }
     return;
@@ -10656,7 +10505,6 @@ static void uname_decoder(struct tar_stat_info *st, char const *arg) {
 static void sparse_size_coder(struct tar_stat_info const *st,
                               char const *keyword, struct xheader *xhdr,
                               void *data) {
-
   {
     { size_coder(st, keyword, xhdr, data); }
     return;
@@ -10666,7 +10514,6 @@ static void sparse_size_decoder(struct tar_stat_info *st, char const *arg) {
   uintmax_t u;
   strtol_error tmp;
   char *__cil_tmp5;
-
   {
     { tmp = xstrtoumax(arg, (char **)((void *)0), 10, &u, ""); }
     if ((unsigned int)tmp == 0U) {
@@ -10678,7 +10525,6 @@ static void sparse_size_decoder(struct tar_stat_info *st, char const *arg) {
 static void sparse_numblocks_coder(struct tar_stat_info const *st,
                                    char const *keyword, struct xheader *xhdr,
                                    void *data __attribute__((__unused__))) {
-
   {
     { code_num((uintmax_t)st->sparse_map_avail, keyword, xhdr); }
     return;
@@ -10690,7 +10536,6 @@ static void sparse_numblocks_decoder(struct tar_stat_info *st,
   void *tmp;
   strtol_error tmp___0;
   char *__cil_tmp6;
-
   {
     { tmp___0 = xstrtoumax(arg, (char **)((void *)0), 10, &u, ""); }
     if ((unsigned int)tmp___0 == 0U) {
@@ -10708,7 +10553,6 @@ static void sparse_offset_coder(struct tar_stat_info const *st,
                                 char const *keyword, struct xheader *xhdr,
                                 void *data) {
   size_t i;
-
   {
     {
       i = *((size_t *)data);
@@ -10721,7 +10565,6 @@ static void sparse_offset_decoder(struct tar_stat_info *st, char const *arg) {
   uintmax_t u;
   strtol_error tmp;
   char *__cil_tmp5;
-
   {
     { tmp = xstrtoumax(arg, (char **)((void *)0), 10, &u, ""); }
     if ((unsigned int)tmp == 0U) {
@@ -10734,7 +10577,6 @@ static void sparse_numbytes_coder(struct tar_stat_info const *st,
                                   char const *keyword, struct xheader *xhdr,
                                   void *data) {
   size_t i;
-
   {
     {
       i = *((size_t *)data);
@@ -10749,7 +10591,6 @@ static void sparse_numbytes_decoder(struct tar_stat_info *st, char const *arg) {
   size_t tmp___0;
   strtol_error tmp___1;
   char *__cil_tmp7;
-
   {
     { tmp___1 = xstrtoumax(arg, (char **)((void *)0), 10, &u, ""); }
     if ((unsigned int)tmp___1 == 0U) {
@@ -10819,7 +10660,6 @@ static Hash_table *directory_table;
 static unsigned int hash_directory(void const *entry, unsigned int n_buckets) {
   struct directory const *directory;
   size_t tmp;
-
   {
     {
       directory = (struct directory const *)entry;
@@ -10832,7 +10672,6 @@ static _Bool compare_directories(void const *entry1, void const *entry2) {
   struct directory const *directory1;
   struct directory const *directory2;
   int tmp;
-
   {
     {
       directory1 = (struct directory const *)entry1;
@@ -10850,7 +10689,6 @@ static struct directory *note_directory(char const *name, dev_t dev, ino_t ino,
   struct directory *directory;
   void *tmp___0;
   void *tmp___1;
-
   {
     {
       tmp = strlen(name);
@@ -10894,7 +10732,6 @@ static struct directory *find_directory(char *name) {
   struct directory *dir;
   void *tmp___0;
   void *tmp___1;
-
   {
     if (!directory_table) {
       return ((struct directory *)0);
@@ -10915,7 +10752,6 @@ static struct directory *find_directory(char *name) {
 }
 static int compare_dirents(void const *first, void const *second) {
   int tmp;
-
   {
     {
       tmp = strcmp((char const *)(*((char *const *)first) + 1),
@@ -10968,7 +10804,6 @@ static void scan_path(struct obstack *stk, char *path, dev_t device) {
   char *__cil_tmp44;
   char *__cil_tmp45;
   char *__cil_tmp46;
-
   {
     {
       tmp = savedir((char const *)path);
@@ -11314,7 +11149,6 @@ static char *sort_obstack(struct obstack *stk) {
   char *tmp___3;
   char tmp___4;
   char *tmp___5;
-
   {
     __o1 = stk;
     value = (void *)__o1->object_base;
@@ -11437,7 +11271,6 @@ char *get_directory_contents(char *path, dev_t device) {
   struct obstack *__o;
   void *__obj;
   char *tmp;
-
   {
     {
       _obstack_begin(&stk, 0, 0, (void *(*)(long))(&xmalloc),
@@ -11513,7 +11346,6 @@ void read_directory_file(void) {
   char *__cil_tmp48;
   char *__cil_tmp49;
   char *__cil_tmp50;
-
   {
     {
       buf = (char *)0;
@@ -11769,7 +11601,6 @@ static _Bool write_directory_file_entry(void *entry, void *data) {
   int tmp___2;
   int tmp___3;
   char *tmp___4;
-
   {
     directory = (struct directory const *)entry;
     fp = (FILE *)data;
@@ -11819,7 +11650,6 @@ void write_directory_file(void) {
   int tmp___2;
   int tmp___3;
   int tmp___4;
-
   {
     fp = listed_incremental_stream;
     if (!fp) {
@@ -11897,7 +11727,6 @@ void gnu_restore(char const *directory_name) {
   char *__cil_tmp26;
   char *__cil_tmp27;
   char *__cil_tmp28;
-
   {
     { current_dir = savedir(directory_name); }
     if (!current_dir) {
@@ -12083,7 +11912,6 @@ static char const base_64_digits[64] = {
 static char base64_map[256];
 static void base64_init(void) {
   int i;
-
   {
     {
       memset((void *)(base64_map), 64, sizeof(base64_map));
@@ -12141,7 +11969,6 @@ void read_and(void (*do_something)(void)) {
   char *__cil_tmp36;
   char *__cil_tmp37;
   char *__cil_tmp38;
-
   {
     {
       status = (enum read_header)0;
@@ -12399,7 +12226,6 @@ void list_archive(void) {
   char *tmp;
   int *tmp___0;
   char *__cil_tmp7;
-
   {
     { decode_header(current_header, &current_stat_info, &current_format, 0); }
     if (verbose_option) {
@@ -12523,7 +12349,6 @@ enum read_header read_header(_Bool raw_extended_headers) {
   int tmp___8;
   void *__cil_tmp33;
   char *__cil_tmp34;
-
   {
     next_long_name = (union block *)0;
     next_long_link = (union block *)0;
@@ -12806,7 +12631,6 @@ void decode_header(union block *header, struct tar_stat_info *stat_info,
   int tmp___4;
   unsigned long long tmp___5;
   _Bool tmp___6;
-
   {
     { tmp___0 = strcmp((char const *)(header->header.magic), "ustar"); }
     if (tmp___0 == 0) {
@@ -13044,7 +12868,6 @@ static uintmax_t from_header(char const *where0, size_t digs, char const *type,
   char *__cil_tmp53;
   char *__cil_tmp54;
   char *__cil_tmp55;
-
   {
     where = where0;
     lim = where + digs;
@@ -13339,7 +13162,6 @@ static uintmax_t from_header(char const *where0, size_t digs, char const *type,
 gid_t gid_from_header(char const *p, size_t s) {
   uintmax_t tmp;
   char *__cil_tmp4;
-
   {
     {
       tmp = from_header(p, s, "gid_t", -((uintmax_t)((gid_t)0)),
@@ -13351,7 +13173,6 @@ gid_t gid_from_header(char const *p, size_t s) {
 int major_from_header(char const *p, size_t s) {
   uintmax_t tmp;
   char *__cil_tmp4;
-
   {
     {
       tmp = from_header(p, s, "major_t",
@@ -13364,7 +13185,6 @@ int major_from_header(char const *p, size_t s) {
 int minor_from_header(char const *p, size_t s) {
   uintmax_t tmp;
   char *__cil_tmp4;
-
   {
     {
       tmp = from_header(p, s, "minor_t",
@@ -13390,7 +13210,6 @@ mode_t mode_from_header(char const *p, size_t s) {
   int tmp___10;
   int tmp___11;
   char *__cil_tmp17;
-
   {
     {
       tmp = from_header(p, s, "mode_t", -((uintmax_t)((mode_t)0)),
@@ -13471,7 +13290,6 @@ mode_t mode_from_header(char const *p, size_t s) {
 off_t off_from_header(char const *p, size_t s) {
   uintmax_t tmp;
   char *__cil_tmp4;
-
   {
     {
       tmp =
@@ -13484,7 +13302,6 @@ off_t off_from_header(char const *p, size_t s) {
 size_t size_from_header(char const *p, size_t s) {
   uintmax_t tmp;
   char *__cil_tmp4;
-
   {
     { tmp = from_header(p, s, "size_t", (uintmax_t)0, 0xffffffffffffffffUL); }
     return (tmp);
@@ -13493,7 +13310,6 @@ size_t size_from_header(char const *p, size_t s) {
 time_t time_from_header(char const *p, size_t s) {
   uintmax_t tmp;
   char *__cil_tmp4;
-
   {
     {
       tmp = from_header(
@@ -13506,7 +13322,6 @@ time_t time_from_header(char const *p, size_t s) {
 uid_t uid_from_header(char const *p, size_t s) {
   uintmax_t tmp;
   char *__cil_tmp4;
-
   {
     {
       tmp = from_header(p, s, "uid_t", -((uintmax_t)((uid_t)0)),
@@ -13518,7 +13333,6 @@ uid_t uid_from_header(char const *p, size_t s) {
 uintmax_t uintmax_from_header(char const *p, size_t s) {
   uintmax_t tmp;
   char *__cil_tmp4;
-
   {
     {
       tmp = from_header(p, s, "uintmax_t", (uintmax_t)0, 0xffffffffffffffffUL);
@@ -13527,7 +13341,6 @@ uintmax_t uintmax_from_header(char const *p, size_t s) {
   }
 }
 char *stringify_uintmax_t_backwards(uintmax_t o___0, char *buf) {
-
   {
     buf--;
     *buf = (char)'\000';
@@ -13555,7 +13368,6 @@ char const *tartime(time_t t) {
   struct tm *tmp___1;
   uintmax_t tmp___2;
   char *__cil_tmp8;
-
   {
     if (utc_option) {
       {
@@ -13669,7 +13481,6 @@ void print_header(struct tar_stat_info *st, off_t block_ordinal) {
   char *__cil_tmp63;
   char *__cil_tmp64;
   char *__cil_tmp65;
-
   {
     if (st->orig_file_name) {
       temp_name = st->orig_file_name;
@@ -14095,7 +13906,6 @@ void print_for_mkdir(char *pathname, int length, mode_t mode) {
   void *__cil_tmp12;
   char *__cil_tmp13;
   char *__cil_tmp14;
-
   {
     if (verbose_option > 1) {
       {
@@ -14129,7 +13939,6 @@ void skip_file(off_t size) {
   union block *x;
   char *tmp;
   char *__cil_tmp4;
-
   {
     if (multi_volume_option) {
       save_totsize = size;
@@ -14165,7 +13974,6 @@ void skip_file(off_t size) {
 void skip_member(void) {
   char save_typeflag;
   _Bool tmp;
-
   {
     {
       save_typeflag = current_header->header.typeflag;
@@ -14230,7 +14038,6 @@ void extract_mangle(void) {
   char *__cil_tmp36;
   char *__cil_tmp37;
   char *__cil_tmp38;
-
   {
     {
       size = current_stat_info.stat.st_size;
@@ -14456,7 +14263,6 @@ static __attribute__((__noreturn__)) void call_arg_fatal(char const *call,
                                                          char const *name);
 void assign_string(char **string, char const *value) {
   char *tmp;
-
   {
     if (*string) {
       {
@@ -14488,7 +14294,6 @@ char *quote_copy_string(char const *string) {
   char *tmp___3;
   char *tmp___4;
   int tmp___5;
-
   {
     source = string;
     destination = (char *)0;
@@ -14579,7 +14384,6 @@ int unquote_string(char *string) {
   char *tmp___14;
   char *tmp___15;
   char *tmp___16;
-
   {
     result = 1;
     source = string;
@@ -14768,7 +14572,6 @@ static char *before_backup_name;
 static char *after_backup_name;
 static _Bool must_be_dot_or_slash(char const *path) {
   int tmp;
-
   {
     path += 0;
     if ((int const) * (path + 0) == 47) {
@@ -14839,7 +14642,6 @@ static int safer_rmdir(char const *path) {
   int *tmp;
   _Bool tmp___0;
   int tmp___1;
-
   {
     { tmp___0 = must_be_dot_or_slash(path); }
     if (tmp___0) {
@@ -14873,7 +14675,6 @@ int remove_any_file(char const *path, enum remove_option option) {
   int *tmp___9;
   int *tmp___10;
   int tmp___11;
-
   {
     if (!we_are_root) {
       {
@@ -15011,7 +14812,6 @@ _Bool maybe_backup_file(char const *path, int this_is_the_archive) {
   void *__cil_tmp16;
   char *__cil_tmp17;
   char *__cil_tmp18;
-
   {
     if (this_is_the_archive) {
       if (!force_local_option) {
@@ -15109,7 +14909,6 @@ void undo_last_backup(void) {
   char *tmp___6;
   char *__cil_tmp10;
   char *__cil_tmp11;
-
   {
     if (after_backup_name) {
       {
@@ -15145,7 +14944,6 @@ int deref_stat(_Bool deref, char const *name, struct stat *buf) {
   int tmp;
   int tmp___0;
   int tmp___1;
-
   {
     if (deref) {
       {
@@ -15170,7 +14968,6 @@ int chdir_arg(char const *dir) {
   void *tmp;
   size_t tmp___0;
   char *__cil_tmp4;
-
   {
     if (wds == wd_alloc) {
       {
@@ -15233,7 +15030,6 @@ void chdir_do(int i) {
   int tmp___3;
   char *__cil_tmp9;
   char *__cil_tmp10;
-
   {
     if (previous != i) {
       prev = wd + previous;
@@ -15307,7 +15103,6 @@ void decode_mode(mode_t mode, char *string) {
   int tmp___20;
   int tmp___21;
   int tmp___22;
-
   {
     tmp = string;
     string++;
@@ -15421,7 +15216,6 @@ static void call_arg_error(char const *call, char const *name) {
   char *tmp___0;
   char *tmp___1;
   char *__cil_tmp7;
-
   {
     {
       tmp = __errno_location();
@@ -15442,7 +15236,6 @@ static void call_arg_fatal(char const *call, char const *name) {
   char *tmp___0;
   char *tmp___1;
   char *__cil_tmp7;
-
   {
     {
       tmp = __errno_location();
@@ -15460,7 +15253,6 @@ static void call_arg_warn(char const *call, char const *name) {
   char *tmp___0;
   char *tmp___1;
   char *__cil_tmp7;
-
   {
     {
       tmp = __errno_location();
@@ -15475,7 +15267,6 @@ static void call_arg_warn(char const *call, char const *name) {
 __attribute__((__noreturn__)) void chdir_fatal(char const *name);
 void chdir_fatal(char const *name) {
   char *__cil_tmp2;
-
   {
     { call_arg_fatal("chdir", name); }
   }
@@ -15488,7 +15279,6 @@ void chmod_error_details(char const *name, mode_t mode) {
   char *tmp___1;
   void *__cil_tmp8;
   char *__cil_tmp9;
-
   {
     {
       tmp = __errno_location();
@@ -15508,7 +15298,6 @@ void chown_error_details(char const *name, uid_t uid, gid_t gid) {
   char *tmp___0;
   char *tmp___1;
   char *__cil_tmp8;
-
   {
     {
       tmp = __errno_location();
@@ -15524,7 +15313,6 @@ void chown_error_details(char const *name, uid_t uid, gid_t gid) {
 }
 void close_error(char const *name) {
   char *__cil_tmp2;
-
   {
     { call_arg_error("close", name); }
     return;
@@ -15532,14 +15320,12 @@ void close_error(char const *name) {
 }
 void close_warn(char const *name) {
   char *__cil_tmp2;
-
   {
     { call_arg_warn("close", name); }
     return;
   }
 }
 void close_diag(char const *name) {
-
   {
     if (ignore_failed_read_option) {
       {
@@ -15554,7 +15340,6 @@ void close_diag(char const *name) {
 __attribute__((__noreturn__)) void exec_fatal(char const *name);
 void exec_fatal(char const *name) {
   char *__cil_tmp2;
-
   {
     { call_arg_fatal("exec", name); }
   }
@@ -15566,7 +15351,6 @@ void link_error(char const *target, char const *source) {
   char *tmp___1;
   char *tmp___2;
   char *__cil_tmp8;
-
   {
     {
       tmp = __errno_location();
@@ -15582,7 +15366,6 @@ void link_error(char const *target, char const *source) {
 }
 void mkdir_error(char const *name) {
   char *__cil_tmp2;
-
   {
     { call_arg_error("mkdir", name); }
     return;
@@ -15590,7 +15373,6 @@ void mkdir_error(char const *name) {
 }
 void mkfifo_error(char const *name) {
   char *__cil_tmp2;
-
   {
     { call_arg_error("mkfifo", name); }
     return;
@@ -15598,7 +15380,6 @@ void mkfifo_error(char const *name) {
 }
 void mknod_error(char const *name) {
   char *__cil_tmp2;
-
   {
     { call_arg_error("mknod", name); }
     return;
@@ -15606,7 +15387,6 @@ void mknod_error(char const *name) {
 }
 void open_error(char const *name) {
   char *__cil_tmp2;
-
   {
     { call_arg_error("open", name); }
     return;
@@ -15615,21 +15395,18 @@ void open_error(char const *name) {
 __attribute__((__noreturn__)) void open_fatal(char const *name);
 void open_fatal(char const *name) {
   char *__cil_tmp2;
-
   {
     { call_arg_fatal("open", name); }
   }
 }
 void open_warn(char const *name) {
   char *__cil_tmp2;
-
   {
     { call_arg_warn("open", name); }
     return;
   }
 }
 void open_diag(char const *name) {
-
   {
     if (ignore_failed_read_option) {
       {
@@ -15643,7 +15420,6 @@ void open_diag(char const *name) {
 }
 void read_error(char const *name) {
   char *__cil_tmp2;
-
   {
     { call_arg_error("read", name); }
     return;
@@ -15657,7 +15433,6 @@ void read_error_details(char const *name, off_t offset, size_t size) {
   char *tmp___1;
   char *tmp___2;
   void *__cil_tmp10;
-
   {
     {
       tmp = __errno_location();
@@ -15682,7 +15457,6 @@ void read_warn_details(char const *name, off_t offset, size_t size) {
   char *tmp___1;
   char *tmp___2;
   void *__cil_tmp10;
-
   {
     {
       tmp = __errno_location();
@@ -15700,7 +15474,6 @@ void read_warn_details(char const *name, off_t offset, size_t size) {
   }
 }
 void read_diag_details(char const *name, off_t offset, size_t size) {
-
   {
     if (ignore_failed_read_option) {
       {
@@ -15715,7 +15488,6 @@ void read_diag_details(char const *name, off_t offset, size_t size) {
 __attribute__((__noreturn__)) void read_fatal(char const *name);
 void read_fatal(char const *name) {
   char *__cil_tmp2;
-
   {
     { call_arg_fatal("read", name); }
   }
@@ -15730,7 +15502,6 @@ void read_fatal_details(char const *name, off_t offset, size_t size) {
   char *tmp___1;
   char *tmp___2;
   void *__cil_tmp10;
-
   {
     {
       tmp = __errno_location();
@@ -15748,7 +15519,6 @@ void read_fatal_details(char const *name, off_t offset, size_t size) {
 }
 void readlink_error(char const *name) {
   char *__cil_tmp2;
-
   {
     { call_arg_error("readlink", name); }
     return;
@@ -15756,14 +15526,12 @@ void readlink_error(char const *name) {
 }
 void readlink_warn(char const *name) {
   char *__cil_tmp2;
-
   {
     { call_arg_warn("readlink", name); }
     return;
   }
 }
 void readlink_diag(char const *name) {
-
   {
     if (ignore_failed_read_option) {
       {
@@ -15777,7 +15545,6 @@ void readlink_diag(char const *name) {
 }
 void savedir_error(char const *name) {
   char *__cil_tmp2;
-
   {
     { call_arg_error("savedir", name); }
     return;
@@ -15785,14 +15552,12 @@ void savedir_error(char const *name) {
 }
 void savedir_warn(char const *name) {
   char *__cil_tmp2;
-
   {
     { call_arg_warn("savedir", name); }
     return;
   }
 }
 void savedir_diag(char const *name) {
-
   {
     if (ignore_failed_read_option) {
       {
@@ -15806,7 +15571,6 @@ void savedir_diag(char const *name) {
 }
 void seek_error(char const *name) {
   char *__cil_tmp2;
-
   {
     { call_arg_error("seek", name); }
     return;
@@ -15821,7 +15585,6 @@ void seek_error_details(char const *name, off_t offset) {
   char *tmp___2;
   void *__cil_tmp9;
   char *__cil_tmp10;
-
   {
     {
       tmp = __errno_location();
@@ -15839,7 +15602,6 @@ void seek_error_details(char const *name, off_t offset) {
 }
 void seek_warn(char const *name) {
   char *__cil_tmp2;
-
   {
     { call_arg_warn("seek", name); }
     return;
@@ -15854,7 +15616,6 @@ void seek_warn_details(char const *name, off_t offset) {
   char *tmp___2;
   void *__cil_tmp9;
   char *__cil_tmp10;
-
   {
     {
       tmp = __errno_location();
@@ -15870,7 +15631,6 @@ void seek_warn_details(char const *name, off_t offset) {
   }
 }
 void seek_diag_details(char const *name, off_t offset) {
-
   {
     if (ignore_failed_read_option) {
       {
@@ -15889,7 +15649,6 @@ void symlink_error(char const *contents, char const *name) {
   char *tmp___1;
   char *tmp___2;
   char *__cil_tmp8;
-
   {
     {
       tmp = __errno_location();
@@ -15905,7 +15664,6 @@ void symlink_error(char const *contents, char const *name) {
 }
 void stat_error(char const *name) {
   char *__cil_tmp2;
-
   {
     { call_arg_error("stat", name); }
     return;
@@ -15913,14 +15671,12 @@ void stat_error(char const *name) {
 }
 void stat_warn(char const *name) {
   char *__cil_tmp2;
-
   {
     { call_arg_warn("stat", name); }
     return;
   }
 }
 void stat_diag(char const *name) {
-
   {
     if (ignore_failed_read_option) {
       {
@@ -15934,7 +15690,6 @@ void stat_diag(char const *name) {
 }
 void truncate_error(char const *name) {
   char *__cil_tmp2;
-
   {
     { call_arg_error("truncate", name); }
     return;
@@ -15942,7 +15697,6 @@ void truncate_error(char const *name) {
 }
 void truncate_warn(char const *name) {
   char *__cil_tmp2;
-
   {
     { call_arg_warn("truncate", name); }
     return;
@@ -15950,7 +15704,6 @@ void truncate_warn(char const *name) {
 }
 void unlink_error(char const *name) {
   char *__cil_tmp2;
-
   {
     { call_arg_error("unlink", name); }
     return;
@@ -15958,7 +15711,6 @@ void unlink_error(char const *name) {
 }
 void utime_error(char const *name) {
   char *__cil_tmp2;
-
   {
     { call_arg_error("utime", name); }
     return;
@@ -15966,7 +15718,6 @@ void utime_error(char const *name) {
 }
 void waitpid_error(char const *name) {
   char *__cil_tmp2;
-
   {
     { call_arg_error("waitpid", name); }
     return;
@@ -15974,7 +15725,6 @@ void waitpid_error(char const *name) {
 }
 void write_error(char const *name) {
   char *__cil_tmp2;
-
   {
     { call_arg_error("write", name); }
     return;
@@ -15982,7 +15732,6 @@ void write_error(char const *name) {
 }
 void write_error_details(char const *name, size_t status, size_t size) {
   char *tmp;
-
   {
     if (status == 0UL) {
       {
@@ -16002,7 +15751,6 @@ void write_error_details(char const *name, size_t status, size_t size) {
 __attribute__((__noreturn__)) void
 write_fatal_details(char const *name, ssize_t status, size_t size);
 void write_fatal_details(char const *name, ssize_t status, size_t size) {
-
   {
     {
       write_error_details(name, (size_t)status, size);
@@ -16016,7 +15764,6 @@ pid_t xfork(void) {
   char *tmp___0;
   char *__cil_tmp4;
   char *__cil_tmp5;
-
   {
     {
       tmp = fork();
@@ -16036,7 +15783,6 @@ void xpipe(int *fd) {
   int tmp___0;
   char *__cil_tmp4;
   char *__cil_tmp5;
-
   {
     { tmp___0 = pipe(fd); }
     if (tmp___0 < 0) {
@@ -16050,7 +15796,6 @@ void xpipe(int *fd) {
 }
 char const *quote_n(int n, char const *name) {
   char *tmp;
-
   {
     { tmp = quotearg_n_style(n, (enum quoting_style)5, name); }
     return ((char const *)tmp);
@@ -16058,7 +15803,6 @@ char const *quote_n(int n, char const *name) {
 }
 char const *quote(char const *name) {
   char const *tmp;
-
   {
     { tmp = quote_n(0, name); }
     return (tmp);
@@ -16096,7 +15840,6 @@ void uid_to_uname(uid_t uid, char **uname) {
   struct passwd *passwd;
   char *__cil_tmp4;
   char *__cil_tmp5;
-
   {
     if (uid != 0U) {
       if (uid == cached_no_such_uid) {
@@ -16136,7 +15879,6 @@ void gid_to_gname(gid_t gid, char **gname) {
   struct group *group;
   char *__cil_tmp4;
   char *__cil_tmp5;
-
   {
     if (gid != 0U) {
       if (gid == cached_no_such_gid) {
@@ -16176,7 +15918,6 @@ int uname_to_uid(char const *uname, uid_t *uidp) {
   struct passwd *passwd;
   int tmp;
   int tmp___0;
-
   {
     if (cached_no_such_uname) {
       {
@@ -16215,7 +15956,6 @@ int gname_to_gid(char const *gname, gid_t *gidp) {
   struct group *group;
   int tmp;
   int tmp___0;
-
   {
     if (cached_no_such_gname) {
       {
@@ -16258,7 +15998,6 @@ static int names;
 static int name_index;
 void init_names(void) {
   void *tmp;
-
   {
     {
       allocated_names = 10;
@@ -16272,7 +16011,6 @@ void init_names(void) {
 void name_add(char const *name) {
   void *tmp;
   int tmp___0;
-
   {
     if (names == allocated_names) {
       {
@@ -16296,7 +16034,6 @@ __inline static int is_pattern(char const *string) {
   char *tmp___0;
   char *tmp___1;
   int tmp___2;
-
   {
     { tmp = strchr(string, '*'); }
     if (tmp) {
@@ -16321,7 +16058,6 @@ void name_init(void) {
   void *tmp;
   int tmp___0;
   char *__cil_tmp3;
-
   {
     {
       tmp = xmalloc((size_t)102);
@@ -16353,7 +16089,6 @@ void name_init(void) {
   }
 }
 void name_term(void) {
-
   {
     {
       free((void *)name_buffer);
@@ -16368,7 +16103,6 @@ static int read_name_from_file(void) {
   void *tmp;
   size_t tmp___0;
   void *tmp___1;
-
   {
     counter = (size_t)0;
     {
@@ -16435,7 +16169,6 @@ char *name_next(int change_dirs) {
   int tmp___5;
   char *tmp___6;
   char *__cil_tmp14;
-
   {
     chdir_flag = 0;
     if ((int)filename_terminator == 0) {
@@ -16549,7 +16282,6 @@ char *name_next(int change_dirs) {
 }
 void name_close(void) {
   int tmp;
-
   {
     if (name_file) {
       if ((unsigned long)name_file != (unsigned long)stdin) {
@@ -16590,7 +16322,6 @@ void name_gather(void) {
   int tmp___10;
   char *__cil_tmp19;
   char *__cil_tmp20;
-
   {
     if (same_order_option) {
       if (allocated_size == 0UL) {
@@ -16748,7 +16479,6 @@ struct name *addname(char const *string, int change_dir___0) {
   struct name *name;
   void *tmp___1;
   int tmp___2;
-
   {
     if (string) {
       {
@@ -16811,7 +16541,6 @@ static struct name *namelist_match(char const *path, size_t length) {
   int tmp___0;
   int tmp___1;
   int tmp___2;
-
   {
     p = namelist;
     {
@@ -16875,7 +16604,6 @@ int name_match(char const *path) {
   size_t tmp;
   struct name *cursor;
   uintmax_t tmp___0;
-
   {
     {
       tmp = strlen(path);
@@ -16947,7 +16675,6 @@ _Bool all_names_found(struct tar_stat_info *p) {
   struct name const *cursor;
   size_t len;
   uintmax_t tmp;
-
   {
     if (!p->file_name) {
       return ((_Bool)0);
@@ -17014,7 +16741,6 @@ void names_notfound(void) {
   char *__cil_tmp10;
   char *__cil_tmp11;
   char *__cil_tmp12;
-
   {
     cursor = (struct name const *)namelist;
     {
@@ -17089,7 +16815,6 @@ static struct name *merge_sort(struct name *list, int length,
   int counter;
   int tmp;
   int tmp___0;
-
   {
     if (length == 1) {
       return (list);
@@ -17174,7 +16899,6 @@ static int compare_names(struct name const *n1, struct name const *n2) {
   int tmp___0;
   uintmax_t tmp___1;
   uintmax_t tmp___2;
-
   {
     if (occurrence_option == 0UL) {
       tmp___1 = n2->found_count;
@@ -17215,7 +16939,6 @@ static void add_hierarchy_to_namelist(struct name *name, dev_t device) {
   void *tmp___2;
   struct name *tmp___3;
   char *__cil_tmp16;
-
   {
     {
       path = name->name;
@@ -17299,7 +17022,6 @@ void collect_and_sort_names(void) {
   int tmp;
   void *__cil_tmp6;
   char *__cil_tmp7;
-
   {
     { name_gather(); }
     if (listed_incremental_option) {
@@ -17391,7 +17113,6 @@ struct name *name_scan(char const *path) {
   size_t tmp;
   struct name *cursor;
   struct name *tmp___0;
-
   {
     {
       tmp = strlen(path);
@@ -17431,7 +17152,6 @@ struct name *name_scan(char const *path) {
   }
 }
 char *name_from_list(void) {
-
   {
     if (!gnu_list_name) {
       gnu_list_name = namelist;
@@ -17464,7 +17184,6 @@ char *name_from_list(void) {
 }
 void blank_name_list(void) {
   struct name *name;
-
   {
     gnu_list_name = (struct name *)0;
     name = namelist;
@@ -17491,7 +17210,6 @@ char *new_name(char const *path, char const *name) {
   char *buffer___2;
   void *tmp___1;
   int tmp___2;
-
   {
     {
       tmp = strlen(path);
@@ -17523,7 +17241,6 @@ char *new_name(char const *path, char const *name) {
 }
 _Bool excluded_name(char const *name) {
   _Bool tmp;
-
   {
     { tmp = excluded_filename((struct exclude const *)excluded, name + 0); }
     return (tmp);
@@ -17532,7 +17249,6 @@ _Bool excluded_name(char const *name) {
 static unsigned int hash_string_hasher(void const *name,
                                        unsigned int n_buckets) {
   size_t tmp;
-
   {
     { tmp = hash_string((char const *)name, (size_t)n_buckets); }
     return ((unsigned int)tmp);
@@ -17540,7 +17256,6 @@ static unsigned int hash_string_hasher(void const *name,
 }
 static _Bool hash_string_compare(void const *name1, void const *name2) {
   int tmp;
-
   {
     { tmp = strcmp((char const *)name1, (char const *)name2); }
     return ((_Bool)(tmp == 0));
@@ -17553,7 +17268,6 @@ static _Bool hash_string_insert(Hash_table **table___0, char const *string) {
   char *e;
   Hash_table *tmp___0;
   void *tmp___1;
-
   {
     {
       t = *table___0;
@@ -17597,7 +17311,6 @@ static _Bool hash_string_lookup(Hash_table const *table___0,
                                 char const *string) {
   void *tmp;
   int tmp___0;
-
   {
     if (table___0) {
       {
@@ -17616,7 +17329,6 @@ static _Bool hash_string_lookup(Hash_table const *table___0,
 }
 static Hash_table *avoided_name_table;
 void add_avoided_name(char const *name) {
-
   {
     { hash_string_insert(&avoided_name_table, name); }
     return;
@@ -17624,7 +17336,6 @@ void add_avoided_name(char const *name) {
 }
 _Bool is_avoided_name(char const *name) {
   _Bool tmp;
-
   {
     { tmp = hash_string_lookup((Hash_table const *)avoided_name_table, name); }
     return (tmp);
@@ -17649,7 +17360,6 @@ char *safer_name_suffix(char const *file_name, _Bool link_target) {
   _Bool tmp___2;
   char *tmp___3;
   char *__cil_tmp12;
-
   {
     if (absolute_names_option) {
       p = file_name;
@@ -17738,7 +17448,6 @@ char *safer_name_suffix(char const *file_name, _Bool link_target) {
 size_t stripped_prefix_len(char const *file_name, size_t num) {
   char const *p;
   _Bool slash;
-
   {
     p = file_name + 0;
     {
@@ -17784,7 +17493,6 @@ size_t stripped_prefix_len(char const *file_name, size_t num) {
 _Bool contains_dot_dot(char const *name) {
   char const *p;
   char const *tmp;
-
   {
     p = name + 0;
     {
@@ -17845,7 +17553,6 @@ static int from_remote[4][2] = {{-1, -1}, {-1, -1}, {-1, -1}, {-1, -1}};
 static int to_remote[4][2] = {{-1, -1}, {-1, -1}, {-1, -1}, {-1, -1}};
 static void _rmt_shutdown(int handle, int errno_value) {
   int *tmp;
-
   {
     {
       close(from_remote[handle][0]);
@@ -17865,7 +17572,6 @@ static int do_command(int handle, char const *buffer___2) {
   void (*tmp___0)(int);
   ssize_t written;
   size_t tmp___1;
-
   {
     {
       tmp = strlen(buffer___2);
@@ -17892,7 +17598,6 @@ static char *get_status_string(int handle, char *command_buffer) {
   size_t tmp___0;
   int *tmp___1;
   int *tmp___2;
-
   {
     counter = 0;
     cursor = command_buffer;
@@ -17989,7 +17694,6 @@ static long get_status(int handle) {
   long tmp___0;
   int *tmp___1;
   void *__cil_tmp8;
-
   {
     {
       tmp = get_status_string(handle, command_buffer);
@@ -18024,7 +17728,6 @@ static off_t get_status_off(int handle) {
   int tmp___1;
   int tmp___2;
   void *__cil_tmp13;
-
   {
     {
       tmp = get_status_string(handle, command_buffer);
@@ -18109,7 +17812,6 @@ static void encode_oflag(char *buf, int oflag) {
   char *__cil_tmp13;
   char *__cil_tmp14;
   char *__cil_tmp15;
-
   {
     {
       sprintf((char * /* __restrict  */)buf,
@@ -18246,7 +17948,6 @@ int rmt_open__(char const *path, int open_mode, int bias,
   char *__cil_tmp39;
   char *__cil_tmp40;
   char *__cil_tmp41;
-
   {
     remote_pipe_number = 0;
     {
@@ -18442,7 +18143,6 @@ int rmt_close__(int handle) {
   int tmp;
   int *tmp___0;
   char *__cil_tmp5;
-
   {
     { tmp = do_command(handle, "C\n"); }
     if (tmp == -1) {
@@ -18465,7 +18165,6 @@ size_t rmt_read__(int handle, char *buffer___2, size_t length) {
   long tmp___0;
   void *__cil_tmp10;
   char *__cil_tmp11;
-
   {
     {
       sprintf((char * /* __restrict  */)(command_buffer),
@@ -18525,7 +18224,6 @@ size_t rmt_write__(int handle, char *buffer___2, size_t length) {
   long tmp___1;
   void *__cil_tmp11;
   char *__cil_tmp12;
-
   {
     {
       sprintf((char * /* __restrict  */)(command_buffer),
@@ -18570,7 +18268,6 @@ off_t rmt_lseek__(int handle, off_t offset, int whence) {
   void *__cil_tmp10;
   void *__cil_tmp11;
   char *__cil_tmp12;
-
   {
     if (offset < 0L) {
       u = -((uintmax_t)offset);
@@ -18651,7 +18348,6 @@ int rmt_ioctl__(int handle, int operation, char *argument) {
   void *__cil_tmp16;
   char *__cil_tmp17;
   char *__cil_tmp18;
-
   {
     {
       if (operation ==
@@ -18772,7 +18468,6 @@ int rmt_ioctl__(int handle, int operation, char *argument) {
 /* #pragma merger("0","00c.sparse.o.i","") */
 static _Bool tar_sparse_member_p(struct tar_sparse_file *file) {
   _Bool tmp;
-
   {
     if ((file->optab)->sparse_member_p) {
       {
@@ -18785,7 +18480,6 @@ static _Bool tar_sparse_member_p(struct tar_sparse_file *file) {
 }
 static _Bool tar_sparse_init(struct tar_sparse_file *file) {
   _Bool tmp;
-
   {
     file->dumped_size = (size_t)0;
     if ((file->optab)->init) {
@@ -18799,7 +18493,6 @@ static _Bool tar_sparse_init(struct tar_sparse_file *file) {
 }
 static _Bool tar_sparse_done(struct tar_sparse_file *file) {
   _Bool tmp;
-
   {
     if ((file->optab)->done) {
       {
@@ -18813,7 +18506,6 @@ static _Bool tar_sparse_done(struct tar_sparse_file *file) {
 static _Bool tar_sparse_scan(struct tar_sparse_file *file,
                              enum sparse_scan_state state, void *block) {
   _Bool tmp;
-
   {
     if ((file->optab)->scan_block) {
       {
@@ -18826,7 +18518,6 @@ static _Bool tar_sparse_scan(struct tar_sparse_file *file,
 }
 static _Bool tar_sparse_dump_region(struct tar_sparse_file *file, size_t i) {
   _Bool tmp;
-
   {
     if ((file->optab)->dump_region) {
       {
@@ -18839,7 +18530,6 @@ static _Bool tar_sparse_dump_region(struct tar_sparse_file *file, size_t i) {
 }
 static _Bool tar_sparse_extract_region(struct tar_sparse_file *file, size_t i) {
   _Bool tmp;
-
   {
     if ((file->optab)->extract_region) {
       {
@@ -18852,7 +18542,6 @@ static _Bool tar_sparse_extract_region(struct tar_sparse_file *file, size_t i) {
 }
 static _Bool tar_sparse_dump_header(struct tar_sparse_file *file) {
   _Bool tmp;
-
   {
     if ((file->optab)->dump_header) {
       {
@@ -18865,7 +18554,6 @@ static _Bool tar_sparse_dump_header(struct tar_sparse_file *file) {
 }
 static _Bool tar_sparse_decode_header(struct tar_sparse_file *file) {
   _Bool tmp;
-
   {
     if ((file->optab)->decode_header) {
       {
@@ -18878,7 +18566,6 @@ static _Bool tar_sparse_decode_header(struct tar_sparse_file *file) {
 }
 static _Bool tar_sparse_fixup_header(struct tar_sparse_file *file) {
   _Bool tmp;
-
   {
     if ((file->optab)->fixup_header) {
       {
@@ -18892,7 +18579,6 @@ static _Bool tar_sparse_fixup_header(struct tar_sparse_file *file) {
 static _Bool lseek_or_error(struct tar_sparse_file *file, off_t offset,
                             int whence) {
   __off_t tmp;
-
   {
     { tmp = lseek(file->fd, offset, whence); }
     if (tmp < 0L) {
@@ -18908,7 +18594,6 @@ static _Bool lseek_or_error(struct tar_sparse_file *file, off_t offset,
 static _Bool zero_block_p(char *buffer___2, size_t size) {
   char *tmp;
   size_t tmp___0;
-
   {
     {
       while (1) {
@@ -18933,7 +18618,6 @@ static void sparse_add_map(struct tar_sparse_file *file, struct sp_array *sp) {
   void *tmp;
   void *tmp___0;
   size_t tmp___1;
-
   {
     if ((unsigned long)(file->stat_info)->sparse_map ==
         (unsigned long)((void *)0)) {
@@ -18971,7 +18655,6 @@ static _Bool sparse_scan_file(struct tar_sparse_file *file) {
   _Bool tmp___2;
   _Bool tmp___3;
   _Bool tmp___4;
-
   {
     {
       offset = (size_t)0;
@@ -19056,7 +18739,6 @@ static struct tar_sparse_optab star_optab;
 static struct tar_sparse_optab pax_optab;
 static _Bool sparse_select_optab(struct tar_sparse_file *file) {
   unsigned int tmp;
-
   {
     if ((unsigned int)current_format == 0U) {
       tmp = (unsigned int)archive_format;
@@ -19110,7 +18792,6 @@ static _Bool sparse_dump_region(struct tar_sparse_file *file, size_t i) {
   size_t bufsize;
   size_t bytes_read;
   off_t tmp___0;
-
   {
     {
       bytes_left = (off_t)((file->stat_info)->sparse_map + i)->numbytes;
@@ -19169,7 +18850,6 @@ static _Bool sparse_extract_region(struct tar_sparse_file *file, size_t i) {
   union block *tmp___1;
   char *tmp___2;
   char *__cil_tmp11;
-
   {
     {
       tmp =
@@ -19241,7 +18921,6 @@ enum dump_status sparse_dump_file(int fd, struct tar_stat_info *st) {
   size_t i;
   _Bool tmp___1;
   int tmp___2;
-
   {
     {
       file.stat_info = st;
@@ -19304,7 +18983,6 @@ enum dump_status sparse_dump_file(int fd, struct tar_stat_info *st) {
   }
 }
 _Bool sparse_file_p(struct tar_stat_info *st) {
-
   {
     return ((_Bool)(st->stat.st_blocks <
                     st->stat.st_size / 512L +
@@ -19315,7 +18993,6 @@ _Bool sparse_member_p(struct tar_stat_info *st) {
   struct tar_sparse_file file;
   _Bool tmp;
   _Bool tmp___0;
-
   {
     { tmp = sparse_select_optab(&file); }
     if (!tmp) {
@@ -19332,7 +19009,6 @@ _Bool sparse_fixup_header(struct tar_stat_info *st) {
   struct tar_sparse_file file;
   _Bool tmp;
   _Bool tmp___0;
-
   {
     { tmp = sparse_select_optab(&file); }
     if (!tmp) {
@@ -19354,7 +19030,6 @@ enum dump_status sparse_extract_file(int fd, struct tar_stat_info *st,
   _Bool tmp___0;
   _Bool tmp___1;
   int tmp___2;
-
   {
     {
       rc___1 = (_Bool)1;
@@ -19417,7 +19092,6 @@ enum dump_status sparse_skip_file(struct tar_stat_info *st) {
   _Bool tmp___0;
   _Bool tmp___1;
   int tmp___2;
-
   {
     {
       rc___1 = (_Bool)1;
@@ -19461,7 +19135,6 @@ static _Bool check_sparse_region(struct tar_sparse_file *file, off_t beg,
   char *tmp___0;
   _Bool tmp___1;
   char *__cil_tmp9;
-
   {
     { tmp = lseek_or_error(file, beg, 0); }
     if (!tmp) {
@@ -19515,7 +19188,6 @@ static _Bool check_data_region(struct tar_sparse_file *file, size_t i) {
   int tmp___3;
   char *__cil_tmp12;
   char *__cil_tmp13;
-
   {
     {
       tmp =
@@ -19592,7 +19264,6 @@ _Bool sparse_diff_file(int fd, struct tar_stat_info *st) {
   _Bool tmp___1;
   _Bool tmp___2;
   int tmp___3;
-
   {
     {
       rc___1 = (_Bool)1;
@@ -19660,13 +19331,11 @@ _Bool sparse_diff_file(int fd, struct tar_stat_info *st) {
 }
 static _Bool oldgnu_sparse_member_p(struct tar_sparse_file *file
                                     __attribute__((__unused__))) {
-
   { return ((_Bool)((int)current_header->header.typeflag == 83)); }
 }
 static enum oldgnu_add_status oldgnu_add_sparse(struct tar_sparse_file *file,
                                                 struct sparse *s) {
   struct sp_array sp;
-
   {
     if ((int)s->numbytes[0] == 0) {
       return ((enum oldgnu_add_status)1);
@@ -19693,7 +19362,6 @@ static enum oldgnu_add_status oldgnu_add_sparse(struct tar_sparse_file *file,
   }
 }
 static _Bool oldgnu_fixup_header(struct tar_sparse_file *file) {
-
   {
     {
       (file->stat_info)->archive_file_size = (file->stat_info)->stat.st_size;
@@ -19713,7 +19381,6 @@ static _Bool oldgnu_get_sparse_info(struct tar_sparse_file *file) {
   char *tmp___0;
   char *__cil_tmp7;
   char *__cil_tmp8;
-
   {
     h = current_header;
     (file->stat_info)->sparse_map_size = (size_t)0;
@@ -19791,7 +19458,6 @@ static _Bool oldgnu_get_sparse_info(struct tar_sparse_file *file) {
 static void oldgnu_store_sparse_info(struct tar_sparse_file *file,
                                      size_t *pindex, struct sparse *sp,
                                      size_t sparse_size) {
-
   {
     {
       while (1) {
@@ -19823,7 +19489,6 @@ static _Bool oldgnu_dump_header(struct tar_sparse_file *file) {
   off_t tmp;
   union block *blk;
   size_t i;
-
   {
     {
       tmp = current_block_ordinal();
@@ -19881,11 +19546,9 @@ static struct tar_sparse_optab oldgnu_optab = {
     &sparse_extract_region};
 static _Bool star_sparse_member_p(struct tar_sparse_file *file
                                   __attribute__((__unused__))) {
-
   { return ((_Bool)((int)current_header->header.typeflag == 83)); }
 }
 static _Bool star_fixup_header(struct tar_sparse_file *file) {
-
   {
     {
       (file->stat_info)->archive_file_size = (file->stat_info)->stat.st_size;
@@ -19905,7 +19568,6 @@ static _Bool star_get_sparse_info(struct tar_sparse_file *file) {
   char *tmp___0;
   char *__cil_tmp7;
   char *__cil_tmp8;
-
   {
     h = current_header;
     (file->stat_info)->sparse_map_size = (size_t)0;
@@ -20000,7 +19662,6 @@ static struct tar_sparse_optab star_optab = {
     (_Bool(*)(struct tar_sparse_file *, size_t))((void *)0),
     &sparse_extract_region};
 static _Bool pax_sparse_member_p(struct tar_sparse_file *file) {
-
   {
     return ((_Bool)((file->stat_info)->archive_file_size !=
                     (file->stat_info)->stat.st_size));
@@ -20015,7 +19676,6 @@ static _Bool pax_dump_header(struct tar_sparse_file *file) {
   char *__cil_tmp7;
   char *__cil_tmp8;
   char *__cil_tmp9;
-
   {
     {
       tmp = current_block_ordinal();
@@ -20082,7 +19742,6 @@ extern __attribute__((__nothrow__, __noreturn__)) void(__attribute__((__leaf__))
 dev_t ar_dev;
 ino_t ar_ino;
 void sys_stat_nanoseconds(struct tar_stat_info *st) {
-
   {
     st->atime_nsec = (unsigned long)st->stat.st_atim.tv_nsec;
     st->mtime_nsec = (unsigned long)st->stat.st_mtim.tv_nsec;
@@ -20093,7 +19752,6 @@ void sys_stat_nanoseconds(struct tar_stat_info *st) {
 static struct stat archive_stat;
 _Bool sys_get_archive_stat(void) {
   int tmp;
-
   {
     { tmp = fstat(archive, &archive_stat); }
     return ((_Bool)(tmp == 0));
@@ -20101,7 +19759,6 @@ _Bool sys_get_archive_stat(void) {
 }
 _Bool sys_file_is_archive(struct tar_stat_info *p) {
   int tmp;
-
   {
     if (ar_dev) {
       if (p->stat.st_dev == ar_dev) {
@@ -20120,7 +19777,6 @@ _Bool sys_file_is_archive(struct tar_stat_info *p) {
   }
 }
 void sys_save_archive_dev_ino(void) {
-
   {
     if (!(archive >= 1 << 30)) {
       if ((archive_stat.st_mode & 61440U) == 32768U) {
@@ -20145,7 +19801,6 @@ void sys_detect_dev_null_output(void) {
   int tmp___0;
   int tmp___1;
   void *__cil_tmp5;
-
   {
     { tmp = strcmp(*(archive_name_array + 0), dev_null); }
     if (tmp == 0) {
@@ -20185,7 +19840,6 @@ void sys_drain_input_pipe(void) {
   size_t r;
   size_t tmp;
   size_t tmp___0;
-
   {
     if ((unsigned int)access_mode == 0U) {
       if (!(archive >= 1 << 30)) {
@@ -20240,7 +19894,6 @@ void sys_wait_for_child(pid_t child_pid___0) {
   union __anonunion_59 __constr_expr_3;
   char *__cil_tmp11;
   char *__cil_tmp12;
-
   {
     if (child_pid___0) {
       {
@@ -20293,7 +19946,6 @@ void sys_spawn_shell(void) {
   __pid_t tmp___1;
   char *__cil_tmp7;
   char *__cil_tmp8;
-
   {
     {
       tmp = getenv("SHELL");
@@ -20331,16 +19983,13 @@ void sys_spawn_shell(void) {
   }
 }
 _Bool sys_compare_uid(struct stat *a, struct stat *b) {
-
   { return ((_Bool)(a->st_uid == b->st_uid)); }
 }
 _Bool sys_compare_gid(struct stat *a, struct stat *b) {
-
   { return ((_Bool)(a->st_gid == b->st_gid)); }
 }
 _Bool sys_compare_links(struct stat *link_data, struct stat *stat_data) {
   int tmp;
-
   {
     if (stat_data->st_dev == link_data->st_dev) {
       if (stat_data->st_ino == link_data->st_ino) {
@@ -20359,7 +20008,6 @@ int sys_truncate(int fd) {
   __off_t tmp;
   int tmp___0;
   int tmp___1;
-
   {
     {
       tmp = lseek(fd, (off_t)0, 1);
@@ -20379,7 +20027,6 @@ int sys_truncate(int fd) {
 void sys_reset_uid_gid(void) {
   __uid_t tmp;
   __gid_t tmp___0;
-
   {
     {
       tmp = getuid();
@@ -20395,7 +20042,6 @@ static int is_regular_file(char const *name) {
   int *tmp;
   int tmp___0;
   void *__cil_tmp5;
-
   {
     {
       tmp___0 = stat((char const * /* __restrict  */)name,
@@ -20413,7 +20059,6 @@ size_t sys_write_archive_buffer(void) {
   size_t tmp;
   size_t tmp___0;
   size_t tmp___1;
-
   {
     if (archive >= 1 << 30) {
       {
@@ -20443,7 +20088,6 @@ static void xdup2(int from, int into) {
   char *tmp___4;
   char *__cil_tmp12;
   char *__cil_tmp13;
-
   {
     if (from != into) {
       {
@@ -20514,7 +20158,6 @@ pid_t sys_child_open_for_compress(void) {
   void *__cil_tmp29;
   char *__cil_tmp30;
   char *__cil_tmp31;
-
   {
     {
       xpipe(parent_pipe);
@@ -20794,7 +20437,6 @@ pid_t sys_child_open_for_uncompress(void) {
   void *__cil_tmp29;
   char *__cil_tmp30;
   char *__cil_tmp31;
-
   {
     {
       xpipe(parent_pipe);
@@ -21064,7 +20706,6 @@ static char const *stdin_used_by;
 void request_stdin(char const *option) {
   char *tmp;
   char *__cil_tmp3;
-
   {
     if (stdin_used_by) {
       {
@@ -21088,7 +20729,6 @@ int confirm(char const *message_action, char const *message_name) {
   int tmp___2;
   char *__cil_tmp9;
   char *__cil_tmp10;
-
   {
     if (!confirm_file) {
       if (archive == 0) {
@@ -21172,7 +20812,6 @@ static void set_archive_format(char const *name) {
   char *tmp___0;
   int tmp___1;
   char *__cil_tmp6;
-
   {
     p = fmttab;
     {
@@ -21201,7 +20840,6 @@ static void set_archive_format(char const *name) {
 static char const *archive_format_string(enum archive_format fmt) {
   struct fmttab const *p;
   char *__cil_tmp3;
-
   {
     p = fmttab;
     {
@@ -21223,7 +20861,6 @@ static char const *archive_format_string(enum archive_format fmt) {
 static void assert_format(unsigned int fmt_mask) {
   char *tmp;
   char *__cil_tmp3;
-
   {
     if (((unsigned int)(1 << (unsigned int)archive_format) & fmt_mask) == 0U) {
       {
@@ -21381,7 +21018,6 @@ void usage(int status) {
   char *__cil_tmp36;
   char *__cil_tmp37;
   char *__cil_tmp38;
-
   {
     if (status != 0) {
       {
@@ -21601,7 +21237,6 @@ void usage(int status) {
 static void set_subcommand_option(enum subcommand subcommand) {
   char *tmp;
   char *__cil_tmp3;
-
   {
     if ((unsigned int)subcommand_option != 0U) {
       if ((unsigned int)subcommand_option != (unsigned int)subcommand) {
@@ -21620,7 +21255,6 @@ static void set_use_compress_program_option(char const *string) {
   char *tmp;
   int tmp___0;
   char *__cil_tmp4;
-
   {
     if (use_compress_program_option) {
       {
@@ -21809,7 +21443,6 @@ static void decode_options(int argc, char **argv) {
   char *__cil_tmp170;
   char *__cil_tmp171;
   char *__cil_tmp172;
-
   {
     {
       textual_date_option = (char const *)0;
@@ -23176,7 +22809,6 @@ int main(int argc, char **argv) {
   char *__cil_tmp13;
   char *__cil_tmp14;
   char *__cil_tmp15;
-
   {
     { tmp = clock_gettime(0, &start_timespec); }
     if (tmp != 0) {
@@ -23339,14 +22971,12 @@ int main(int argc, char **argv) {
   }
 }
 void tar_stat_init(struct tar_stat_info *st) {
-
   {
     { memset((void *)st, 0, sizeof(*st)); }
     return;
   }
 }
 void tar_stat_destroy(struct tar_stat_info *st) {
-
   {
     {
       free((void *)st->orig_file_name);
@@ -23379,7 +23009,6 @@ static void append_file(char *path) {
   int tmp___6;
   void *__cil_tmp17;
   void *__cil_tmp18;
-
   {
     {
       tmp = open((char const *)path, 0);
@@ -23475,7 +23104,6 @@ void update_archive(void) {
   char *__cil_tmp15;
   char *__cil_tmp16;
   char *__cil_tmp17;
-
   {
     {
       previous_status = (enum read_header)0;
@@ -23647,7 +23275,6 @@ void update_archive(void) {
 /* #pragma merger("0","010.utf8.o.i","") */
 static iconv_t conv_desc[2] = {(iconv_t)-1, (iconv_t)-1};
 static iconv_t utf8_init(_Bool to_utf) {
-
   {
     if ((unsigned long)conv_desc[(int)to_utf] == (unsigned long)((iconv_t)-1)) {
       if (to_utf) {
@@ -23670,7 +23297,6 @@ _Bool utf8_convert(_Bool to_utf, char const *input, char **output) {
   size_t tmp___0;
   char *tmp___1;
   void *tmp___2;
-
   {
     {
       tmp = utf8_init(to_utf);
@@ -23703,7 +23329,6 @@ _Bool utf8_convert(_Bool to_utf, char const *input, char **output) {
 }
 _Bool string_ascii_p(char const *str) {
   unsigned char const *p;
-
   {
     p = (unsigned char const *)str;
     {
@@ -23741,7 +23366,6 @@ void addext(char *filename, char const *ext, int e) {
   char c;
   long size;
   int *tmp___3;
-
   {
     {
       tmp = base_name((char const *)filename);
@@ -23817,7 +23441,6 @@ int __xargmatch_internal(char const *context, char const *arg,
                          size_t valsize, void (*exit_fn)(void));
 int volatile exit_failure;
 static void __argmatch_die(void) {
-
   {
     { exit((int)exit_failure); }
   }
@@ -23832,7 +23455,6 @@ int argmatch(char const *arg, char const *const *arglist, char const *vallist,
   int tmp;
   size_t tmp___0;
   int tmp___1;
-
   {
     {
       matchind = -1;
@@ -23892,7 +23514,6 @@ void argmatch_invalid(char const *context, char const *value, int problem) {
   char *tmp___3;
   char *__cil_tmp10;
   char *__cil_tmp11;
-
   {
     if (problem == -1) {
       {
@@ -23921,7 +23542,6 @@ void argmatch_valid(char const *const *arglist, char const *vallist,
   char *tmp;
   int tmp___0;
   char *__cil_tmp8;
-
   {
     {
       last_val = (char const *)((void *)0);
@@ -23977,7 +23597,6 @@ int __xargmatch_internal(char const *context, char const *arg,
                          size_t valsize, void (*exit_fn)(void)) {
   int res;
   int tmp;
-
   {
     {
       tmp = argmatch(arg, arglist, vallist, valsize);
@@ -24025,7 +23644,6 @@ char *find_backup_file_name(char const *file,
   char *numbered_suffix;
   char *__cil_tmp17;
   char *__cil_tmp18;
-
   {
     {
       tmp = strlen(file);
@@ -24100,7 +23718,6 @@ static int max_backup_version(char const *file, char const *dir) {
   size_t file_name_length;
   size_t tmp;
   int tmp___0;
-
   {
     { dirp = opendir(dir); }
     if (!dirp) {
@@ -24147,7 +23764,6 @@ static int version_number(char const *base, char const *backup,
   int version;
   char const *p;
   int tmp;
-
   {
     {
       version = 0;
@@ -24198,7 +23814,6 @@ static enum backup_type const backup_types[8] = {
     (enum backup_type const)3, (enum backup_type const)3};
 enum backup_type get_version(char const *context, char const *version) {
   int tmp;
-
   {
     if ((unsigned long)version == (unsigned long)((char const *)0)) {
       return ((enum backup_type)2);
@@ -24224,7 +23839,6 @@ enum backup_type xget_version(char const *context, char const *version) {
   char *__cil_tmp7;
   char *__cil_tmp8;
   char *__cil_tmp9;
-
   {
     if (version) {
       if (*version) {
@@ -24252,7 +23866,6 @@ enum backup_type xget_version(char const *context, char const *version) {
 char *base_name(char const *name) {
   char const *base;
   char const *p;
-
   {
     base = name + 0;
     p = base;
@@ -24290,7 +23903,6 @@ char *base_name(char const *name) {
 }
 size_t base_len(char const *name) {
   size_t len;
-
   {
     { len = strlen(name); }
     {
@@ -24317,7 +23929,6 @@ size_t dir_len(char const *path) {
   size_t prefix_length;
   size_t length;
   char *tmp;
-
   {
     {
       prefix_length = (size_t)0;
@@ -24348,7 +23959,6 @@ char *dir_name(char const *path) {
   char *newpath;
   void *tmp___0;
   size_t tmp___1;
-
   {
     {
       tmp = dir_len(path);
@@ -24381,7 +23991,6 @@ void *x2realloc(void *p, size_t *pn);
 void *x2nrealloc(void *p, size_t *pn, size_t s);
 __inline static _Bool is_space(unsigned char c) {
   unsigned short const **tmp;
-
   {
     { tmp = __ctype_b_loc(); }
     return ((_Bool)(((int const) * (*tmp + (int)c) & 8192) != 0));
@@ -24390,7 +23999,6 @@ __inline static _Bool is_space(unsigned char c) {
 struct exclude *new_exclude(void) {
   struct exclude *tmp;
   void *tmp___0;
-
   {
     { tmp___0 = xzalloc(sizeof(*tmp)); }
     return ((struct exclude *)tmp___0);
@@ -24407,7 +24015,6 @@ static int fnmatch_no_wildcards(char const *pattern, char const *f,
   int tmp___3;
   int tmp___4;
   int tmp___5;
-
   {
     if (!(options & (1 << 3))) {
       if (options & (1 << 4)) {
@@ -24461,7 +24068,6 @@ _Bool excluded_filename(struct exclude const *ex, char const *f) {
   int tmp;
   char const *p;
   int tmp___0;
-
   {
     exclude_count = (size_t)ex->exclude_count;
     if (exclude_count == 0UL) {
@@ -24528,7 +24134,6 @@ void add_exclude(struct exclude *ex, char const *pattern, int options) {
   struct patopts *patopts;
   void *tmp;
   size_t tmp___0;
-
   {
     if (ex->exclude_count == ex->exclude_alloc) {
       {
@@ -24572,7 +24177,6 @@ int add_exclude_file(void (*add_func)(struct exclude *, char const *, int),
   int tmp___9;
   int tmp___10;
   int tmp___11;
-
   {
     if ((int const) * (filename + 0) == 45) {
       if (!*(filename + 1)) {
@@ -24714,7 +24318,6 @@ size_t full_write(int fd, void const *buf, size_t count) {
   size_t n_rw;
   size_t tmp;
   int *tmp___0;
-
   {
     total = (size_t)0;
     ptr = (char const *)buf;
@@ -24992,7 +24595,6 @@ int yyparse(void *parm) {
   int __cil_tmp28;
   char *__cil_tmp29;
   char *__cil_tmp30;
-
   {
     yychar1 = 0;
     yyss = yyssa;
@@ -25737,7 +25339,6 @@ static int to_hour(long hours, int meridian) {
   long tmp___1;
   int tmp___2;
   long tmp___3;
-
   {
     {
       if (meridian == 2) {
@@ -25806,7 +25407,6 @@ static int to_hour(long hours, int meridian) {
 static long to_year(textint textyear) {
   long year;
   int tmp;
-
   {
     year = textyear.value;
     if (year < 0L) {
@@ -25828,7 +25428,6 @@ static table const *lookup_zone(parser_control const *pc, char const *name) {
   table const *tp;
   int tmp;
   int tmp___0;
-
   {
     tp = (table const *)(pc->local_time_zone_table);
     {
@@ -25882,7 +25481,6 @@ static table const *lookup_word(parser_control const *pc, char *word) {
   int tmp___8;
   char tmp___9;
   int tmp___10;
-
   {
     p = word;
     {
@@ -26087,7 +25685,6 @@ static int yylex(YYSTYPE *lvalp, parser_control *pc) {
   int tmp___7;
   int tmp___8;
   void *__cil_tmp26;
-
   {
     {
       while (1) {
@@ -26341,7 +25938,6 @@ static int yylex(YYSTYPE *lvalp, parser_control *pc) {
   }
 }
 static int yyerror(char *s __attribute__((__unused__))) {
-
   { return (0); }
 }
 _Bool get_date(struct timespec *result, char const *p,
@@ -26377,7 +25973,6 @@ _Bool get_date(struct timespec *result, char const *p,
   time_t t4;
   void *__cil_tmp33;
   int __cil_tmp34;
-
   {
     if (!now) {
       {
@@ -26624,7 +26219,6 @@ int gettime(struct timespec *ts) {
   struct timeval tv;
   int r;
   int tmp___0;
-
   {
     { tmp = clock_gettime(0, ts); }
     if (tmp == 0) {
@@ -26651,7 +26245,6 @@ void *hash_lookup(Hash_table const *table___0, void const *entry) {
   size_t tmp;
   struct hash_entry const *cursor;
   _Bool tmp___0;
-
   {
     {
       tmp = (*(table___0->hasher))(entry, (size_t)table___0->n_buckets);
@@ -26688,7 +26281,6 @@ void *hash_lookup(Hash_table const *table___0, void const *entry) {
 }
 void *hash_get_first(Hash_table const *table___0) {
   struct hash_entry const *bucket;
-
   {
     if (table___0->n_entries == 0UL) {
       return ((void *)0);
@@ -26716,7 +26308,6 @@ void *hash_get_next(Hash_table const *table___0, void const *entry) {
   struct hash_entry const *bucket;
   size_t tmp;
   struct hash_entry const *cursor;
-
   {
     {
       tmp = (*(table___0->hasher))(entry, (size_t)table___0->n_buckets);
@@ -26766,7 +26357,6 @@ size_t hash_do_for_each(Hash_table const *table___0,
   struct hash_entry const *bucket;
   struct hash_entry const *cursor;
   _Bool tmp;
-
   {
     counter = (size_t)0;
     bucket = (struct hash_entry const *)table___0->bucket;
@@ -26804,7 +26394,6 @@ size_t hash_do_for_each(Hash_table const *table___0,
 size_t hash_string(char const *string, size_t n_buckets) {
   size_t value;
   char const *tmp;
-
   {
     value = (size_t)0;
     {
@@ -26826,7 +26415,6 @@ static _Bool is_prime(size_t candidate) {
   size_t divisor;
   size_t square;
   int tmp;
-
   {
     divisor = (size_t)3;
     square = divisor * divisor;
@@ -26856,7 +26444,6 @@ static _Bool is_prime(size_t candidate) {
 }
 static size_t next_prime(size_t candidate) {
   _Bool tmp;
-
   {
     if (candidate < 10UL) {
       candidate = (size_t)10;
@@ -26879,7 +26466,6 @@ static size_t next_prime(size_t candidate) {
 static _Bool check_tuning(Hash_table *table___0) {
   Hash_tuning const *tuning;
   float epsilon;
-
   {
     tuning = table___0->tuning;
     epsilon = 0.1f;
@@ -26915,7 +26501,6 @@ Hash_table *hash_initialize(size_t candidate, Hash_tuning const *tuning,
   void *tmp___1;
   int tmp___2;
   int tmp___3;
-
   {
     if ((unsigned long)hasher == (unsigned long)((void *)0)) {
       return ((Hash_table *)((void *)0));
@@ -26986,7 +26571,6 @@ Hash_table *hash_initialize(size_t candidate, Hash_tuning const *tuning,
 static struct hash_entry *allocate_entry(Hash_table *table___0) {
   struct hash_entry *new;
   void *tmp;
-
   {
     if (table___0->free_entry_list) {
       new = table___0->free_entry_list;
@@ -27001,7 +26585,6 @@ static struct hash_entry *allocate_entry(Hash_table *table___0) {
   }
 }
 static void free_entry(Hash_table *table___0, struct hash_entry *entry) {
-
   {
     entry->data = (void *)0;
     entry->next = table___0->free_entry_list;
@@ -27020,7 +26603,6 @@ static void *hash_find_entry(Hash_table *table___0, void const *entry,
   void *data___0;
   struct hash_entry *next___0;
   _Bool tmp___1;
-
   {
     {
       tmp = (*(table___0->hasher))(entry, table___0->n_buckets);
@@ -27090,7 +26672,6 @@ _Bool hash_rehash(Hash_table *table___0, size_t candidate) {
   size_t tmp;
   struct hash_entry *new_entry;
   struct hash_entry *tmp___0;
-
   {
     {
       new_table =
@@ -27184,7 +26765,6 @@ void *hash_insert(Hash_table *table___0, void const *entry) {
   float candidate;
   _Bool tmp___0;
   float tmp___1;
-
   {
     if (!entry) {
       {
@@ -27255,7 +26835,6 @@ static char const power_letter[9] = {
 static long double adjust_value(int inexact_style, long double value) {
   uintmax_t u;
   int tmp;
-
   {
     if (inexact_style != 1) {
       if (value < (long double)0xffffffffffffffffUL) {
@@ -27285,7 +26864,6 @@ static char *group_number(char *number, size_t numberlen, char const *grouping,
   char buf[(((2UL * sizeof(uintmax_t)) * 8UL) * 302UL) / 1000UL + 1UL];
   unsigned char g;
   void *__cil_tmp12;
-
   {
     {
       grouplen = 0xffffffffffffffffUL;
@@ -27384,7 +26962,6 @@ char *human_readable(uintmax_t n, char *buf, int opts,
   char *__cil_tmp54;
   char *__cil_tmp55;
   char *__cil_tmp56;
-
   {
     inexact_style = opts & 3;
     if (opts & 32) {
@@ -27707,7 +27284,6 @@ extern __attribute__((__nothrow__)) struct tm *(
     localtime_r)(time_t const *__restrict __timer, struct tm *__restrict __tp);
 __inline static int leapyear(int year) {
   int tmp;
-
   {
     if ((year & 3) == 0) {
       if (year % 100 != 0) {
@@ -27756,7 +27332,6 @@ __inline static time_t ydhms_diff(long year1, long yday1, int hour1, int min1,
   time_t hours;
   time_t minutes;
   time_t seconds;
-
   {
     a4 = (int)(((year1 >> 2) + (long)(1900 >> 2)) - (long)(!(year1 & 3L)));
     b4 = ((year0 >> 2) + (1900 >> 2)) - !(year0 & 3);
@@ -27781,7 +27356,6 @@ static time_t guess_time_tm(long year, long yday, int hour, int min, int sec,
   time_t tmp;
   time_t t1;
   long tmp___0;
-
   {
     if (tp) {
       {
@@ -27821,7 +27395,6 @@ static struct tm *ranged_convert(struct tm *(*convert)(time_t const *,
   time_t mid;
   time_t tmp;
   int tmp___0;
-
   {
     { r = (*convert)((time_t const *)t, tp); }
     if (!r) {
@@ -27925,7 +27498,6 @@ time_t mktime_internal(struct tm *tp,
   int tmp___2;
   int tmp___3;
   int tmp___4;
-
   {
     {
       remaining_probes = 6;
@@ -28136,7 +27708,6 @@ __attribute__((__nothrow__))
 time_t(__attribute__((__leaf__)) rpl_mktime)(struct tm *tp);
 time_t(__attribute__((__leaf__)) rpl_mktime)(struct tm *tp) {
   time_t tmp;
-
   {
     {
       tmp = mktime_internal(
@@ -28153,7 +27724,6 @@ strtol_error xstrtoul(char const *s, char **ptr, int strtol_base,
 static struct mode_change *make_node_op_equals(mode_t new_mode) {
   struct mode_change *p;
   void *tmp;
-
   {
     {
       tmp = malloc(sizeof(struct mode_change));
@@ -28174,7 +27744,6 @@ static void mode_append_entry(struct mode_change **head,
                               struct mode_change **tail,
                               struct mode_change *e) {
   struct mode_change *tmp;
-
   {
     if ((unsigned long)*head == (unsigned long)((void *)0)) {
       tmp = e;
@@ -28221,7 +27790,6 @@ struct mode_change *mode_compile(char const *mode_string,
   int tmp___16;
   int tmp___17;
   char *__cil_tmp34;
-
   {
     {
       head = (struct mode_change *)((void *)0);
@@ -28567,7 +28135,6 @@ mode_t mode_adjust(mode_t oldmode, struct mode_change const *changes) {
   int tmp___5;
   int tmp___6;
   int tmp___7;
-
   {
     newmode = oldmode & (unsigned int)((4032 | (448 >> 3)) | ((448 >> 3) >> 3));
     {
@@ -28675,7 +28242,6 @@ mode_t mode_adjust(mode_t oldmode, struct mode_change const *changes) {
 }
 void mode_free(struct mode_change *changes) {
   register struct mode_change *next;
-
   {
     {
       while (1) {
@@ -28706,7 +28272,6 @@ static int prepend_args(char const *options, char *buf, char **argv) {
   char const *tmp___3;
   unsigned short const **tmp___4;
   char *tmp___5;
-
   {
     o___0 = options;
     b = buf;
@@ -28786,7 +28351,6 @@ void prepend_default_options(char const *options, int *pargc, char ***pargv) {
   char **tmp___6;
   char *tmp___7;
   char *const *tmp___8;
-
   {
     if (options) {
       {
@@ -28869,7 +28433,6 @@ struct quoting_options *clone_quoting_options(struct quoting_options *o___0) {
   void *tmp___0;
   int *tmp___1;
   struct quoting_options *tmp___2;
-
   {
     {
       tmp = __errno_location();
@@ -28892,7 +28455,6 @@ struct quoting_options *clone_quoting_options(struct quoting_options *o___0) {
 }
 void set_quoting_style(struct quoting_options *o___0, enum quoting_style s) {
   struct quoting_options *tmp;
-
   {
     if (o___0) {
       tmp = o___0;
@@ -28909,7 +28471,6 @@ int set_char_quoting(struct quoting_options *o___0, char c, int i) {
   int shift;
   int r;
   struct quoting_options *tmp;
-
   {
     uc = (unsigned char)c;
     if (o___0) {
@@ -28928,7 +28489,6 @@ static char const *gettext_quote(char const *msgid, enum quoting_style s) {
   char const *translation;
   char *tmp;
   char *__cil_tmp5;
-
   {
     {
       tmp = gettext(msgid);
@@ -28979,7 +28539,6 @@ static size_t quotearg_buffer_restyled(char *buffer___2, size_t buffersize,
   char *__cil_tmp37;
   char *__cil_tmp38;
   char *__cil_tmp39;
-
   {
     {
       len = (size_t)0;
@@ -30015,7 +29574,6 @@ size_t quotearg_buffer(char *buffer___2, size_t buffersize, char const *arg,
   size_t r;
   size_t tmp___0;
   int *tmp___1;
-
   {
     if (o___0) {
       p = o___0;
@@ -30055,7 +29613,6 @@ static char *quotearg_n_options(int n, char const *arg, size_t argsize,
   void *tmp___3;
   int *tmp___4;
   int tmp___5;
-
   {
     {
       tmp = __errno_location();
@@ -30125,7 +29682,6 @@ static char *quotearg_n_options(int n, char const *arg, size_t argsize,
 }
 char *quotearg_n(int n, char const *arg) {
   char *tmp;
-
   {
     {
       tmp = quotearg_n_options(
@@ -30137,7 +29693,6 @@ char *quotearg_n(int n, char const *arg) {
 }
 char *quotearg(char const *arg) {
   char *tmp;
-
   {
     { tmp = quotearg_n(0, arg); }
     return (tmp);
@@ -30147,7 +29702,6 @@ static struct quoting_options
 quoting_options_from_style(enum quoting_style style) {
   struct quoting_options o___0;
   void *__cil_tmp3;
-
   {
     {
       o___0.style = style;
@@ -30162,7 +29716,6 @@ char *quotearg_n_style(int n, enum quoting_style s, char const *arg) {
   char *tmp___0;
   void *__cil_tmp7;
   void *__cil_tmp8;
-
   {
     {
       tmp = quoting_options_from_style(s);
@@ -30177,7 +29730,6 @@ char *quotearg_char(char const *arg, char ch) {
   struct quoting_options options;
   char *tmp;
   void *__cil_tmp5;
-
   {
     {
       options = default_quoting_options;
@@ -30190,7 +29742,6 @@ char *quotearg_char(char const *arg, char ch) {
 }
 char *quotearg_colon(char const *arg) {
   char *tmp;
-
   {
     { tmp = quotearg_char(arg, (char)':'); }
     return (tmp);
@@ -30202,7 +29753,6 @@ extern ssize_t read(int __fd, void *__buf, size_t __nbytes);
 size_t safe_read(int fd, void *buf, size_t count) {
   ssize_t result;
   int *tmp;
-
   {
     if (count > 2147483647UL) {
       count = (size_t)2147475456;
@@ -30232,7 +29782,6 @@ extern ssize_t write(int __fd, void const *__buf, size_t __n);
 size_t safe_write(int fd, void const *buf, size_t count) {
   ssize_t result;
   int *tmp;
-
   {
     if (count > 2147483647UL) {
       count = (size_t)2147475456;
@@ -30263,7 +29812,6 @@ extern __attribute__((__nothrow__)) int(__attribute__((__leaf__))
 char *xgetcwd(void);
 static int have_working_fchdir = 1;
 int save_cwd(struct saved_cwd *cwd) {
-
   {
     cwd->desc = -1;
     cwd->name = (char *)((void *)0);
@@ -30289,7 +29837,6 @@ int save_cwd(struct saved_cwd *cwd) {
 int restore_cwd(struct saved_cwd const *cwd) {
   int tmp;
   int tmp___0;
-
   {
     if (0 <= (int)cwd->desc) {
       {
@@ -30322,7 +29869,6 @@ char *savedir(char const *dir) {
   int *tmp___6;
   int tmp___7;
   int tmp___8;
-
   {
     {
       allocated = (size_t)512;
@@ -30426,7 +29972,6 @@ int strip_trailing_slashes(char *path) {
   char *base_lim;
   size_t tmp___0;
   int had_slash;
-
   {
     {
       tmp = base_name((char const *)path);
@@ -30446,7 +29991,6 @@ char *xgetcwd(void) {
   char *cwd;
   char *tmp;
   int *tmp___0;
-
   {
     {
       tmp = getcwd((char *)((void *)0), (size_t)0);
@@ -30482,7 +30026,6 @@ char const xalloc_msg_memory_exhausted[17] = {
 __attribute__((__noreturn__)) void xalloc_die(void);
 void xalloc_die(void) {
   char *tmp;
-
   {
     if (xalloc_fail_func) {
       {
@@ -30499,7 +30042,6 @@ void xalloc_die(void) {
 __inline static void *xnmalloc_inline(size_t n, size_t s) {
   void *p;
   int tmp;
-
   {
     if (sizeof(ptrdiff_t) <= sizeof(size_t)) {
       tmp = -1;
@@ -30523,7 +30065,6 @@ __inline static void *xnmalloc_inline(size_t n, size_t s) {
 }
 void *xmalloc(size_t n) {
   void *tmp;
-
   {
     { tmp = xnmalloc_inline(n, (size_t)1); }
     return (tmp);
@@ -30531,7 +30072,6 @@ void *xmalloc(size_t n) {
 }
 __inline static void *xnrealloc_inline(void *p, size_t n, size_t s) {
   int tmp;
-
   {
     if (sizeof(ptrdiff_t) <= sizeof(size_t)) {
       tmp = -1;
@@ -30555,7 +30095,6 @@ __inline static void *xnrealloc_inline(void *p, size_t n, size_t s) {
 }
 void *xrealloc(void *p, size_t n) {
   void *tmp;
-
   {
     { tmp = xnrealloc_inline(p, n, (size_t)1); }
     return (tmp);
@@ -30564,7 +30103,6 @@ void *xrealloc(void *p, size_t n) {
 __inline static void *x2nrealloc_inline(void *p, size_t *pn, size_t s) {
   size_t n;
   void *tmp;
-
   {
     n = *pn;
     if (!p) {
@@ -30589,7 +30127,6 @@ __inline static void *x2nrealloc_inline(void *p, size_t *pn, size_t s) {
 }
 void *x2nrealloc(void *p, size_t *pn, size_t s) {
   void *tmp;
-
   {
     { tmp = x2nrealloc_inline(p, pn, s); }
     return (tmp);
@@ -30597,7 +30134,6 @@ void *x2nrealloc(void *p, size_t *pn, size_t s) {
 }
 void *x2realloc(void *p, size_t *pn) {
   void *tmp;
-
   {
     { tmp = x2nrealloc_inline(p, pn, (size_t)1); }
     return (tmp);
@@ -30606,7 +30142,6 @@ void *x2realloc(void *p, size_t *pn) {
 void *xzalloc(size_t s) {
   void *tmp;
   void *tmp___0;
-
   {
     {
       tmp = xmalloc(s);
@@ -30618,7 +30153,6 @@ void *xzalloc(size_t s) {
 void *xclone(void const *p, size_t s) {
   void *tmp;
   void *tmp___0;
-
   {
     {
       tmp = xmalloc(s);
@@ -30632,7 +30166,6 @@ void *xclone(void const *p, size_t s) {
 char *xstrdup(char const *string) {
   size_t tmp;
   void *tmp___0;
-
   {
     {
       tmp = strlen(string);
@@ -30652,7 +30185,6 @@ extern
                                               int __base);
 /* #pragma merger("0","02d.xstrtoul.o.i","") */
 static strtol_error bkm_scale___0(unsigned long *x, int scale_factor) {
-
   {
     if (0xffffffffffffffffUL / (unsigned long)scale_factor < *x) {
       *x = 0xffffffffffffffffUL;
@@ -30667,7 +30199,6 @@ static strtol_error bkm_scale_by_power___0(unsigned long *x, int base,
   strtol_error err;
   strtol_error tmp;
   int tmp___0;
-
   {
     err = (strtol_error)0;
     {
@@ -30705,7 +30236,6 @@ strtol_error xstrtoul(char const *s, char **ptr, int strtol_base,
   strtol_error overflow;
   char *tmp___5;
   char *tmp___6;
-
   {
     err = (strtol_error)0;
     if (0 <= strtol_base) {
@@ -30952,7 +30482,6 @@ uintmax_t(__attribute__((__leaf__)) strtoumax)(char const *__restrict __nptr,
                                                char **__restrict __endptr,
                                                int __base);
 static strtol_error bkm_scale___1(uintmax_t *x, int scale_factor) {
-
   {
     if (0xffffffffffffffffUL / (unsigned long)scale_factor < *x) {
       *x = 0xffffffffffffffffUL;
@@ -30966,7 +30495,6 @@ static strtol_error bkm_scale_by_power___1(uintmax_t *x, int base, int power) {
   strtol_error err;
   strtol_error tmp;
   int tmp___0;
-
   {
     err = (strtol_error)0;
     {
@@ -31004,7 +30532,6 @@ strtol_error xstrtoumax(char const *s, char **ptr, int strtol_base,
   strtol_error overflow;
   char *tmp___5;
   char *tmp___6;
-
   {
     err = (strtol_error)0;
     if (0 <= strtol_base) {
